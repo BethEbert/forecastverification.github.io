@@ -7,13 +7,13 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.4;
     }
     #sidebar {
       position: fixed;
       top: 0;
       left: 0;
-      width: 220px;
+      width: 230px;
       height: 100%;
       background-color: #f8f8f8;
       border-right: 1px solid #ddd;
@@ -25,8 +25,8 @@
       margin-top: 0;
     }
     #sidebar ul {
-      font-size: 0.8rem;
-	  line-height: 0.9rem;
+      font-size: 0.9rem;
+	  line-height: 1.0rem;
       list-style: none;
       padding-left: 0;
     }
@@ -34,7 +34,7 @@
       margin: 0.5em 0;
     }
 	#sidebar ul ul {
-	  margin-left: 1em; /* Adjust indent here */
+	  margin-left: 0.5em; /* Adjust indent here */
 	  padding-left: 0.5em;
 	}
     #sidebar a {
@@ -57,6 +57,9 @@
       padding-bottom: 0.2em;
       margin-top: 2em;
     }
+	.spaced-list li {
+      margin-bottom: 0.5em;
+	}
     @media print {
       #sidebar {
         display: none;
@@ -142,33 +145,25 @@ More scores:<br>
 
 <h2 id="Purpose">What is this website about?</h2>
 This web site:
-<ul>
-Describes methods for forecast verification, including their characteristics,
+<ul class="spaced-list" style="list-style-type: disc; margin-left: 0.5em;">
+<li>Describes methods for forecast verification, including their characteristics,
 pros and cons. The methods range from simple traditional statistics and
-scores, to methods for more detailed diagnostic and scientific verification.
-</ul>
-<ul>
-Gives examples for each method, with links and references for further
+scores, to methods for more detailed diagnostic and scientific verification.</li>
+<li>Gives examples for each method, with links and references for further
 information. The examples are all drawn from the meteorological world (since
 the <a href="index.html#Contributors_to_this_site">people creating this web</a> site
 are themselves meteorologists or work with meteorologists), but the
 verification methods can easily be applied in other fields. They are appropriate
-for verifying <i>estimates</i> as well as forecasts.
-</ul>
-<ul>
-Demonstrates the verification techniques on a handful of forecast examples.
+for verifying <i>estimates</i> as well as forecasts.</li>
+<li>Demonstrates the verification techniques on a handful of forecast examples.
 These data will be available for download if you want to try out some of
-the techniques.
-</ul>
-<ul>
-Does not provide source code&nbsp; (sorry, but what language would
+the techniques.</li>
+<li>Does not provide source code&nbsp; (sorry, but what language would
 we use?). However, the simple methods are relatively easy to code, and
 the complex ones give references to people who have developed them or
-are working on them.
-</ul>
-<ul>
-Is a <b><i>dynamic site</i></b> - please contribute your ideas and
-verification methods, also suggestions for making the site better.
+are working on them.</li>
+<li>Is a <b><i>dynamic site</i></b> - please contribute your ideas and
+verification methods, also suggestions for making the site better.</li>
 </ul>
 
 <h2 id="Definition">What is forecast verification?</h2>
@@ -190,18 +185,14 @@ way, you shouldn't consider a forecast experiment to be complete until
 you find out whether the forecast was successful.
 <p>The three most important reasons to verify forecasts are:
 </p>
-<ul>
-to <i>monitor</i> forecast quality - how accurate are the forecasts
-and are they improving over time?
-</ul>
-<ul>
-to <i>improve</i> forecast quality - the first step toward getting
-better is discovering what you're doing wrong.
-</ul>
-<ul>
-to <i>compare</i> the quality of different forecast systems - to what
+<ul class="spaced-list" style="list-style-type: disc; margin-left: 0.5em;">
+<li>to <i>monitor</i> forecast quality - how accurate are the forecasts
+and are they improving over time?</li>
+<li>to <i>improve</i> forecast quality - the first step toward getting
+better is discovering what you're doing wrong.</li>
+<li>to <i>compare</i> the quality of different forecast systems - to what
 extent does one forecast system give better forecasts than another, and
-in what ways is that system better?
+in what ways is that system better?</li>
 </ul>
 
 <h2 id="Types">Types of forecasts and verification</h2>
@@ -224,17 +215,25 @@ thresholding the data.
     <tr>
       <td>deterministic (non-probabilistic)&nbsp;</td>
       <td>quantitative precipitation forecast</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>, <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Multi-category">multi-category</a>, 
+	  <a href="index.html#Continuous">continuous</a>, 
+	  <a href="index.html#Spatial">spatial</a></td>
     </tr>
     <tr>
       <td>probabilistic</td>
       <td>probability of precipitation, ensemble forecast</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_EPS">ensemble</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
       <td>qualitative (worded)</td>
       <td>5-day outlook</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Multi-category">multi-category</a></td>
     </tr>
     <tr>
       <td> <br>
@@ -247,20 +246,30 @@ thresholding the data.
     <tr>
       <td>time series</td>
       <td>daily maximum temperature forecasts for a city</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>, <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Multi-category">multi-category</a>, 
+	  <a href="index.html#Continuous">continuous</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a></td>
     </tr>
     <tr>
       <td>spatial distribution</td>
       <td>map of geopotential height, rainfall chart</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>, <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a>, <a href="index.html#Methods_for_EPS">ensemble</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Multi-category">multi-category</a>, 
+	  <a href="index.html#Continuous">continuous</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Spatial">spatial</a>, 
+	  <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
       <td>pooled space and time</td>
       <td>monthly average global temperature anomaly</td>
-      <td><a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>,
-      <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>,
-      <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>,
-      <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>,
+      <td><a href="index.html#Dichotomous">dichotomous</a>,
+      <a href="index.html#Multi-category">multi-category</a>,
+      <a href="index.html#Continuous">continuous</a>,
+      <a href="index.html#Probabilistic">probabilistic</a>,
       <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
@@ -274,22 +283,39 @@ thresholding the data.
     <tr>
       <td>dichotomous (yes/no)</td>
       <td>occurrence of fog</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a>, <a href="index.html#Methods_for_EPS">ensemble</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Spatial">spatial</a>, 
+	  <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
       <td>multi-category</td>
       <td>cold, normal, or warm conditions</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a>, <a href="index.html#Methods_for_EPS">ensemble</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Multi-category">multi-category</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Spatial">spatial</a>, 
+	  <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
       <td>continuous</td>
       <td>maximum temperature</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a>, <a href="index.html#Methods_for_EPS">ensemble</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Continuous">continuous</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Spatial">spatial</a>, 
+	  <a href="index.html#Methods_for_EPS">ensemble</a></td>
     </tr>
     <tr>
       <td>object- or event-oriented&nbsp;</td>
       <td>tropical cyclone motion and intensity</td>
-      <td><a href="index.html#Eyeball_method">visual</a>, <a href="index.html#Methods_for_dichotomous_forecasts">dichotomous</a>, <a href="index.html#Methods_for_multi-category_forecasts">multi-category</a>, <a href="index.html#Methods_for_foreasts_of_continuous_variables">continuous</a>, <a href="index.html#Methods_for_probabilistic_forecasts">probabilistic</a>, <a href="index.html#Methods_for_spatial_forecasts">spatial</a></td>
+      <td><a href="index.html#Eyeball_method">visual</a>, 
+	  <a href="index.html#Dichotomous">dichotomous</a>, 
+	  <a href="index.html#Multi-category">multi-category</a>, 
+	  <a href="index.html#Continuous">continuous</a>, 
+	  <a href="index.html#Probabilistic">probabilistic</a>, 
+	  <a href="index.html#Spatial">spatial</a></td>
     </tr>
   </tbody>
 </table>
@@ -312,57 +338,49 @@ decision maker to realize some incremental economic and/or other benefit
 at the forecast <b><i>quality</i></b>. Murphy described nine aspects
 (called "attributes") that contribute to the quality of a forecast. These are:
 </p><p>
-<b>Bias</b> - the correspondence between the mean forecast and mean observation.
-</p><p>
-<b>Association</b> - the strength of the linear relationship between
+<ul class="spaced-list" style="list-style-type: disc; margin-left: 0.5em;">
+<li><b>Bias</b> - the correspondence between the mean forecast and mean observation.</li>
+<li><b>Association</b> - the strength of the linear relationship between
 the forecasts and observations (for example, the correlation
-coefficient measures this linear relationship)
-</p><p>
-<b>Accuracy</b> - the level of agreement between the forecast and the
+coefficient measures this linear relationship)</li>
+<li><b>Accuracy</b> - the level of agreement between the forecast and the
 truth (as represented by observations). The difference between the
 forecast and the observation is the <i>error</i>. The lower the errors, the
-greater the accuracy.
-</p><p>
-<b>Skill</b> - the relative accuracy of the forecast over some
+greater the accuracy.</li>
+<li><b>Skill</b> - the relative accuracy of the forecast over some
 reference forecast. The reference forecast is generally an unskilled forecast
 such as random chance, persistence (defined as the most recent set of
 observations, "persistence" implies no change in condition), or climatology. Skill
 refers to the increase in accuracy due purely to the "smarts" of the forecast
 system. Weather forecasts may be more accurate simply because the
-weather is easier to forecast -- skill takes this into account.
-</p><p>
-<b>Reliability</b> - the average agreement between the forecast values
+weather is easier to forecast -- skill takes this into account.</li>
+<li><b>Reliability</b> - the average agreement between the forecast values
 and the observed values. If all forecasts are considered together, then
 the <i>overall reliability</i> is the same as the <i>bias</i>. If the
 forecasts are stratified into different ranges or categories, then the
 reliability is the same as the <i>conditional bias</i>, i.e., it has a different
-value for each category.
-</p><p>
-<b>Resolution</b> - the ability of the forecast to sort or resolve
+value for each category.</li>
+<li><b>Resolution</b> - the ability of the forecast to sort or resolve
 the set of events into subsets with different frequency distributions.
 This means that the distribution of outcomes when "A" was forecast is
 different from the distribution of outcomes when "B" is forecast. Even if the
 forecasts are wrong, the forecast system has resolution if it can successfully
-separate one type of outcome from another.
-</p><p>
-<b>Sharpness</b> - the tendency of the forecast to predict extreme
+separate one type of outcome from another.</li>
+<li><b>Sharpness</b> - the tendency of the forecast to predict extreme
 values. To use a counter-example, a forecast of "climatology" has no sharpness.
 Sharpness is a property of the forecast only, and like resolution, a forecast
 can have this attribute even if it's wrong (in this case it would have
-poor reliability).
-</p><p>
-<b>Discrimination</b> - ability of the forecast to discriminate among
+poor reliability).</li>
+<li><b>Discrimination</b> - ability of the forecast to discriminate among
 observations, that is, to have a higher prediction frequency for an
-outcome whenever that outcome occurs.
-</p><p>
-<b>Uncertainty</b> - the variability of the observations. The greater
+outcome whenever that outcome occurs.</li>
+<li><b>Uncertainty</b> - the variability of the observations. The greater
 the uncertainty, the more difficult the forecast will tend to be.
-</p><p>
 Traditionally, forecast verification has emphasized <i>accuracy</i>
 and <i>skill</i>. It's important to note that the other attributes of
 forecast performance also have a strong influence on the <i>value</i> of the
-forecast.
-</p>
+forecast.</li>
+</ul>
 
 <h2 id="Quality vs value">Forecast quality vs. forecast value</h2>
 Forecast quality is not the same as forecast value. A forecast has high
@@ -1467,7 +1485,7 @@ the larger the number of samples needed.
 <p><b><i>Relative operating characteristic</i></b> -
 <img src="site/ROC.gif" alt="Relative operating characteristic (ROC)" width="292" height="299" align="right">
 Plot <i><a href="index.html#POD">hit
-rate (POD)</a></i> vs <a href="index.html#POFD"><i>false alarm rate</i> (<i>POFD</i>)</a>,
+rate (POD)</a></i> vs <a href="index.html#POFD"><i>false alarm rate</i> (<i>F</i>)</a>,
 using a set of increasing probability thresholds (for example, 0.05, 0.15,
 0.25, etc.) to make the yes/no decision. The area under the ROC curve
 is frequently used as a score.
@@ -1612,17 +1630,17 @@ share your methods via this web site.</font></i></b>
 <h2 id="Spatial">Methods for spatial forecasts</h2>
 <p><big><b><i>Scale decomposition methods</i></b></big> - allow the errors at each scale to be diagnosed:
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Wavelet decomposition&nbsp; (<a href="index.html#Briggs_and_Levine_1997">
+<p>Wavelet decomposition&nbsp; (<a href="index.html#Briggs_and_Levine_1997">
 Briggs and Levine, 1997</a>)<br>
 </p>
 <p>- - - - - - - - - - -
 </p>
 <a name="IS"></a>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i><b><a href="https://doi.org/10.1017/S1350482704001239">
+<p><i><b><a href="https://doi.org/10.1017/S1350482704001239">
 Intensity-scale verification approach</a></b></i> (<a href="index.html#Casati2004">
 Casati et al. 2004</a>)<br>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><i>Answers
+<p><b><i>Answers
 the question:&nbsp;</i></b> <i>How does the skill
 of spatial precipitation forecasts depend on both the scale of the
 forecast error and the intensity of the precipitation events?
@@ -1648,34 +1666,30 @@ two-dimensional discrete Haar wavelet decomposition of binary error
 images. The forecast skill can then be evaluated in terms of precipitation 
 rate intensity and spatial scale. <br>
 </p>
-<p><click><a href="https://doi.org/10.1017/S1350482704001239">
-here</a> to learn more.<br>
-</click></p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>Click <a href="https://doi.org/10.1017/S1350482704001239">here</a> to learn more.<br>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Discrete cosine transformation (DCT) (<a href="index.html#Denis_et_al_2002a">Denis
+<p>- - - - - - - - - - -
+</p>
+<p>Discrete cosine transformation (DCT) (<a href="index.html#Denis_et_al_2002a">Denis
 et al., 2002a</a> for method; <a href="index.html#Denis_et_al_2002b">Denis et al., 2002b</a> 
 and <a href="index.html#de_Elia_et_al_2002">de Elia et al., 2002</a> for application)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
+<p>- - - - - - - - - - -
 </p>
 <p><big><b><i>Neighborhood (fuzzy) methods</i></b></big> - relax the
 requirement for an exact match by evaluating forecasts
 in the local neighborhood of the observations. <br>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Multi-scale statistical organization 
+<p>Multi-scale statistical organization 
 (<a href="index.html#Zepeda-Arce_et_al_2000">Zepeda-Arce et al., 2000</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
+<p>- - - - - - - - - - -
 </p>
 <a name="FSS"></a>
 <img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px;" vspace="2" align="right">
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <i><b>Fractions skill score</b></i> (<a href="index.html#Roberts_Lean_2008">Roberts and Lean, 2008</a>)<br>
+<p><i><b>Fractions skill score</b></i> (<a href="index.html#Roberts_Lean_2008">Roberts and Lean, 2008</a>)<br>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i><b>Answers the question: </b>What are
+<p><i><b>Answers the question: </b>What are
 the spatial scales at which the forecast resembles the observations?</i>
 </p>
 <p>This approach directly compares the forecast and observed
@@ -1689,34 +1703,32 @@ framed as a Fractions Skill Score<br>
 </p><p>where <i>P<sub>f</sub></i> is the forecast fraction,
 <i>P<sub>o</sub></i> is the observed fraction, and <i>N</i>
 is the number of spatial windows in the domain.</p>
-<p>FSS has the following properties:
-</p><ul>
+<p>FSS has the following properties:</p>
+<ul class="spaced-list" style="list-style-type: disc; margin-left: 0.5em;">
   <li>The Fractions Skill Score ranges from 0 (complete mismatch) to 1 (perfect match). </li>
   <li>If either there are no events forecast and some occur, or some occur and 
   none are forecast the score is always 0.</li>
   <li>The value of FSS above which the forecasts are considered to have useful 
-(better than random) skill is given by 
-<i>FSS<sub>useful</sub></i> = 0.5 + <i>f<sub>o</sub></i>/2, where 
-<i>f<sub>o</sub></i> is the domain average observed fraction. The smallest
-window size for which <i>FSS</i> ≥ <i>FSS<sub>useful</sub></i> can be considered
-the "skillful scale".</li>
+  (better than random) skill is given by 
+  <i>FSS<sub>useful</sub></i> = 0.5 + <i>f<sub>o</sub></i>/2, where 
+  <i>f<sub>o</sub></i> is the domain average observed fraction. The smallest
+  window size for which <i>FSS</i> ≥ <i>FSS<sub>useful</sub></i> can be considered
+  the "skillful scale".</li>
   <li>As the size of the squares used to
-compute the fractions gets larger, the score will asympotote to a value
-that depends on the ratio between the forecast and observed frequencies
-of the event. The closer the asymptotic value is to 1, the smaller the
-forecast bias.</li>
+  compute the fractions gets larger, the score will asympotote to a value
+  that depends on the ratio between the forecast and observed frequencies
+  of the event. The closer the asymptotic value is to 1, the smaller the
+  forecast bias.</li>
   <li>The score is most sensitive to rare events (e.g., small rain areas).</li>
 </ul>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Pragmatic (neighborhood)
-method (<a href="index.html#Theis_et_al_2005">Theis et al., 2005</a>)
+<p><i><b>Pragmatic (neighborhood) method</b></i> (
+<a href="index.html#Theis_et_al_2005">Theis et al., 2005</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <i><b><a href="site/Atger/SpatialMultiEvent.html">
+<p><i><b><a href="site/Atger/SpatialMultiEvent.html">
 Spatial multi-event contingency tables</a></b></i> - 
 useful for verifying high resolution forecasts (<a href="index.html#Atger_2001">Atger, 2001</a>).<br>
 </p>
@@ -1737,18 +1749,14 @@ systems or other probabilistic forecasts. <br>
 </p>
 <p>(related work: <a href="index.html#Tremblay_et_al_1996">Tremblay et al., 1996</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Practically Perfect Hindcasts: Objective limits on 
-forecasting skill of rare events 
+<p><i><b>Practically Perfect Hindcasts</b></i> - Objective limits on forecasting skill of rare events 
  <a href="https://doi.org/10.1175/WAF-D-12-00113.1">Hitchens et al., 2013</a>; 
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <i><b>Neighborhood verification framework</i></b> - 
+<p><i><b>Neighborhood verification framework</i></b> - 
 12 neighborhood (a.k.a. fuzzy verification) methods combined into one
 framework (<a href="index.html#Ebert_2008">Ebert, 2008</a>)<br>
 </p>
@@ -1769,16 +1777,15 @@ thus allowing the user to determine at which scales the forecast has useful
 skill. Other windows could be included to represent closeness in time,
 closeness in intensity, and/or closeness in some other important aspect.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 <br>
 </p>
 <big><b><i>Object oriented methods:</i></b></big>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <b><i><a href="site/CRA/CRA_verification.html">
+<p><b><i><a href="site/CRA/CRA_verification.html">
 CRA (entity-based) verification</a></i></b> 
 (<a href="index.html#Ebert_and_McBride_2000">Ebert and McBride, 2000</a>)
 </p>
-<p><i><b>&nbsp;&nbsp;&nbsp; Answers the question:</b>
+<p><i><b>Answers the question:</b>
 What is the location error of the (spatial) forecast, and how does the total error break
 down into components due to incorrect location, volume, and fine scale structure?</i>
 <br>
@@ -1801,15 +1808,14 @@ the forecast. This event verification can be useful for monitoring forecast perf
 </p>
 <p>Click <a href="site/CRA/CRA_verification.html">here</a> to learn more.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <b><i>Method for Object-based Diagnostic Evaluation (MODE)</i></b> 
+<p><b><i>Method for Object-based Diagnostic Evaluation (MODE)</i></b> 
 (<a href="index.html#Brown_et_al_2004">Brown et al.,
 2004</a>; <a href="index.html#Davis_et_al_2006a">Davis et al., 2006</a>)
 <img src="site/MODE.gif" alt="MODE objects" width="236" hspace="5" height="209" align="right"><br>
 </p>
-<p><i><b>&nbsp;&nbsp;&nbsp; Answers the question:</b>
+<p><i><b>Answers the question:</b>
 How similar are the forecast objects to the observed objects
 according to a variety of descriptive criteria ?</i></p>
 <p>MODE uses a convolution filter and thresholding to first
@@ -1838,29 +1844,24 @@ Model Evaluation Tools (MET)</a> toolkit freely available from NCAR.
 More information on MODE is available from the
 <a href="https://dtcenter.org/community-code/model-evaluation-tools-met/documentation">
 Developmental Testbed Center</a>.</p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Event verification using composites (<a href="index.html#Nachamkin2004">Nachamkin, 2004</a>)
+<p>Event verification using composites (<a href="index.html#Nachamkin2004">Nachamkin, 2004</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Cluster analysis (<a href="index.html#Marzban_Sandgathe_2006">Marzban and Sandgathe, 2006, 2008</a>)<br>
+<p>Cluster analysis (<a href="index.html#Marzban_Sandgathe_2006">Marzban and Sandgathe, 2006, 2008</a>)<br>
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Procrustes shape analysis (<a href="index.html#Michaes_2007">Michaes et al., 2007</a>; 
+<p>Procrustes shape analysis (<a href="index.html#Michaes_2007">Michaes et al., 2007</a>; 
 <a href="index.html#Lack_et_al_2010">Lack et al. 2010</a>)<br>
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; Structure-Amplitude-Location (SAL) method (<a href="index.html#Wernli_2008">Wernli et al., 2008</a>)<br>
+<p>Structure-Amplitude-Location (SAL) method (<a href="index.html#Wernli_2008">Wernli et al., 2008</a>)<br>
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/Brill/Brill_EW_PhaseError.html">Automated
 east-west phase error calculation</a></i></b> (Keith Brill, NOAA/NWS/NCEP/HPC)
@@ -1884,22 +1885,20 @@ of the variance and is the main one of interest. The phase errors are
 presented as time series.&nbsp; Click <a href="site/Brill/Brill_EW_PhaseError.html">here</a>
 to learn more.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p>Feature calibration and alignment (<a href="index.html#Hoffman_et_al._1995">Hoffman 
 et al., 1995</a>; <a href="index.html#Nehrkorn_et_al_2003">Nehrkorn et al., 2003</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 <br>
 </p>
 <big><b><i>Field verification methods:</i></b></big> <br>
 <br><a name="DAS"></a>
-&nbsp;&nbsp;&nbsp;&nbsp; <b><i>Displacement and Amplitude Score (DAS)</i></b>
+<b><i>Displacement and Amplitude Score (DAS)</i></b>
 <a href="index.html#Keil_Craig_2009">(Keil and Craig, 2009</a>)<br>
 <br>
-<i><b>&nbsp;&nbsp;&nbsp; Answers the question:</b>
+<i><b>Answers the question:</b>
 What is the distance between forecast and observed features?</i>
 <br>
 <img style="width: 325px; height: 321px;" alt="Example of Displacement Amplitude Score verification" src="site/DASexample.gif" align="right"><br>
@@ -1924,14 +1923,12 @@ and observation (bottom right – top left).<br>
 
 <h2 id="Ensemble">Methods for probabilistic & ensemble forecasts</h2>
 Wilson method for EPS verification (<a href="index.html#Wilson_et_al_1999">Wilson et al., 1999</a>)
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p>Multi-category reliability diagram (<a href="index.html#Hamill_1997">Hamill,
 1997</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><a name="rank_histogram"></a><b><i>Rank histogram</i></b>
 (<a href="index.html#Talagrand_et_al_1997">Talagrand et al, 1997</a>; 
@@ -1948,15 +1945,13 @@ perfect spread, each member represents an equally likely scenario, so the
 observation is equally likely to fall between any two members.
 </p>
 <p>To construct a rank histogram, do the following:
-<br>
-1. At every observation (or analysis) point rank the <i>N</i> ensemble
+<ol class="spaced-list">
+<li>At every observation (or analysis) point rank the <i>N</i> ensemble
 members from lowest to highest. This represents N+1 possible bins that
-the observation could fit into, including the two extremes
-<br>
-2. Identify which bin the observation falls into at each point
-<br>
-3. Tally over many observations to create a histogram of rank.
-</p>
+the observation could fit into, including the two extremes</li>
+<li>Identify which bin the observation falls into at each point</li>
+<li>Tally over many observations to create a histogram of rank.</li>
+</ol>
 <p>Interpretation:
 <br>
 Flat - ensemble spread about right to represent forecast uncertainty
@@ -1973,8 +1968,7 @@ Asymmetric - ensemble contains bias
 it only measures whether the observed probability distribution is well
 represented by the ensemble.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/CorrespondenceRatio.html">Correspondence ratio</a></i></b>
 - ratio of the area of intersection of two or more events to the combined area
@@ -1986,8 +1980,7 @@ and <i>O<sub>i</sub></i> is the corresponding observed value. In the diagram <i>
 is the ratio of the dark area to the total shaded area. Click
 <a href="site/CorrespondenceRatio.html">here</a> to learn more.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><b><i><a href="http://arxiv.org/PS_cache/physics/pdf/0308/0308046v2.pdf">Likelihood
 skill measure</a></i></b> - Likelihood is defined very simply as <i>the
@@ -1996,9 +1989,7 @@ Likelihood-based measures can be used for binary and continuous probability fore
 and provide a simple and natural general framework for the evaluation of all kinds
 of probabilistic forecasts. For more information see <a href="index.html#Jewson_2003">Jewson (2003</a>)
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-<br>
+<p>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/Ignorance.html">Logarithmic scoring rule (ignorance
 score)</a></i></b> (<a href="index.html#Roulston_Smith_2002">Roulston and Smith, 2002</a>)<br>
@@ -2011,13 +2002,13 @@ predicted probability of the <i>i<sup>th</sup></i>
 outcome occurring then if the <i>j<sup>th</sup></i> outcome is the
 one which actually occurs the score for this particular
 forecast-realization pair is given by</p>
-<p><center><o:p>&nbsp;IGN = -log</o:p><small><sub>2</sub></small> <i>f<sub>j</sub></i></center><br>
+<p><center>&nbsp;IGN = -log<small><sub>2</sub></small> <i>f<sub>j</sub></i></center>
 </p>
 As defined above, with a negative sign, the logarithmic score cannot be negative and
 smaller values of the score are better. The minimum value of the score (zero) is obtained
 if a probability of 100% is assigned to the actual outcome. If a probability of zero is
 assigned to the actual outcome the logarithmic scoring rule is infinite. 
-Click <a href="site/Ignorance.html">here</a> to learn more.<br>
+Click <a href="site/Ignorance.html">here</a> to learn more.
 </p>
   
 <h2 id="Rare">Methods for rare events</h2>
@@ -2049,8 +2040,7 @@ EDS and EDI for biased forecasts.
 For further details and comparison of the merits of these scores see
 <a href="index.html#Ferro_Stephenson_2011">Ferro and Stephenson (2011)</a>.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/Ferro/Verif_rare_events.html">Probability model approach</a></i></b> 
 <a href="index.html#Ferro2007">(Ferro, 2007)</a> -
@@ -2063,21 +2053,20 @@ Click <a href="site/Ferro/Verif_rare_events.html">here</a> to learn more.
 
 <h2 id="Other">Other methods</h2>
 <img style="width: 347px; height: 331px;" alt="Taylor diagram example" src="site/TaylorDiagram.gif" align="right"> 
-<b><i>Diagrams to plot several statistics at one time</i></b><br>
-&nbsp;<br>
-&nbsp;&nbsp;&nbsp;&nbsp; <b><i>Taylor diagram</i></b> of correlation coefficient,
+<b><i>Diagrams to plot several statistics at one time</i></b>
+<p>
+<b><i>Taylor diagram</i></b> of correlation coefficient,
 root-mean-square difference, and standard deviation (<a href="index.html#Taylor_2001">
 Taylor, 2001</a>); see also <a href="https://pcmdi.llnl.gov/staff/taylor/CV/Taylor_diagram_primer.pdf">
-LLNL description</a>. An example of a Taylor diagram is shown at right.<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp; <b><i>BLT diagram</i></b> of relative climate mean squared
+LLNL description</a>. An example of a Taylor diagram is shown at right.</p>
+<p>
+<b><i>BLT diagram</i></b> of relative climate mean squared
 difference, variance ratio, and effective correlation (<a href="index.html#Boer_and_Lambert_2001">
-Boer and Lambert, 2001</a>).<br>
-<br>
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br>
-<br>
-<a name="Roebber_diagram"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+Boer and Lambert, 2001</a>).
+</p>
+<p>- - - - - - - - - - -
+</p>
+<a name="Roebber_diagram"></a>
 <i><b>Categorical performance diagram</b></i> (<a href="index.html#Roebber_2009">Roebber 2009</a>)<br>
 <img style="width: 243px; height: 234px;" alt="Probability of Detection vs. Success Ratio" src="site/PerformanceDiagram_small.gif" align="right"><br>
 In an approach that is conceptually similar to the Taylor diagram, it is possible 
@@ -2091,8 +2080,7 @@ assessed by plotting the forecast quality measure relative to a reference foreca
 persistence or any other desired baseline). <br>
 <br>
 Click <a href="site/Roebber/PerformanceDiagram.html">here</a> to learn more.<br>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <p><a name="RMSF"></a><b><i>Root mean squared factor</i></b>&nbsp;
 (<a href="index.html#Golding_1998">Golding, 1998</a>)&nbsp;
@@ -2116,8 +2104,7 @@ example, for visibility verification, the lower and upper limits used by Golding
 lies within the range but the other is outside the range, then limits
 of half the lower limit or double the upper limit are prescribed on the other.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <i><b>Nash-Sutcliffe
 efficiency coefficient</b></i> (<a href="index.html#Nash_Sutcliffe_1970">Nash and Sutcliffe, 1970</a>) - 
@@ -2134,8 +2121,7 @@ observed value is a more accurate predictor than the model. The
 expression is identical to that for the coefficient of determination 
 <i>R</i><sup>2</sup> and the <a href="index.html#Skill_score">reduction of variance</a>.<br>
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 <p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" vspace="2" height="237" align="right">
 <b><i><a href="site/Hewson/DeterministicLimit.html">
 Deterministic limit</a></i></b> <a href="index.html#Hewson2007">(Hewson, 2007)</a></p>
@@ -2163,8 +2149,7 @@ shown, by some customers, for probabilistic forecasts.
 </p>
 <p>Click <a href="site/Hewson/DeterministicLimit.html">here</a> to learn more.<br>
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p></p>
 <a name="alpha_index"></a>
 <b><i>Alpha Index</i></b> (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;-&nbsp; &nbsp; 
@@ -2181,8 +2166,7 @@ products if the variable is a vector (e.g. wind).
 </p>
 <p>Click <a href="site/Koh/AlphaIndex.html">here</a> to learn more.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <a name="elliptical_representation"></a> <b><i>Elliptical representation of vector errors</i></b> 
 (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;&nbsp;
@@ -2210,8 +2194,7 @@ error, and <i>ε</i> denotes the degree of preference for that direction.
 </p>
 <p>Click <a href="site/Koh/EllipticalVectorError.html">here</a> to learn more.
 </p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>- - - - - - - - - - -
 </p>
 <b><i>Quantile-based categorical statistics</i></b>&nbsp;
 (<a href="index.html#Jenkner_2008">Jenkner et al., 2008</a>) 
