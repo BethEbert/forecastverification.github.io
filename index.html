@@ -25,13 +25,18 @@
       margin-top: 0;
     }
     #sidebar ul {
-      font-size: 0.8em;
+      font-size: 0.8rem;
+	  line-height: 0.9rem;
       list-style: none;
       padding-left: 0;
     }
     #sidebar li {
       margin: 0.5em 0;
     }
+	#sidebar ul ul {
+	  margin-left: 1em; /* Adjust indent here */
+	  padding-left: 0.5em;
+	}
     #sidebar a {
       text-decoration: none;
       color: #333;
@@ -45,6 +50,10 @@
     }
     h2 {
       border-bottom: 1px solid #ccc;
+      padding-bottom: 0.2em;
+      margin-top: 2em;
+    }
+    h3 {
       padding-bottom: 0.2em;
       margin-top: 2em;
     }
@@ -68,26 +77,34 @@
   <ul>
     <li><a href="#Purpose">What is this website about?</a></li>
     <li><a href="#Definition">What is forecast verification?</a></li>
-    <li><a href="#Why verify?">Why verify?</a></li>
-    <li><a href="#Types">Types of forecasts and verification</a></li>
-    <li><a href="#Goodness">What makes a forecast good?</a></li>
-    <li><a href="#Quality vs value">Forecast quality vs. value</a></li>
-    <li><a href="#Truth">What is truth?</a></li>
-    <li><a href="#Validity">Validity of verification results</a></li>
-    <li><a href="#Pooling vs stratifying">Pooling vs. stratifying results</a></li>
+	<ul>
+      <li><a href="#Why verify?">Why verify?</a></li>
+      <li><a href="#Types">Types of forecasts and verification</a></li>
+      <li><a href="#Goodness">What makes a forecast good?</a></li>
+      <li><a href="#Quality vs value">Forecast quality vs. forecast value</a></li>
+      <li><a href="#Truth">What is truth?</a></li>
+      <li><a href="#Validity">Validity of verification results</a></li>
+      <li><a href="#Pooling vs stratifying">Pooling vs. stratifying results</a></li>
+	</ul>
     <li><a href="#Standard">Standard verification methods</a></li>
-    <li><a href="#Dichotomous">Methods for dichotomous (yes/no) forecasts</a></li>
-    <li><a href="#Multi-category">Methods for multi-category forecasts</a></li>
-    <li><a href="#Continuous">Methods for forecasts of continuous variables</a></li>
-    <li><a href="#Probabilistic">Methods for probabilistic forecasts</a></li>
+	<ul>
+      <li><a href="#Dichotomous">Methods for dichotomous (yes/no) forecasts</a></li>
+      <li><a href="#Multi-category">Methods for multi-category forecasts</a></li>
+      <li><a href="#Continuous">Methods for forecasts of continuous variables</a></li>
+      <li><a href="#Probabilistic">Methods for probabilistic forecasts</a></li>
+	</ul>
     <li><a href="#Diagnostic">Diagnostic verification methods</a></li>
-    <li><a href="#Spatial">Methods for spatial forecasts</a></li>
-    <li><a href="#Ensemble">Methods for probabilistic forecasts, including ensemble prediction systems</a></li>
-    <li><a href="#Rare">Methods for rare events</a></li>
+	<ul>
+      <li><a href="#Spatial">Methods for spatial forecasts</a></li>
+      <li><a href="#Ensemble">Methods for probabilistic & ensemble forecasts</a></li>
+      <li><a href="#Rare">Methods for rare events</a></li>
+	</ul>
     <li><a href="#Other">Other methods</a></li>
     <li><a href="#Datasets">Sample forecast datasets</a></li>
-    <li><a href="#Finley">Finley tornado forecasts</a></li>
-    <li><a href="#POP3">Probability of precipitation forecasts</a></li>
+	<ul>
+      <li><a href="#Finley">Finley tornado forecasts</a></li>
+      <li><a href="#POP3">Probability of precipitation forecasts</a></li>
+ 	</ul>
     <li><a href="#Tools">Freely available verification tools and packages</a></li>
     <li><a href="#FAQs">Some frequently asked questions</a></li>
     <!--<li><a href="#Group">Discussion group</a></li>-->
@@ -284,28 +301,28 @@ essay on what makes a forecast "good" (<a href="index.html#Murphy1993">Murphy,
 <p><b><i>Consistency</i></b> - the degree to which the forecast
 corresponds to the forecaster's best judgement about the situation, based upon
 his/her knowledge base
-<br>
+</p><p>
 <b><i>Quality</i></b> - the degree to which the forecast corresponds
 to what actually happened
-<br>
+</p><p>
 <b><i>Value</i></b> - the degree to which the forecast helps a
 decision maker to realize some incremental economic and/or other benefit
-</p>
+</p><p>
 <p>Since we're interested in forecast verification, let's look a bit closer
 at the forecast <b><i>quality</i></b>. Murphy described nine aspects
 (called "attributes") that contribute to the quality of a forecast. These are:
-</p>
-<p><b>Bias</b> - the correspondence between the mean forecast and mean observation.
-<br>
+</p><p>
+<b>Bias</b> - the correspondence between the mean forecast and mean observation.
+</p><p>
 <b>Association</b> - the strength of the linear relationship between
 the forecasts and observations (for example, the correlation
 coefficient measures this linear relationship)
-<br>
+</p><p>
 <b>Accuracy</b> - the level of agreement between the forecast and the
 truth (as represented by observations). The difference between the
 forecast and the observation is the <i>error</i>. The lower the errors, the
 greater the accuracy.
-<br>
+</p><p>
 <b>Skill</b> - the relative accuracy of the forecast over some
 reference forecast. The reference forecast is generally an unskilled forecast
 such as random chance, persistence (defined as the most recent set of
@@ -313,44 +330,43 @@ observations, "persistence" implies no change in condition), or climatology. Ski
 refers to the increase in accuracy due purely to the "smarts" of the forecast
 system. Weather forecasts may be more accurate simply because the
 weather is easier to forecast -- skill takes this into account.
-<br>
+</p><p>
 <b>Reliability</b> - the average agreement between the forecast values
 and the observed values. If all forecasts are considered together, then
 the <i>overall reliability</i> is the same as the <i>bias</i>. If the
 forecasts are stratified into different ranges or categories, then the
 reliability is the same as the <i>conditional bias</i>, i.e., it has a different
 value for each category.
-<br>
+</p><p>
 <b>Resolution</b> - the ability of the forecast to sort or resolve
 the set of events into subsets with different frequency distributions.
 This means that the distribution of outcomes when "A" was forecast is
 different from the distribution of outcomes when "B" is forecast. Even if the
 forecasts are wrong, the forecast system has resolution if it can successfully
 separate one type of outcome from another.
-<br>
+</p><p>
 <b>Sharpness</b> - the tendency of the forecast to predict extreme
 values. To use a counter-example, a forecast of "climatology" has no sharpness.
 Sharpness is a property of the forecast only, and like resolution, a forecast
 can have this attribute even if it's wrong (in this case it would have
 poor reliability).
-<br>
+</p><p>
 <b>Discrimination</b> - ability of the forecast to discriminate among
 observations, that is, to have a higher prediction frequency for an
 outcome whenever that outcome occurs.
-<br>
+</p><p>
 <b>Uncertainty</b> - the variability of the observations. The greater
 the uncertainty, the more difficult the forecast will tend to be.
-</p>
-<p>Traditionally, forecast verification has emphasized <i>accuracy</i>
+</p><p>
+Traditionally, forecast verification has emphasized <i>accuracy</i>
 and <i>skill</i>. It's important to note that the other attributes of
 forecast performance also have a strong influence on the <i>value</i> of the
 forecast.
 </p>
 
-<h2 id="Quality vs value">Forecast quality vs. value</h2>
+<h2 id="Quality vs value">Forecast quality vs. forecast value</h2>
 Forecast quality is not the same as forecast value. A forecast has high
-<i>quality</i>
-if it predicts the observed conditions well according to some objective
+<i>quality</i> if it predicts the observed conditions well according to some objective
 or subjective criteria. It has <i>value</i> if it helps the user to make
 a better decision.
 <p>Imagine a situation in which a high resolution numerical weather
@@ -359,24 +375,24 @@ particular region, and thunderstorms are indeed observed in the region but not i
 the particular spots suggested by the model. According to most standard
 verification measures this forecast would have poor quality, yet it
 might be very valuable to the forecaster in issuing a public weather forecast.
-</p>
-<p>An example of a forecast with high quality but little value is a
+</p><p>
+An example of a forecast with high quality but little value is a
 forecast of clear skies over the Sahara Desert during the dry season.
-</p>
-<p>When the cost of a missed event is high, the deliberate overforecasting
+</p><p>
+When the cost of a missed event is high, the deliberate overforecasting
 of a rare event may be justified, even though a large number of false
 alarms may also result. An example of such a circumstance is the occurence of
 fog at airports. In this case quadratic scoring rules (those involving
 squared errors) will tend to penalise such forecasts harshly, and a
 positively oriented score such as "hit rate" may be more useful.
-</p>
-<p><a href="index.html#Katz_and_Murphy_1997">Katz and Murphy (1997)</a>, 
+</p><p>
+<a href="index.html#Katz_and_Murphy_1997">Katz and Murphy (1997)</a>, 
 <a href="index.html#Thornes_and_Stephenson_2001">Thornes and Stephenson (2001)</a> 
 and <a href="index.html#Wilks_2001">Wilks (2001)</a>
 describe methods for assessing the value of weather forecasts. 
 The <a href="index.html#relative_value">relative value plot</a> 
 is sometimes used as a verification diagnostic.
-<br></p>
+</p>
 
 <h2 id="Truth">What is truth?</h2>
 The "truth" data that we use to verify a forecasts generally comes from
@@ -403,7 +419,7 @@ The verification results are naturally more trustworthy when the quantity
 and quality of the verification data are high. It is always a good idea
 to put some error bounds on the verification results themselves. It is
 especially important (a) for rare events where the sample size is typically
-small, (b) when the data shows a lot of variability, and (c)when you
+small, (b) when the data shows a lot of variability, and (c) when you
 want to know whether one forecast product is significantly better (in a
 statistical sense) than another.
 <p>The usual approach is to determine confidence intervals for the
@@ -489,19 +505,15 @@ no), called the <i>joint distribution</i>, are:
 are given on the lower and right sides of the contingency table, and
 are called the <i>marginal distribution</i>.
 </p>
-<p><a name="Contingency_table"></a><br>
-&nbsp;
-</p>
+<a name="Contingency_table"></a><br>
 <table summary="Two by two contingency table of forecasts and observations" width="468" height="180">
   <caption><b>Contingency Table</b></caption> <tbody>
     <tr valign="CENTER" align="center">
       <td><b>&nbsp;</b></td>
       <td><b>&nbsp;</b></td>
-      <td width="140"><br>
-      </td>
+      <td width="140"><br></td>
       <td width="140" align="left">&nbsp;Observed</td>
-      <td width="140"><br>
-      </td>
+      <td width="140"><br></td>
     </tr>
     <tr valign="CENTER" align="center">
       <td>&nbsp;</td>
@@ -533,17 +545,16 @@ are called the <i>marginal distribution</i>.
     </tr>
   </tbody>
 </table>
+<br>
 <p>The contingency table is a useful way to see what types of errors are
 being made. A perfect forecast system would produce only
 <i>hits</i> and <i>correct negatives</i>, and no <i>misses</i> or <i>false alarms</i>.
-</p>
-<p>A large variety of <i>categorical statistics</i> are computed from the
+</p><p>
+A large variety of <i>categorical statistics</i> are computed from the
 elements in the contingency table to describe particular aspects of forecast
 performance. We will illustrate these statistics using a (made-up) example.
 Suppose a year's worth of official daily rain forecasts and
 observations produced the following contingency table:
-<br>
-&nbsp;
 </p>
 <table summary="Sample contingency table for made-up rainfall data" width="300" height="180">
   <tbody>
@@ -586,6 +597,7 @@ observations produced the following contingency table:
     </tr>
   </tbody>
 </table>
+<br>
 <p>Categorical statistics that can be computed from the yes/no contingency
 table are given below. Sometimes these scores are known by alternate names
 shown in parentheses.
@@ -936,6 +948,7 @@ contingency table" width="600" height="100">
     </tr>
   </tbody>
 </table>
+<br>
 <p>In this table <i>n(F<sub>i</sub>,O<sub>j</sub>)</i> denotes the number
 of forecasts in category <i>i</i> that had observations in category <i>j</i>,
 <i>N(F<sub>i</sub>)</i> denotes the total number of forecasts in category
@@ -1061,15 +1074,11 @@ of the forecasts differ from the values of the observations. The continuous
 verification methods and statistics will be demonstrated on a sample data
 set of 10 temperature forecasts taken from 
 <a href="index.html#Stanski_et_al.">Stanski et al. (1989)</a>:
-<br>
-&nbsp;
-<br>
-&nbsp;
-</p>
-<table summary="Sample data set of ten temperature forecasts taken from Stanski et al (1989)" width="500">
+</p><br>
+<table summary="Sample data set of ten temperature forecasts taken from Stanski et al (1989)" width="600">
   <tbody>
     <tr align="center">
-      <td width="35" align="left">Day</td>
+      <td width="150" align="left">Day</td>
       <td>1</td>
       <td>2</td>
       <td>3</td>
@@ -1109,14 +1118,14 @@ set of 10 temperature forecasts taken from
     </tr>
   </tbody>
 </table>
+<br>
 <p>Verification of continous forecasts often includes some exploratory
 plots such as scatter plots and box plots, as well as various summary scores.
 </p>
 <p><a name="scatterplot"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Scatter plot -</i></b> Plots the forecast values against the observed
-values.&nbsp;
-<img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212" align="bottom">
+<p><b><i>Scatter plot -</i></b> Plots the forecast values against the observed values.&nbsp;
+<img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212"  vspace="3" hspace="3" align="right">
 </p>
 <p><i><b>Answers the question: </b>How well did the forecast values correspond
 to the observed values?</i>
@@ -1124,9 +1133,9 @@ to the observed values?</i>
 <p><b>Characteristics:</b> Good first look at correspondence between forecast
 and observations. An accurate forecast will have points on or near the diagonal.
 </p>
-<p><img src="site/error_scatterplot.gif" alt="error scatterplots" width="323" height="157" align="texttop">
-Scatter plots of the error can reveal relationships between the observed or
-forecast values and the errors.
+<p>Scatter plots of the error can reveal relationships between the observed or
+forecast values and the errors.&nbsp;
+<img src="site/error_scatterplot.gif" alt="error scatterplots" width="323" height="157" align="texttop">
 </p>
 <p><a name="box_plot"></a>- - - - - - - - - - -
 </p>
@@ -1228,7 +1237,8 @@ following Murphy (1987). Units of <i>MSE</i> are the square of the basic units.
 <p><a name="LEPS"></a>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/LEPS.html">Linear error in probability space</a> (LEPS)</i></b> -&nbsp;
-<img src="site/LEPS.gif" alt="Equation for linear errorin probability space" width="248" height="47" align="middle"><img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" vspace="3" hspace="3" height="243" align="right">
+<img src="site/LEPS.gif" alt="Equation for linear error in probability space" width="248" height="47" align="middle">
+<img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" vspace="3" hspace="3" height="243" align="right">
 </p>
 <p>Measures the error in probability space as opposed to measurement space,
 where <i>CDFo()</i> is the cumulative probability density function of
@@ -1912,7 +1922,7 @@ displacement vector length and the root mean square error of morphed forecast
 and observation (bottom right – top left).<br>
 <p>
 
-<h2 id="Ensemble">Methods for probabilistic forecasts, including ensemble prediction systems</h2>
+<h2 id="Ensemble">Methods for probabilistic & ensemble forecasts</h2>
 Wilson method for EPS verification (<a href="index.html#Wilson_et_al_1999">Wilson et al., 1999</a>)
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -2008,41 +2018,10 @@ smaller values of the score are better. The minimum value of the score (zero) is
 if a probability of 100% is assigned to the actual outcome. If a probability of zero is
 assigned to the actual outcome the logarithmic scoring rule is infinite. 
 Click <a href="site/Ignorance.html">here</a> to learn more.<br>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </p>
   
 <h2 id="Rare">Methods for rare events</h2>
-<p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" vspace="2" height="237" align="right">
-<b><i><a href="site/Hewson/DeterministicLimit.html">
-Deterministic limit</a></i></b> <a href="index.html#Hewson2007">(Hewson, 2007)</a></p>
-<p><a><i><b>Answers the question:</b> What is the length of time into the forecast 
-in which the forecast is more likely to be correct than incorrect?</i>
-</a></p>
-<p><a>The 'deterministic limit' is defined, for
-categorical forecasts of a pre-defined rare meteorological event, to
-simply be the point ahead of issue time at which, across the
-population, the number of misses plus false alarms equals the number of
-hits (i.e. </a><a href="index.html#CSI">critical success index</a>
-=0.5). A hypothetical example of an accuracy statement that might thus
-arise would be: 'The deterministic limit for predicting a windstorm,
-with gusts in excess of 60 kts at one or more low-lying inland stations
-in NW Europe, is 2.1 days'. The base rate (or event frequency) should
-also be disclosed. Recalibration of the forecast is often necessary for
-useful deterministic limit measures to be realised. </p>
-<p>As they provide a clear measure of capability,
-deterministic limit values for various parameters may in due course be
-used as year-on-year performance indicators, and also to provide
-succinct guidelines for warning service provision. They could also be
-used as the cut-off point to switch from deterministic to probabilistic
-guidance. In turn this may help elevate the hitherto muted enthusiasm
-shown, by some customers, for probabilistic forecasts.
-</p>
-<p>Click <a href="site/Hewson/DeterministicLimit.html">here</a> to learn more.<br>
-</p>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</p>
+
 <a name="Extreme_dependence"></a>
 <p><b><i>Extreme dependency score</i></b> -
 <img src="site/EDS.gif" alt="extreme dependency score equation" width="319" height="95" align="absmiddle">
@@ -2157,7 +2136,36 @@ expression is identical to that for the coefficient of determination
 </p>
 <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" vspace="2" height="237" align="right">
+<b><i><a href="site/Hewson/DeterministicLimit.html">
+Deterministic limit</a></i></b> <a href="index.html#Hewson2007">(Hewson, 2007)</a></p>
+<p><a><i><b>Answers the question:</b> What is the length of time into the forecast 
+in which the forecast is more likely to be correct than incorrect?</i>
+</a></p>
+<p><a>The 'deterministic limit' is defined, for
+categorical forecasts of a pre-defined rare meteorological event, to
+simply be the point ahead of issue time at which, across the
+population, the number of misses plus false alarms equals the number of
+hits (i.e. </a><a href="index.html#CSI">critical success index</a>
+=0.5). A hypothetical example of an accuracy statement that might thus
+arise would be: 'The deterministic limit for predicting a windstorm,
+with gusts in excess of 60 kts at one or more low-lying inland stations
+in NW Europe, is 2.1 days'. The base rate (or event frequency) should
+also be disclosed. Recalibration of the forecast is often necessary for
+useful deterministic limit measures to be realised. </p>
+<p>As they provide a clear measure of capability,
+deterministic limit values for various parameters may in due course be
+used as year-on-year performance indicators, and also to provide
+succinct guidelines for warning service provision. They could also be
+used as the cut-off point to switch from deterministic to probabilistic
+guidance. In turn this may help elevate the hitherto muted enthusiasm
+shown, by some customers, for probabilistic forecasts.
 </p>
+<p>Click <a href="site/Hewson/DeterministicLimit.html">here</a> to learn more.<br>
+</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</p></p>
 <a name="alpha_index"></a>
 <b><i>Alpha Index</i></b> (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;-&nbsp; &nbsp; 
 <img style="width: 203px; height: 56px;" alt="Koh's alpha index" src="site/AlphaIndex.gif" align="middle">
@@ -2228,11 +2236,9 @@ means of appropriate summary measures.
 </p>
   
 <h2 id="Datasets">Sample forecast datasets</h2>
-A few sample datasets are provided here as worked examples of various types of verification methods.
 <!-- IT WOULD BE GOOD TO ADD NOWCASTING, SEASONAL, & CLIMATE EXAMPLES -->
-
   
-<h2 id="Finley">Finley tornado forecasts</h2>
+<h3 id="Finley"><i>Finley tornado forecasts</i></h3>
 This is a classic example used in many textbooks and talks on forecast
 verification to illustrate the characteristics of the various categorical verification scores.
 <p>In March 1884 Sergeant John Finley initiated twice daily tornado forecasts
@@ -2294,7 +2300,7 @@ different categorical scores rate the Finley (1884) forecasts. <br>
 <br>
 </p>
   
-<h2 id="POP3">Probability of precipitation forecasts</h2>
+<h3 id="POP3"><i>Probability of precipitation forecasts</i></h3>
 <img alt="Tampere, Finland" src="site/TampereRain_small.jpg" style="border: 0px solid ; width: 497px; height: 116px;" align="right"></a>
 <i>Probability of precipitation forecasts</i></h3>
 24-hour and 48-hour forecasts of probability of precipitation were made by the Finnish
