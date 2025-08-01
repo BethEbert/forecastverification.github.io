@@ -3,6 +3,7 @@
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Verification FAQ</title>
 <link rel = "stylesheet" href="default.css">
   <style>
     body {
@@ -19,7 +20,7 @@
       background-color: #f8f8f8;
       border-right: 1px solid #ddd;
       padding: 1em;
-      overflow-y: auto;
+      overflow-y: auto;,
     }
     #sidebar h2 {
       font-size: 1.1em;
@@ -91,43 +92,43 @@
   <h2>Navigation</h2>
   <ul>
     <li><a href="#Purpose">What is this website about?</a></li>
-    <li><a href="#Definition">What is forecast verification?</a></li>
+    <li><a href="#Definition">What is forecast verification?</a>
 	<ul>
-      <li><a href="#Why verify?">Why verify?</a></li>
+      <li><a href="#Why">Why verify?</a></li>
       <li><a href="#Types">Types of forecasts and verification</a></li>
       <li><a href="#Goodness">What makes a forecast good?</a></li>
-      <li><a href="#Quality vs value">Forecast quality vs. forecast value</a></li>
+      <li><a href="#Quality_vs_value">Forecast quality vs. forecast value</a></li>
       <li><a href="#Truth">What is truth?</a></li>
       <li><a href="#Validity">Validity of verification results</a></li>
-      <li><a href="#Pooling vs stratifying">Pooling vs. stratifying results</a></li>
-	</ul>
-    <li><a href="#Standard">Standard verification methods</a></li>
+      <li><a href="#Pooling_vs_stratifying">Pooling vs. stratifying results</a></li>
+	</ul></li>
+    <li><a href="#Standard">Standard verification methods</a>
 	<ul>
       <li><a href="#Dichotomous">Methods for dichotomous (yes/no) forecasts</a></li>
       <li><a href="#Multi-category">Methods for multi-category forecasts</a></li>
       <li><a href="#Continuous">Methods for forecasts of continuous variables</a></li>
       <li><a href="#Probabilistic">Methods for probabilistic forecasts</a></li>
-	</ul>
-    <li><a href="#Diagnostic">Diagnostic verification methods</a></li>
+	</ul></li>
+    <li><a href="#Diagnostic">Diagnostic verification methods</a>
 	<ul>
       <li><a href="#Spatial">Methods for spatial forecasts</a></li>
       <li><a href="#Ensemble">Methods for probabilistic & ensemble forecasts</a></li>
       <li><a href="#Rare">Methods for rare events</a></li>
-	</ul>
+	</ul></li>
     <li><a href="#Other">Other methods</a></li>
-    <li><a href="#Datasets">Sample forecast datasets</a></li>
+    <li><a href="#Datasets">Sample forecast datasets</a>
 	<ul>
       <li><a href="#Finley">Finley tornado forecasts</a></li>
       <li><a href="#POP3">Probability of precipitation forecasts</a></li>
- 	</ul>
+ 	</ul></li>
     <li><a href="#Tools">Freely available verification tools and packages</a></li>
     <li><a href="#FAQs">Some frequently asked questions</a></li>
     <!--<li><a href="#Group">Discussion group</a></li>-->
-    <li><a href="#References">References</a></li>
+    <li><a href="#References">References</a>
 	<ul>
-      <li><a href="#Other sites">Verification websites</a></li>
+      <li><a href="#Other_sites">Verification websites</a></li>
       <li><a href="#Reading">References and further reading</a></li>
-	</ul>
+	</ul></li>
     <li><a href="#Contributors">Contributors to this site</a></li>
     <!--<li><a href="#Art">Verification and art</a></li>-->
  </ul>
@@ -137,14 +138,14 @@
 
 <!-- Logos -->
 <a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research">
-<img alt="JWGFVR logo" src="site/JWGFVR-logo-250.png" style="height: 90px;" vspace="2" border="0"></a>
+<img alt="JWGFVR logo" src="site/JWGFVR-logo-250.png" style="height: 90px;"></a>
 <a href="https://community.wmo.int/en/activity-areas/wwrp">
-<img alt="WWRP logo" src="site/WWRPlogo.gif" style="height: 90px;" vspace="2" border="0"></a>
+<img alt="WWRP logo" src="site/WWRPlogo.gif" style="height: 90px;"></a>
 <a href="https://www.wcrp-climate.org/">
-<img alt="WCRP logo" src="site/WCRP_logo.jpg" style="height: 90px;" vspace="2" border="0"></a>
+<img alt="WCRP logo" src="site/WCRP_logo.jpg" style="height: 90px;"></a>
 <h3 class="green"><a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research"><i>
 WWRP/WGNE Joint Working Group on Forecast Verification Research</i></a></h3>
-<hr width="100%">
+<!--<hr>-->
 
 <!-- UNCOMMENT AND USE THIS SECTION TO PROMOTE NEWS, ETC. -->
 <!--
@@ -152,9 +153,9 @@ WWRP/WGNE Joint Working Group on Forecast Verification Research</i></a></h3>
 More scores:<br>
 &nbsp;&nbsp;&nbsp;<a href="#Extreme_dependence">Extreme dependence family of scores for binary rare events</a><br>
 &nbsp;&nbsp;&nbsp;<a href="#SEEPS">Stable equitable error in probability space (SEEPS)</a><br>
-<hr width="100%">
+<hr>
 <b><i>Upcoming meetings:</i></b><br> 
-<hr width="100%">
+<hr>
 -->
 
 <h2 id="Purpose">What is this website about?</h2>
@@ -193,7 +194,7 @@ right?") or quantitative ("how accurate was it?"). In either case it should give
 you information about the nature of the forecast errors.
 </p>
 
-<h2 id="Why verify?">Why verify?</h2>
+<h2 id="Why">Why verify?</h2>
 
 A forecast is like an experiment -- given a set of conditions, you make
 a hypothesis that a certain outcome will occur. You wouldn't consider
@@ -222,7 +223,7 @@ scheme for forecasts</a>. It is often possible to convert from one type
 of forecast to another simply by rearranging, categorizing, or
 thresholding the data.
 <br>&nbsp;
-<table summary="Types of forecasts and verification methods that are appropriate" border="0">
+<table>
   <caption>&nbsp;</caption> <tbody>
     <tr>
       <td><b>Nature of forecast:</b></td>
@@ -393,7 +394,7 @@ forecast performance also have a strong influence on the <i>value</i> of the
 forecast.</li>
 </ul>
 
-<h2 id="Quality vs value">Forecast quality vs. forecast value</h2>
+<h2 id="Quality_vs_value">Forecast quality vs. forecast value</h2>
 
 Forecast quality is not the same as forecast value. A forecast has high
 <i>quality</i> if it predicts the observed conditions well according to some objective
@@ -465,7 +466,7 @@ on the score). Some good meteorological references on this subject are
 <a href="index.html#Kane_and_Brown_2000">Kane and Brown (2000)</a>.
 </p>
 
-<h2 id="Pooling vs stratifying">Pooling vs. stratifying results</h2>
+<h2 id="Pooling_vs_stratifying">Pooling vs. stratifying results</h2>
 
 To get reliable verification statistics, a large number of forecast/observations pairs 
 (samples) may be pooled over time and/or space. The larger the number of samples, 
@@ -497,8 +498,8 @@ fashioned visual, or "eyeball", method: look at the forecast and observations
 side by side and use human judgment to discern the forecast errors. Common
 ways to present data are as time series and maps.
 </p><br>
-<img src="site/timeseries.gif" alt="Time series of temperature forecasts and observations" width="372" height="178" align="left">
-<img src="site/DWDmaps.gif" alt="Rainfall forecast and observations" width="320" hspace="25" height="152">
+<img src="site/timeseries.gif" alt="Time series of temperature forecasts and observations" width="372" height="178" style="float: left;">
+<img src="site/DWDmaps.gif" alt="Rainfall forecast and observations" width="320" height="152" style="margin: 0px 25px 0px 25px;"  >
 <br>
 <p>
 The eyeball method is great if you only have a few forecasts, or you
@@ -573,7 +574,7 @@ are called the <i>marginal distribution</i>.
       <td style="background-color: #99ff99;"><em>forecast no</em></td>
     </tr>
     <tr>
-      <th colspan="2" style="text-align: left;">Total</th>
+      <th colspan="2" style="text-align: right;">Total</th>
       <td style="background-color: #99ff99;"><em>observed yes</em></td>
       <td style="background-color: #99ff99;"><em>observed no</em></td>
       <td style="background-color: #99ff99;"><em>total</em></td>
@@ -610,21 +611,21 @@ observations produced the following contingency table:
     <tr>
       <th rowspan="2" style="text-align: left;">Forecast</th>
       <th>yes</th>
-      <td style="background-color: #33ff33;"><em>82</em></td>
-      <td style="background-color: #33ff33;"><em>38</em></td>
-      <td style="background-color: #99ff99;"><em>120</em></td>
+      <td style="background-color: #33ff33;">82</td>
+      <td style="background-color: #33ff33;">38</td>
+      <td style="background-color: #99ff99;">120</td>
     </tr>
     <tr>
       <th>no</th>
-      <td style="background-color: #33ff33;"><em>23</em></td>
-      <td style="background-color: #33ff33;"><em>222</em></td>
-      <td style="background-color: #99ff99;"><em>245</em></td>
+      <td style="background-color: #33ff33;">23</td>
+      <td style="background-color: #33ff33;">222</td>
+      <td style="background-color: #99ff99;">245</td>
     </tr>
     <tr>
-      <th colspan="2" style="text-align: left;">Total</th>
-      <td style="background-color: #99ff99;"><em>105</em></td>
-      <td style="background-color: #99ff99;"><em>260</em></td>
-      <td style="background-color: #99ff99;"><em>365</em></td>
+      <th colspan="2" style="text-align: right;">Total</th>
+      <td style="background-color: #99ff99;">105</td>
+      <td style="background-color: #99ff99;">260</td>
+      <td style="background-color: #99ff99;">365</td>
     </tr>
   </tbody>
 </table>
@@ -634,10 +635,13 @@ table are given below. Sometimes these scores are known by alternate names
 shown in parentheses.
 </p><p>
 <a id="ACC"></a>- - - - - - - - - - -
-</p><p>
-<b><i>Accuracy (fraction correct)</i></b> -&nbsp;
-<img src="site/Accuracy.gif" alt="Equation for accuracy" width="267" height="55" align="middle">
 </p>
+<div style="display: flex; align-items: center;">
+  <p>
+    <b><i>Accuracy (fraction correct)</i></b> -&nbsp;
+  </p>
+  <img src="site/Accuracy.gif" alt="Description" width="267" height="55">
+</div>
 <p><b>Answers the question:</b> <i>Overall, what fraction of the forecasts were correct?</i>
 </p>
 <p><b>Range:</b> 0 to 1.&nbsp; <b>Perfect score:</b> 1.
@@ -818,7 +822,7 @@ Can be expressed in a form similar to the <i>ETS</i> except the <i>hits<sub>rand
 term is unbiased. See <a href="index.html#Woodcock_1976">Woodcock (1976)</a>
 for a comparison of <i>HK</i> with other scores.
 </p>
-<p>In the example above, <i>HK</i> = 82 / (82+23) - 38 / (38+222) = 0.63
+<p class="green">In the example above, <i>HK</i> = 82 / (82+23) - 38 / (38+222) = 0.63
 </p>
 <p><a id="HSS"></a>- - - - - - - - - - -
 </p>
@@ -842,7 +846,7 @@ to compare to - it may be better to use climatology (long-term average
 value) or persistence (forecast = most recent observation, i.e., no change) or
 some other standard.
 </p>
-<p class="green>In the example above, <i>HSS</i> = 0.61
+<p class="green">In the example above, <i>HSS</i> = 0.61
 </p>
 <p><a id="OR"></a>- - - - - - - - - - -
 </p>
@@ -870,7 +874,7 @@ ratio of the <i>probability</i> of making a hit (<i>hits / # forecasts</i>) to t
 since both of those can depend on the climatological frequency (i.e.,
 the prior probability) of the event.
 </p>
-<p class="green>In the example above, <i>OR</i> = (82 x 222) / (23 x 38) = 20.8, 
+<p class="green">In the example above, <i>OR</i> = (82 x 222) / (23 x 38) = 20.8, 
 indicating that the odds of a "yes" prediction being correct are over 20 times 
 greater than the odds of a "yes" forecast being incorrect.
 </p>
@@ -888,7 +892,7 @@ over random chance?</i>
 the threshold chosen to separate "yes" and "no"), so is difficult to hedge.
 See <a href="index.html#Stephenson_2000">Stephenson (2000)</a> for more information.
 </p>
-<p class="green>In the example above, 
+<p class="green">In the example above, 
 <i>ORSS</i> = [(82 x 222)-(23 x 38)] / [(82 x 222)+(23 x 38)] = 0.91
 </p>
 
@@ -1119,9 +1123,9 @@ set of 10 temperature forecasts taken from
       <th>8</th>
       <th>9</th>
       <th>10</th>
+	</tr>
   </thead>
   <tbody>
-    </tr>
     <tr style="background-color: #99ff99; text-align: center;">
       <th style="background-color: #ffffff; text-align: left;">Forecast, <i>F<sub>i </sub></i>(C)</th>
       <td>5</td>
@@ -1157,7 +1161,7 @@ plots such as scatter plots and box plots, as well as various summary scores.
 <p><a id="scatterplot"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Scatter plot -</i></b> Plots the forecast values against the observed values.&nbsp;
-<img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212"  vspace="3" hspace="3" align="right">
+<img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212" style="margin: 3px 3px 3px 3px;" "align="right">
 </p>
 <p><b>Answers the question: </b><i>How well did the forecast values correspond
 to the observed values?</i>
@@ -1197,7 +1201,7 @@ bias. Does not measure the magnitude of the errors. Does not measure the
 correspondence between forecasts and observations, i.e., it is possible
 to get a perfect score for a bad forecast if there are compensating errors.
 </p>
-<p class="green>In the example above, <i>Mean Error</i> = 0.8C
+<p class="green">In the example above, <i>Mean Error</i> = 0.8C
 </p>
 <p><a id="multiplicative_bias"></a>- - - - - - - - - - -
 </p>
@@ -1215,7 +1219,7 @@ the errors. Does not measure the correspondence between forecasts and observatio
 i.e., it is possible to get a perfect score for a bad forecast if there
 are compensating errors.
 </p>
-<p class="green>In the example above, <i>Bias</i> = 1.06
+<p class="green">In the example above, <i>Bias</i> = 1.06
 </p>
 <p><a id="MAE"></a>- - - - - - - - - - -
 </p>
@@ -1229,7 +1233,7 @@ are compensating errors.
 <p><b>Characteristics:</b> Simple, familiar. Does not indicate the direction
 of the deviations.
 </p>
-<p class="green>In the example above, <i>MAE</i> = 2.8 C
+<p class="green">In the example above, <i>MAE</i> = 2.8 C
 </p>
 <p><a id="RMS"></a>- - - - - - - - - - -
 </p>
@@ -1246,7 +1250,7 @@ of the deviations. The <i>RMSE</i> puts greater influence on large errors
 than smaller errors, which may be a good things if large errors are especially
 undesirable, but may also encourage conservative forecasting.
 </p>
-<p class="green>In the example above, <i>RMSE</i> = 3.2 C
+<p class="green">In the example above, <i>RMSE</i> = 3.2 C
 </p>
 <p>The <a href="index.html#RMSF">root mean square factor</a> is similar to <i>RMSE</i>,
 but gives a multiplicative error instead of an additive error.
@@ -1263,13 +1267,13 @@ but gives a multiplicative error instead of an additive error.
 <p><b>Characteristics:</b> Can be decomposed into component error sources
 following Murphy (1987). Units of <i>MSE</i> are the square of the basic units.
 </p>
-<p class="green>In the example above, <i>MSE</i> = 10 degrees squared
+<p class="green">In the example above, <i>MSE</i> = 10 degrees squared
 </p>
 <p><a id="LEPS"></a>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/LEPS.html">Linear error in probability space</a> (LEPS)</i></b> -&nbsp;
 <img src="site/LEPS.gif" alt="Equation for linear error in probability space" width="248" height="47" align="middle">
-<img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" vspace="3" hspace="3" height="243" align="right">
+<img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" height="243" style="margin: 3px 3px 3px 3px;" align="right">
 </p>
 <p>Measures the error in probability space as opposed to measurement space,
 where <i>CDFo()</i> is the cumulative probability density function of
@@ -1284,7 +1288,7 @@ derived an improved version of the LEPS score that is equitable and
 does not "bend back" (give better scores for worse forecasts near the extremes):
 <img src="site/LEPSrevised.gif" alt="Revised LEPS score" width="616" height="33">.
 </p>
-<p class="green>In the example above, suppose the climatological
+<p class="green">In the example above, suppose the climatological
 temperature is normally distributed with a mean of 14 C and variance of
 50 C. Then according to the first expression, LEPS=0.106.
 </p>
@@ -1292,7 +1296,7 @@ temperature is normally distributed with a mean of 14 C and variance of
 </p>
 <p><b><i>Stable equitable error in probability space (SEEPS)</i></b> -&nbsp;
 <img src="site/SEEPS.gif" alt="Equation for stable equitable error in probability space" width="211" height="50" align="middle">
-<img src="site/SEEPSdiagram.gif" alt="SEEPS diagram" width="288" vspace="3" hspace="3" height="282" align="right">
+<img src="site/SEEPSdiagram.gif" alt="SEEPS diagram" width="288" height="282" style="margin: 3px 3px 3px 3px;" align="right">
 <br>where <i>n</i>(<i>F<sub>i</sub>,O<sub>j</sub></i>) is the joint occurrence
 of forecast category <i>i</i> and observed category <i>j</i> in
 the 3x3 contingency table, and the scoring matrix is given by
@@ -1333,7 +1337,7 @@ scatter plot are to a straight line. Does not take forecast bias into account --
 it is possible for a forecast with large errors to still have a good
 correlation coefficient with the observations. Sensitive to outliers.
 </p>
-<p class="green>In the example above, <i>r</i> = 0.914
+<p class="green">In the example above, <i>r</i> = 0.914
 </p>
 <p><a id="AC"></a>- - - - - - - - - - -
 </p>
@@ -1354,7 +1358,7 @@ so a good anomaly correlation does not guarantee accurate forecasts. Both
 forms of the equation are in common use -- see <a href="index.html#Jolliffe_and_Stephenson_2012">Jolliffe
 and Stephenson (2012)</a> or <a href="index.html#Wilks">Wilks (2011)</a> for further discussion.
 </p>
-<p class="green>In the example above, if the climatological temperature is 14 C, 
+<p class="green">In the example above, if the climatological temperature is 14 C, 
 then <i>AC</i> = 0.904. <i>AC</i> is more often used in spatial verification.
 </p>
 <p><a id="S1"></a>- - - - - - - - - - -
@@ -1604,7 +1608,7 @@ expected expense, with climatology as the reference forecast. Because the
 cost/loss ratio is different for different users of forecasts, the value is
 generally plotted as a function of <i>C/L</i>.
 </p>
-<p><img src="site/value_EPS.gif" alt="relative value for ensemble prediction system" width="353" height="265" border="0" align="right">
+<p><img src="site/value_EPS.gif" alt="relative value for ensemble prediction system" width="353" height="265" align="right">
 Like <a href="index.html#ROC">ROC</a>,
 it gives information that can be used in decision making. When applied
 to a probabilistic forecasts system (for example, an ensemble
@@ -1636,7 +1640,7 @@ are standard diagnostic verification methods.
 developed scientific and diagnostic methods, and relies heavily on references and
 links to other sites with greater detail.
 </p>
-<p style="color: blue;><b><i>This is also a place to promote new
+<p style="color: blue;"><b><i>This is also a place to promote new
 verification techniques. If you are working in this area, then you are encouraged to
 share your methods via this web site.</i></b>
 </p>
@@ -1657,7 +1661,7 @@ Intensity-scale verification approach</a></b></i> (<a href="index.html#Casati200
 </p>
 <p><b>Answers the question:</b> <i>How does the skill of spatial precipitation forecasts 
 depend on both the scale of the forecast error and the intensity of the precipitation events?
-<img alt="MSE skill for intensity-scale verification method" src="site/IS_MSEskill.gif" width="444" vspace="5" hspace="5" height="239" align="right"></i><br>
+<img alt="MSE skill for intensity-scale verification method" src="site/IS_MSEskill.gif" width="444" height="239" style="margin: 5px 5px 5px 5px;" align="right"></i><br>
 </p>
 <p>The intensity-scale verification approach bridges
 traditional categorical binary verification, which provides information
@@ -1699,7 +1703,7 @@ in the local neighborhood of the observations.
 <p>- - - - - - - - - - -
 </p>
 <a id="FSS"></a>
-<img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px;" vspace="2" align="right">
+<img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px; margin: 2px 2px 2px 2px;" align="right">
 <p><i><b>Fractions skill score</b></i> (<a href="index.html#Roberts_Lean_2008">Roberts and Lean, 2008</a>)<br>
 </p>
 <p><b>Answers the question: </b><i>What are
@@ -1769,7 +1773,7 @@ comparison against ensemble prediction systems or other probabilistic forecasts.
 </p>
 <p>- - - - - - - - - - -
 </p>
-<p><i><b>Neighborhood verification framework</i></b> - 
+<p><i><b>Neighborhood verification framework</b></i> - 
 12 neighborhood (a.k.a. fuzzy verification) methods combined into one
 framework (<a href="index.html#Ebert_2008">Ebert, 2008</a>)<br>
 </p>
@@ -1803,7 +1807,7 @@ CRA (entity-based) verification</a></i></b>
 What is the location error of the (spatial) forecast, and how does the total error break
 down into components due to incorrect location, volume, and fine scale structure?</i>
 <br>
-<img src="site/CRA_entities0.gif" alt="CRA entities" width="260" vspace="5" hspace="5" height="111" align="right"><br>
+<img src="site/CRA_entities0.gif" alt="CRA entities" width="260" height="111" style="margin: 5px 5px 5px 5px;" align="right"><br>
 This object-oriented method verifies the properties of spatial forecasts of <i>entities</i>,
 where an entity is anything that can be defined by a closed contour. Some
 examples of entities, or blobs, are contiguous rain areas (CRAs, for which
@@ -1827,7 +1831,7 @@ the forecast. This event verification can be useful for monitoring forecast perf
 <p><b><i>Method for Object-based Diagnostic Evaluation (MODE)</i></b> 
 (<a href="index.html#Brown_et_al_2004">Brown et al.,2004</a>; 
  <a href="index.html#Davis_et_al_2006a">Davis et al., 2006</a>)
-<img src="site/MODE.gif" alt="MODE objects" width="236" hspace="5" height="209" align="right"><br>
+<img src="site/MODE.gif" alt="MODE objects" width="236" height="209" style="margin: 5px 5px 5px 5px;" align="right"><br>
 </p>
 <p><b>Answers the question:</b><i> How similar are the forecast objects to the observed
  objects according to a variety of descriptive criteria ?</i></p>
@@ -2020,7 +2024,7 @@ outcome occurring then if the <i>j<sup>th</sup></i> outcome is the
 one which actually occurs the score for this particular
 forecast-realization pair is given by</p>
 <p style="text-align: center;">&nbsp;IGN = -log<small><sub>2</sub></small> <i>f<sub>j</sub></i>
-</p>
+</p><p>
 As defined above, with a negative sign, the logarithmic score cannot be negative and
 smaller values of the score are better. The minimum value of the score (zero) is obtained
 if a probability of 100% is assigned to the actual outcome. If a probability of zero is
@@ -2173,7 +2177,7 @@ expression is identical to that for the coefficient of determination
 <i>R</i><sup>2</sup> and the <a href="index.html#Skill_score">reduction of variance</a>.<br>
 </p>
 <p>- - - - - - - - - - -
-<p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" vspace="2" height="237" align="right">
+<p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" height="237" style="margin: 2px 2px 2px 2px;" align="right">
 <b><i><a href="site/Hewson/DeterministicLimit.html">
 Deterministic limit</a></i></b> <a href="index.html#Hewson2007">(Hewson, 2007)</a></p>
 <p><a><b>Answers the question:</b><i> What is the length of time into the forecast 
@@ -2201,7 +2205,7 @@ shown, by some customers, for probabilistic forecasts.
 <p>Click <a href="site/Hewson/DeterministicLimit.html">here</a> to learn more.<br>
 </p>
 <p>- - - - - - - - - - -
-</p></p>
+</p>
 <a id="alpha_index"></a>
 <b><i>Alpha Index</i></b> (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;-&nbsp; &nbsp; 
 <img style="width: 203px; height: 56px;" alt="Koh's alpha index" src="site/AlphaIndex.gif" align="middle">
@@ -2260,55 +2264,50 @@ illustrates the need for more meaningful verification scores.
 <p>The contingency table for <a href="index.html#Finley_1884">Finley's (1884)</a>
 forecasts is:
 </p>
-<table summary="Contingency table for Finley's tornado forecasts" width="400" height="180">
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="3" style="text-align: center;">Observed</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>tornado</th>
+      <th>no tornado</th>
+      <th>Total</th>
+    </tr>
+  </thead>
   <tbody>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td><b>&nbsp;</b></td>
-      <td width="75"><br>
-      </td>
-      <td width="75" align="left">&nbsp;Observed</td>
-      <td width="75"><br>
-      </td>
+    <tr style="text-align: center;">
+      <th rowspan="2" style="text-align: left;">Forecast</th>
+      <th>tornado</th>
+      <td style="background-color: #33ff33;">28</td>
+      <td style="background-color: #33ff33;">72</td>
+      <td style="background-color: #99ff99;">100</td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>tornado</td>
-      <td>no tornado</td>
-      <td>&nbsp;Total</td>
+    <tr style="text-align: center;">
+      <th>no tornado</th>
+      <td style="background-color: #33ff33;">23</td>
+      <td style="background-color: #33ff33;">2680</td>
+      <td style="background-color: #99ff99;">2703</td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td valign="baseline" align="left">Forecast</td>
-      <td>tornado</td>
-      <td style="background-color: "#33ff33"><b>28</b></td>
-      <td style="background-color: "#33ff33"><b>72</b></td>
-      <td style="background-color: "#99ff99"><b>100</b></td>
-    </tr>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td>no tornado</td>
-      <td style="background-color: "#33ff33"><b>23</b></td>
-      <td style="background-color: "#33ff33"><b>2680</b></td>
-      <td style="background-color: "#99ff99"><b>2703</b></td>
-    </tr>
-    <tr valign="CENTER" align="center">
-      <td align="left">Total</td>
-      <td><b>&nbsp;</b></td>
-      <td style="background-color: "#99ff99"><b>51</b></td>
-      <td style="background-color: "#99ff99"><b>2752</b></td>
-      <td style="background-color: "#99ff99"><b>2803</b></td>
+    <tr style="text-align: center;">
+      <th colspan="2" style="text-align: right;">Total</th>
+      <td style="background-color: #99ff99;">51</td>
+      <td style="background-color: #99ff99;">2752</td>
+      <td style="background-color: #99ff99;">2803</td>
     </tr>
   </tbody>
 </table>
+
 <p>Click <a href="site/Finley/Finley_Tornados.html">here</a> to see how the
 different categorical scores rate the Finley (1884) forecasts. 
 </p>
   
 <h3 id="POP3"><i>Probability of precipitation forecasts</i></h3>
 
-<img alt="Tampere, Finland" src="site/TampereRain_small.jpg" style="border: 0px solid ; width: 497px; height: 116px;" align="right"></a>
-<i>Probability of precipitation forecasts</i></h3>
+<img alt="Tampere, Finland" src="site/TampereRain_small.jpg" style="width: 497px; height: 116px;" align="right">
 24-hour and 48-hour forecasts of probability of precipitation were made by the Finnish
 Meteorological Institute (FMI) during 2003, for daily precipitation in
 the city of Tampere in south central Finland. Three precipitation categories were used:<br>
@@ -2406,7 +2405,6 @@ probability score; tercile and quintile ranked probability skill score;
 and relative operating characteristics (ROC) curve). Forecast
 verification results and scores are displayed as spatial maps, diagrams and
 single values when the user selects the option for time series verification.
-</p>
   
 <h2 id="FAQs">Some frequently asked questions</h2>
 
@@ -2455,7 +2453,7 @@ web page. This discussion group was begun in June 2003.
   
 <h2 id="References">References</h2>
   
-<h3 id="Other sites">Verification websites</h3>
+<h3 id="Other_sites">Verification websites</h3>
 
 <h4>General</h4>
 
@@ -3458,11 +3456,11 @@ THERE USED TO BE LINKS TO VERIFICATION BLUES HERE
   
 </div>
 
-<hr width="100%">
+<hr>
 <p>
 Webmaster: Beth Ebert, Bureau of Meteorology
 <a href="mailto:Beth.Ebert@bom.gov.au">Beth.Ebert@bom.gov.au</a> <br> 
-Last updated: 30 July 2024<br>
+Last updated: 1 August 2024<br>
 </p>
 </body>
 
