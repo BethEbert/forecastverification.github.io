@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -62,8 +63,15 @@
       margin-top: 1em;
 	  font-style: italic;
     }
+	table td, table th {
+      padding: 8px;  /* or any size you prefer */
+    }
+
 	.spaced-list li {
       margin-bottom: 0.5em;
+	}
+	.green {
+	  color: #04BD1C;
 	}
     @media print {
       #sidebar {
@@ -75,7 +83,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -135,8 +142,8 @@
 <img alt="WWRP logo" src="site/WWRPlogo.gif" style="height: 90px;" vspace="2" border="0"></a>
 <a href="https://www.wcrp-climate.org/">
 <img alt="WCRP logo" src="site/WCRP_logo.jpg" style="height: 90px;" vspace="2" border="0"></a>
-<h3><a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research"><i>
-<font color="#993366">WWRP/WGNE Joint Working Group on Forecast Verification Research</font></i></a></h3>
+<h3 class="green"><a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research"><i>
+WWRP/WGNE Joint Working Group on Forecast Verification Research</i></a></h3>
 <hr width="100%">
 
 <!-- UNCOMMENT AND USE THIS SECTION TO PROMOTE NEWS, ETC. -->
@@ -483,7 +490,7 @@ trustworthy verification results.
 
 <h2 id="Standard">Standard verification methods</h2>
 
-<h3><a name="Eyeball_method"></a>"Eyeball" verification</h3>
+<h3><a id="Eyeball_method"></a>"Eyeball" verification</h3>
 
 <p>One of the oldest and best verification methods is the good old
 fashioned visual, or "eyeball", method: look at the forecast and observations
@@ -535,46 +542,45 @@ The total numbers of observed and forecast occurrences and non-occurences
 are given on the lower and right sides of the contingency table, and
 are called the <i>marginal distribution</i>.
 </p>
-<a name="Contingency_table"></a><br>
-<table summary="Two by two contingency table of forecasts and observations" width="468" height="180">
-  <caption><b>Contingency Table</b></caption> <tbody>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td><b>&nbsp;</b></td>
-      <td width="140"><br></td>
-      <td width="140" align="left">&nbsp;Observed</td>
-      <td width="140"><br></td>
+<a id="Contingency_table"></a><br>
+<table>
+  <caption><strong>Contingency Table</strong></caption>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="3" style="text-align: center;">Observed</th>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>yes</td>
-      <td>no</td>
-      <td>&nbsp;Total</td>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>yes</th>
+      <th>no</th>
+      <th>Total</th>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td valign="baseline" align="left">Forecast</td>
-      <td>yes</td>
-      <td bgcolor="#33ff33"><b><i>hits</i></b></td>
-      <td bgcolor="#33ff33"><b><i>false alarms</i></b></td>
-      <td bgcolor="#99ff99"><b><i>forecast yes</i></b></td>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" style="text-align: left;">Forecast</th>
+      <th>yes</th>
+      <td style="background-color: #33ff33;"><em>hits</em></td>
+      <td style="background-color: #33ff33;"><em>false alarms</em></td>
+      <td style="background-color: #99ff99;"><em>forecast yes</em></td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td>no</td>
-      <td bgcolor="#33ff33"><b><i>misses</i></b></td>
-      <td bgcolor="#33ff33"><b><i>correct negatives</i></b></td>
-      <td bgcolor="#99ff99"><b><i>forecast no</i></b></td>
+    <tr>
+      <th>no</th>
+      <td style="background-color: #33ff33;"><em>misses</em></td>
+      <td style="background-color: #33ff33;"><em>correct negatives</em></td>
+      <td style="background-color: #99ff99;"><em>forecast no</em></td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td align="left">Total</td>
-      <td><b>&nbsp;</b></td>
-      <td bgcolor="#99ff99"><b><i>observed yes</i></b></td>
-      <td bgcolor="#99ff99"><b><i>observed no</i></b></td>
-      <td bgcolor="#99ff99"><b><i>total</i></b></td>
+    <tr>
+      <th colspan="2" style="text-align: left;">Total</th>
+      <td style="background-color: #99ff99;"><em>observed yes</em></td>
+      <td style="background-color: #99ff99;"><em>observed no</em></td>
+      <td style="background-color: #99ff99;"><em>total</em></td>
     </tr>
   </tbody>
 </table>
+
 <br>
 <p>The contingency table is a useful way to see what types of errors are
 being made. A perfect forecast system would produce only
@@ -586,44 +592,39 @@ performance. We will illustrate these statistics using a (made-up) example.
 Suppose a year's worth of official daily rain forecasts and
 observations produced the following contingency table:
 </p>
-<table summary="Sample contingency table for made-up rainfall data" width="300" height="180">
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="3" style="text-align: center;">Observed</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>yes</th>
+      <th>no</th>
+      <th>Total</th>
+    </tr>
+  </thead>
   <tbody>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td><b>&nbsp;</b></td>
-      <td width="50"><br>
-      </td>
-      <td width="75" align="left">&nbsp;Observed</td>
-      <td width="50"><br>
-      </td>
+    <tr>
+      <th rowspan="2" style="text-align: left;">Forecast</th>
+      <th>yes</th>
+      <td style="background-color: #33ff33;"><em>82</em></td>
+      <td style="background-color: #33ff33;"><em>38</em></td>
+      <td style="background-color: #99ff99;"><em>120</em></td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>yes</td>
-      <td>no</td>
-      <td>&nbsp;Total</td>
+    <tr>
+      <th>no</th>
+      <td style="background-color: #33ff33;"><em>23</em></td>
+      <td style="background-color: #33ff33;"><em>222</em></td>
+      <td style="background-color: #99ff99;"><em>245</em></td>
     </tr>
-    <tr valign="CENTER" align="center">
-      <td valign="baseline" align="left">Forecast</td>
-      <td>yes</td>
-      <td bgcolor="#33ff33"><b>82</b></td>
-      <td bgcolor="#33ff33"><b>38</b></td>
-      <td bgcolor="#99ff99"><b>120</b></td>
-    </tr>
-    <tr valign="CENTER" align="center">
-      <td><b>&nbsp;</b></td>
-      <td>no</td>
-      <td bgcolor="#33ff33"><b>23</b></td>
-      <td bgcolor="#33ff33"><b>222</b></td>
-      <td bgcolor="#99ff99"><b>245</b></td>
-    </tr>
-    <tr valign="CENTER" align="center">
-      <td align="left">Total</td>
-      <td><b>&nbsp;</b></td>
-      <td bgcolor="#99ff99"><b>105</b></td>
-      <td bgcolor="#99ff99"><b>260</b></td>
-      <td bgcolor="#99ff99"><b>365</b></td>
+    <tr>
+      <th colspan="2" style="text-align: left;">Total</th>
+      <td style="background-color: #99ff99;"><em>105</em></td>
+      <td style="background-color: #99ff99;"><em>260</em></td>
+      <td style="background-color: #99ff99;"><em>365</em></td>
     </tr>
   </tbody>
 </table>
@@ -632,7 +633,7 @@ observations produced the following contingency table:
 table are given below. Sometimes these scores are known by alternate names
 shown in parentheses.
 </p><p>
-<a name="ACC"></a>- - - - - - - - - - -
+<a id="ACC"></a>- - - - - - - - - - -
 </p><p>
 <b><i>Accuracy (fraction correct)</i></b> -&nbsp;
 <img src="site/Accuracy.gif" alt="Equation for accuracy" width="267" height="55" align="middle">
@@ -644,10 +645,10 @@ shown in parentheses.
 <p><b>Characteristics:</b> Simple, intuitive. Can be misleading since it is heavily influenced 
 by the most common category, usually "no event" in the case of rare weather.
 </p>
-<p><font color="#00cc00">In the example above, 
-<i>Accuracy</i> = (82+222) / 365 = 0.83, indicating that 83% of all forecasts were correct.</font>
+<p class="green">In the example above, 
+<i>Accuracy</i> = (82+222) / 365 = 0.83, indicating that 83% of all forecasts were correct.
 </p>
-<p><a name="BIAS"></a>- - - - - - - - - - -
+<p><a id="BIAS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Bias score (frequency bias)</i></b> -&nbsp;
 <img src="site/BIAS.gif" alt="Equation for bias" width="194" height="53" align="middle">
@@ -662,11 +663,11 @@ events to the frequency of observed events. Indicates whether the forecast
 system has a tendency to underforecast (<i>BIAS</i>&lt;1) or overforecast
 (<i>BIAS</i>&gt;1) events. Does not measure how well the forecast
 corresponds to the observations, only measures relative frequencies.
-</p><p>
-<font color="#00cc00">In the example above, <i>BIAS</i> = (82+38) / (82+23) = 1.14, 
-indicating slight overforecasting of rain frequency.</font>
+</p><p class="green">
+In the example above, <i>BIAS</i> = (82+38) / (82+23) = 1.14, 
+indicating slight overforecasting of rain frequency.
 </p>
-<p><a name="POD"></a>- - - - - - - - - - -
+<p><a id="POD"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Probability of detection (hit rate)</i></b> -&nbsp;
 <img src="site/POD.gif" alt="Equation for probability of detection" width="162" height="49" align="middle">
@@ -684,10 +685,10 @@ increase the number of hits. Should be used in conjunction with the false
 alarm ratio (below). <i>POD</i> is also an important component of the <a href="index.html#ROC">
 Relative Operating Characteristic (ROC)</a> used widely for probabilistic forecasts.
 </p>
-<p><font color="#00cc00">In the example above, <i>POD</i> = 82 / (82+23) = 0.78, 
-indicating that roughly 3/4 of the observed rain events were correctly predicted.</font>
+<p class="green">In the example above, <i>POD</i> = 82 / (82+23) = 0.78, 
+indicating that roughly 3/4 of the observed rain events were correctly predicted.
 </p>
-<p><a name="FAR"></a>- - - - - - - - - - -
+<p><a id="FAR"></a>- - - - - - - - - - -
 </p>
 <p><b><i>False alarm ratio</i></b> -&nbsp;
 <img src="site/FAR.gif" alt="Equation for false alarm ratio" width="198" height="52" align="middle">
@@ -701,10 +702,10 @@ events actually did not occur (i.e., were false alarms)?</i>
 misses. Very sensitive to the climatological frequency of the event. Should be
 used in conjunction with the probability of detection (above).
 </p>
-<p><font color="#00cc00">In the example above, <i>FAR</i> = 38 / (82+38) = 0.32, 
-indicating that in roughly 1/3 of the forecast rain events, rain was not observed.</font>
+<p class="green">In the example above, <i>FAR</i> = 38 / (82+38) = 0.32, 
+indicating that in roughly 1/3 of the forecast rain events, rain was not observed.
 </p>
-<p><a name="POFD"></a>- - - - - - - - - - -
+<p><a id="POFD"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Probability of false detection (false alarm rate)</i></b>
 -&nbsp;<img src="site/POFD.gif" alt="probability of false detection" width="278" height="54" align="middle">
@@ -722,11 +723,11 @@ the number of false alarms. Not often reported for deterministic forecasts,
 but is an important component of the <a href="index.html#ROC">Relative Operating
 Characteristic (ROC)</a> used widely for probabilistic forecasts.
 </p>
-<p><font color="#00cc00">In the example above, <i>POFD</i> = 38 / (222+38)
+<p class="green">In the example above, <i>POFD</i> = 38 / (222+38)
 = 0.15, indicating that for 15% of the observed "no rain" events the
-forecasts were incorrect.</font>
+forecasts were incorrect.
 </p>
-<p><a name="SR"></a>- - - - - - - - - - -
+<p><a id="SR"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Success ratio</i></b>
 -&nbsp;<img src="site/SR.gif" alt="success ratio" width="182" height="51" align="middle">
@@ -742,10 +743,10 @@ It is sensitive to false alarms but ignores misses.
 <i>SR</i> is equal to 1-<i>FAR</i>. <i>POD</i> is plotted against 
 <i>SR</i> in the <a href="index.html#Roebber_diagram">categorical performance diagram</a>.
 </p>
-<p><font color="#00cc00">In the example above, <i>SR</i> = 82 / (82+38) = 0.68, 
-indicating that for 68% of the forecast rain events, rain was actually observed.</font>
+<p class="green">In the example above, <i>SR</i> = 82 / (82+38) = 0.68, 
+indicating that for 68% of the forecast rain events, rain was actually observed.
 </p>
-<p><a name="CSI"></a>- - - - - - - - - - -
+<p><a id="CSI"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Threat score (critical success index)</i></b> -&nbsp;
 <img src="site/TS.gif" alt="Equation for threat score" width="250" height="48" align="middle">
@@ -765,16 +766,16 @@ penalizes both misses and false alarms. Does not distinguish source of forecast
 error. Depends on climatological frequency of events (poorer scores for rarer
 events) since some hits can occur purely due to random chance.
 </p>
-<p><font color="#00cc00">In the example above, <i>TS</i> = 82 / (82+23+38) = 0.57, 
+<p class="green">In the example above, <i>TS</i> = 82 / (82+23+38) = 0.57, 
 meaning that slightly more than half of the "rain" events (observed
-and/or predicted) were correctly forecast.</font>
+and/or predicted) were correctly forecast.
 </p>
-<p><a name="ETS"></a>- - - - - - - - - - -
+<p><a id="ETS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Equitable threat score (Gilbert skill score)</i></b>-
 <img src="site/ETSa.gif" alt="Equation for equitable threat score" width="339" height="60" align="middle">
 &nbsp;(also denoted GSS)
-<br>where&nbsp;<a name="random_hits"></a>
+<br>where&nbsp;<a id="random_hits"></a>
 <img src="site/ETSb.gif" alt="Equation for hits due to random chance" width="332" height="47" align="middle">
 </p>
 <p><b>Answers the question: </b><i>How well did the forecast "yes" events
@@ -792,10 +793,10 @@ allows scores to be compared more fairly across different regimes. Sensitive
 to hits. Because it penalises both misses and false alarms in the same way,
 it does not distinguish the source of forecast error.
 </p>
-<p><font color="#00cc00">In the example above, <i>ETS</i> = (82-34) / (82+23+38-34) = 0.44. 
-<i>ETS</i> gives a lower score than <i>TS</i>.</font>
+<p class="green">In the example above, <i>ETS</i> = (82-34) / (82+23+38-34) = 0.44. 
+<i>ETS</i> gives a lower score than <i>TS</i>.
 </p>
-<p><a name="HK"></a>- - - - - - - - - - -
+<p><a id="HK"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Hanssen and Kuipers discriminant (true skill statistic,
 Peirce's skill score)</i></b> -&nbsp;
@@ -817,11 +818,11 @@ Can be expressed in a form similar to the <i>ETS</i> except the <i>hits<sub>rand
 term is unbiased. See <a href="index.html#Woodcock_1976">Woodcock (1976)</a>
 for a comparison of <i>HK</i> with other scores.
 </p>
-<p><font color="#00cc00">In the example above, <i>HK</i> = 82 / (82+23) - 38 / (38+222) = 0.63</font>
+<p>In the example above, <i>HK</i> = 82 / (82+23) - 38 / (38+222) = 0.63
 </p>
-<p><a name="HSS"></a>- - - - - - - - - - -
+<p><a id="HSS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Heidke skill score (Cohen's <font face="Symbol">k</font>)</i></b>-&nbsp;
+<p><b><i>Heidke skill score (Cohen's κ</i></b>-&nbsp;
 <img src="site/HSSnew.gif" alt="Heidke skill score" width="388" height="49" align="middle">
 <br>
 where&nbsp;<img src="site/ExpectedCorrect.gif" alt="Expected correct forecasts for random chance" width="634" height="53" align="middle">
@@ -841,9 +842,9 @@ to compare to - it may be better to use climatology (long-term average
 value) or persistence (forecast = most recent observation, i.e., no change) or
 some other standard.
 </p>
-<p><font color="#00cc00">In the example above, <i>HSS</i> = 0.61</font>
+<p class="green>In the example above, <i>HSS</i> = 0.61
 </p>
-<p><a name="OR"></a>- - - - - - - - - - -
+<p><a id="OR"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Odds ratio</i></b> -
 <img src="site/OddsRatio.gif" alt="odds ratio" width="301" height="86" align="middle">
@@ -864,17 +865,16 @@ hedging. Do not use if any of the cells in the contingency table are equal to
 see <a href="index.html#Stephenson_2000">Stephenson (2000)</a> for more information.
 <br>
 &nbsp;&nbsp;&nbsp; Note that the odds ratio is not the same as the
-ratio of the <i>probability</i> of making a hit (<i><font face="Arial,Helvetica">hits
-/ # forecasts</font></i>) to the <i>probability</i> of making a false alarm
-(<i><font face="Arial,Helvetica">false alarms / # forecasts</font></i>),
+ratio of the <i>probability</i> of making a hit (<i>hits / # forecasts</i>) to the 
+<i>probability</i> of making a false alarm (<i>false alarms / # forecasts</i>),
 since both of those can depend on the climatological frequency (i.e.,
 the prior probability) of the event.
 </p>
-<p><font color="#00cc00">In the example above, <i>OR</i> = (82 x 222) / (23 x 38) = 20.8, 
+<p class="green>In the example above, <i>OR</i> = (82 x 222) / (23 x 38) = 20.8, 
 indicating that the odds of a "yes" prediction being correct are over 20 times 
-greater than the odds of a "yes" forecast being incorrect.</font>
+greater than the odds of a "yes" forecast being incorrect.
 </p>
-<p><a name="ORSS"></a>- - - - - - - - - - -
+<p><a id="ORSS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Odds ratio skill score (Yule's Q)</i></b> -
 <img src="site/ORSS.gif" alt="odds ratio skill score equation" width="375" height="47" align="middle">
@@ -888,8 +888,8 @@ over random chance?</i>
 the threshold chosen to separate "yes" and "no"), so is difficult to hedge.
 See <a href="index.html#Stephenson_2000">Stephenson (2000)</a> for more information.
 </p>
-<p><font color="#00cc00">In the example above, 
-<i>ORSS</i> = [(82 x 222)-(23 x 38)] / [(82 x 222)+(23 x 38)] = 0.91</font>
+<p class="green>In the example above, 
+<i>ORSS</i> = [(82 x 222)-(23 x 38)] / [(82 x 222)+(23 x 38)] = 0.91
 </p>
 
 <h2 id="Multi-category">Methods for multi-category forecasts</h2>
@@ -898,79 +898,68 @@ See <a href="index.html#Stephenson_2000">Stephenson (2000)</a> for more informat
 a contingency table showing the frequency of forecasts and observations
 in the various bins. It is analogous to a scatter plot for categories.
 </p>
-<table summary="multi-category contingency table" width="600" height="100">
-  <caption><b>Multi-category Contingency Table</b></caption> <tbody>
-    <tr align="center">
-      <td><br>
-      </td>
-      <td width="50"><br>
-      </td>
-      <td width="60"><br>
-      </td>
-      <td width="60" align="right">Observed</td>
-      <td width="60" align="left">Category</td>
-      <td width="60"><br>
-      </td>
-      <td>Total</td>
+<table>
+  <caption><b>Multi-category Contingency Table</b></caption> 
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="4" style="text-align: center;">Observed Category</th>
+      <th>Total</th>
     </tr>
-    <tr align="center">
-      <td align="center"><br>
-      </td>
-      <td><i>i,j</i></td>
-      <td align="center">1</td>
-      <td>2</td>
-      <td>...</td>
-      <td><i>K</i></td>
-      <td><br>
-      </td>
+    <tr style="text-align: center;">
+      <th></th>
+      <th><i>i,j</i></th>
+      <th>1</th>
+      <th>2</th>
+      <th>...</th>
+      <th><i>K</i></th>
+      <th></th>
     </tr>
-    <tr align="center">
-      <td><br>
-      </td>
-      <td>1</td>
-      <td bgcolor="#33ff33"><i>n(F<sub>1</sub>,O<sub>1</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>1</sub>,O<sub>2</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>...</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>1</sub>,O<sub>K</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>N(F<sub>1</sub>)</i></td>
+  </thead>
+  <tbody>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>1</th>
+      <td style="background-color: #33ff33;"><i>n(F<sub>1</sub>,O<sub>1</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>1</sub>,O<sub>2</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>...</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>1</sub>,O<sub>K</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>N(F<sub>1</sub>)</i></td>
     </tr>
-    <tr align="center">
-      <td>Forecast</td>
-      <td>2</td>
-      <td bgcolor="#33ff33"><i>n(F<sub>2</sub>,O<sub>1</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>2</sub>,O<sub>2</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>...</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>2</sub>,O<sub>K</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>N(F<sub>2</sub>)</i></td>
+    <tr style="text-align: center;">
+      <th rowspan="2">Forecast<br>Category</th>
+      <th>2</th>
+      <td style="background-color: #33ff33;"><i>n(F<sub>2</sub>,O<sub>1</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>2</sub>,O<sub>2</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>...</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>2</sub>,O<sub>K</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>N(F<sub>2</sub>)</i></td>
     </tr>
-    <tr align="center">
-      <td>Category</td>
-      <td>...</td>
-      <td bgcolor="#33ff33" align="center">...</td>
-      <td bgcolor="#33ff33">...</td>
-      <td bgcolor="#33ff33">...</td>
-      <td bgcolor="#33ff33">...</td>
-      <td bgcolor="#99ff99">...</td>
+    <tr style="text-align: center;">
+      <th><i>...</i></th>
+      <td style="background-color: #33ff33;" align="center">...</td>
+      <td style="background-color: #33ff33;">...</td>
+      <td style="background-color: #33ff33;">...</td>
+      <td style="background-color: #33ff33;">...</td>
+      <td style="background-color: #99ff99;">...</td>
     </tr>
-    <tr align="center">
-      <td><br>
-      </td>
-      <td><i>K</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>K</sub>,O<sub>1</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>K</sub>,O<sub>2</sub>)</i></td>
-      <td bgcolor="#33ff33"><i>...</i></td>
-      <td bgcolor="#33ff33"><i>n(F<sub>K</sub>,O<sub>K</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>N(F<sub>K</sub>)</i></td>
+    <tr style="text-align: center;">
+      <th></th>
+      <th><i>K</i></th>
+      <td style="background-color: #33ff33;"><i>n(F<sub>K</sub>,O<sub>1</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>K</sub>,O<sub>2</sub>)</i></td>
+      <td style="background-color: #33ff33;"><i>...</i></td>
+      <td style="background-color: #33ff33;"><i>n(F<sub>K</sub>,O<sub>K</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>N(F<sub>K</sub>)</i></td>
     </tr>
-    <tr align="center">
-      <td>Total</td>
-      <td><br>
-      </td>
-      <td bgcolor="#99ff99"><i>N(O<sub>1</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>N(O<sub>2</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>...</i></td>
-      <td width="50" bgcolor="#99ff99"><i>N(O<sub>K</sub>)</i></td>
-      <td bgcolor="#99ff99"><i>N</i></td>
+    <tr style="text-align: center;">
+      <th>Total</th>
+      <th></th>
+      <td style="background-color: #99ff99;"><i>N(O<sub>1</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>N(O<sub>2</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>...</i></td>
+      <td style="background-color: #99ff99;"><i>N(O<sub>K</sub>)</i></td>
+      <td style="background-color: #99ff99;"><i>N</i></td>
     </tr>
   </tbody>
 </table>
@@ -1003,7 +992,7 @@ series of <i>K</i>-1 yes/no-type verifications by defining "yes" to be
 "in category <i>i</i>" or "in category <i>i</i> or higher", and "no"
 to be "not in category <i>i</i>" or "below category <i>i</i>".
 </p>
-<p><a name="histogram"></a>- - - - - - - - - - -
+<p><a id="histogram"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Histogram</i></b> - Plot the relative frequencies of forecast and observed categories
 <img src="site/histogram.gif" alt="histogram of temperature change categories" width="311" height="178">
@@ -1016,7 +1005,7 @@ and skewness of forecast and observed distributions. Does not give
 information on the correspondence between the forecasts and observations.
 Histograms give information similar to <a href="index.html#box_plot">box plots</a>.
 </p>
-<p><a name="ACCmulti"></a>- - - - - - - - - - -
+<p><a id="ACCmulti"></a>- - - - - - - - - - -
 <br>
 <b><i>Accuracy</i></b> -&nbsp;
 <img src="site/ACCmulti.gif" alt="Equation for accuracy for multiple categories" width="189" height="47" align="middle">
@@ -1029,9 +1018,9 @@ forecasts were in the correct category?</i>
 <p><b>Characteristics:</b> Simple, intuitive. Can be misleading since
 it is heavily influenced by the most common category.
 </p>
-<p><a name="HSSmulti"></a>- - - - - - - - - - -
+<p><a id="HSSmulti"></a>- - - - - - - - - - -
 </p>
-<p><a name="multicategory_HSS"></a><b><i>Heidke skill score</i></b> -&nbsp;
+<p><a id="multicategory_HSS"></a><b><i>Heidke skill score</i></b> -&nbsp;
 <img src="site/HSSmulti.gif" alt="Equation for Heidke skill score for multiple categories" width="324" height="110" align="middle">
 </p>
 <p><b>Answers the question: </b><i>What was the accuracy of the forecast
@@ -1050,9 +1039,9 @@ usually not the best forecast to compare to - it may be better to use
 climatology (long-term average value) or persistence (forecast is most recent
 observation, i.e., no change) or some other standard.
 </p>
-<p><a name="HKmulti"></a>- - - - - - - - - - -
+<p><a id="HKmulti"></a>- - - - - - - - - - -
 </p>
-<p><a name="multicategory_HK"></a><b><i>Hanssen and Kuipers discriminant
+<p><a id="multicategory_HK"></a><b><i>Hanssen and Kuipers discriminant
 (true skill statistic, Peirce's skill score)</i></b> -&nbsp;
 <img src="site/HKKmulti.gif" alt="Hanssen and Kuipers score for multiple categories" width="323" height="105" align="middle">
 </p>
@@ -1065,7 +1054,7 @@ forecast in predicting the correct category, relative to that of random chance?<
 except that in the denominator the fraction of correct forecasts due to random
 chance is for an unbiased forecast.
 </p>
-<p><a name="Gerrity"></a>- - - - - - - - - - -
+<p><a id="Gerrity"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Gerrity score</i></b> -&nbsp;
 <img src="site/GSS.gif" alt="Gerrity skill score for multiple categories" width="186" height="50" align="middle">
@@ -1101,23 +1090,40 @@ verification methods and statistics will be demonstrated on a sample data
 set of 10 temperature forecasts taken from 
 <a href="index.html#Stanski_et_al.">Stanski et al. (1989)</a>:
 </p><br>
-<table summary="Sample data set of ten temperature forecasts taken from Stanski et al (1989)" width="600">
-  <tbody>
-    <tr align="center">
-      <td width="150" align="left">Day</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>10</td>
+  <!--
+    <tr>
+      <th rowspan="2" style="text-align: left;">Forecast</th>
+      <th>yes</th>
+      <td style="background-color: #33ff33;"><em>hits</em></td>
+      <td style="background-color: #33ff33;"><em>false alarms</em></td>
+      <td style="background-color: #99ff99;"><em>forecast yes</em></td>
     </tr>
-    <tr bgcolor="#99ff99" align="center">
-      <td align="left">Forecast, <i>F<sub>i </sub></i>(C)</td>
+    <tr>
+      <th>no</th>
+      <td style="background-color: #33ff33;"><em>misses</em></td>
+      <td style="background-color: #33ff33;"><em>correct negatives</em></td>
+      <td style="background-color: #99ff99;"><em>forecast no</em></td>
+    </tr>
+  -->
+<table>
+  <thead>
+    <tr style="text-align: center;">
+      <th style="text-align: left;">Day</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+  </thead>
+  <tbody>
+    </tr>
+    <tr style="background-color: #99ff99; text-align: center;">
+      <th style="background-color: #ffffff; text-align: left;">Forecast, <i>F<sub>i </sub></i>(C)</th>
       <td>5</td>
       <td>10</td>
       <td>9</td>
@@ -1129,8 +1135,8 @@ set of 10 temperature forecasts taken from
       <td>19</td>
       <td>23</td>
     </tr>
-    <tr bgcolor="#99ff99" align="center">
-      <td align="left">Observation, <i>O<sub>i</sub></i> (C)</td>
+    <tr style="background-color: #99ff99; text-align: center;">
+      <th style="background-color: #ffffff; text-align: left;">Observation, <i>O<sub>i</sub></i> (C)</th>
       <td>-1</td>
       <td>8</td>
       <td>12</td>
@@ -1148,7 +1154,7 @@ set of 10 temperature forecasts taken from
 <p>Verification of continous forecasts often includes some exploratory
 plots such as scatter plots and box plots, as well as various summary scores.
 </p>
-<p><a name="scatterplot"></a>- - - - - - - - - - -
+<p><a id="scatterplot"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Scatter plot -</i></b> Plots the forecast values against the observed values.&nbsp;
 <img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212"  vspace="3" hspace="3" align="right">
@@ -1163,7 +1169,7 @@ and observations. An accurate forecast will have points on or near the diagonal.
 forecast values and the errors.&nbsp;
 <img src="site/error_scatterplot.gif" alt="error scatterplots" width="323" height="157" align="texttop">
 </p>
-<p><a name="box_plot"></a>- - - - - - - - - - -
+<p><a id="box_plot"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Box plot -</i></b> Plot boxes to show the range of data falling
 between the 25th and 75th percentiles, horizontal line inside the box showing
@@ -1178,7 +1184,7 @@ skewness of forecast and observed distributions. Does not give information
 on the correspondence between the forecasts and observations. Box plots
 give information similar to <a href="index.html#histogram">histograms</a>.
 </p>
-<p><a name="meanerror"></a>- - - - - - - - - - -
+<p><a id="meanerror"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Mean error</i></b> -&nbsp;<img src="site/MeanError.gif" alt="Equation for mean error" width="196" height="48" align="middle">
 </p>
@@ -1191,9 +1197,9 @@ bias. Does not measure the magnitude of the errors. Does not measure the
 correspondence between forecasts and observations, i.e., it is possible
 to get a perfect score for a bad forecast if there are compensating errors.
 </p>
-<p><font color="#00cc00">In the example above, <i>Mean Error</i> = 0.8C</font>
+<p class="green>In the example above, <i>Mean Error</i> = 0.8C
 </p>
-<p><a name="multiplicative_bias"></a>- - - - - - - - - - -
+<p><a id="multiplicative_bias"></a>- - - - - - - - - - -
 </p>
 <p><b><i>(Multiplicative) bias</i></b> -&nbsp;
 <img src="site/multbias.gif" alt="multiplicative bias equation" width="113" height="92" align="middle">
@@ -1209,9 +1215,9 @@ the errors. Does not measure the correspondence between forecasts and observatio
 i.e., it is possible to get a perfect score for a bad forecast if there
 are compensating errors.
 </p>
-<p><font color="#00cc00">In the example above, <i>Bias</i> = 1.06</font>
+<p class="green>In the example above, <i>Bias</i> = 1.06
 </p>
-<p><a name="MAE"></a>- - - - - - - - - - -
+<p><a id="MAE"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Mean absolute error</i></b> -&nbsp;
 <img src="site/MAE.gif" alt="Equation for mean absolute error" width="161" height="48" align="middle">
@@ -1223,9 +1229,9 @@ are compensating errors.
 <p><b>Characteristics:</b> Simple, familiar. Does not indicate the direction
 of the deviations.
 </p>
-<p><font color="#00cc00">In the example above, <i>MAE</i> = 2.8 C</font>
+<p class="green>In the example above, <i>MAE</i> = 2.8 C
 </p>
-<p><a name="RMS"></a>- - - - - - - - - - -
+<p><a id="RMS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Root mean square error</i></b> -&nbsp;
 <img src="site/RMSE.gif" alt="Equation for root mean square error" width="178" height="58" align="middle">
@@ -1240,12 +1246,12 @@ of the deviations. The <i>RMSE</i> puts greater influence on large errors
 than smaller errors, which may be a good things if large errors are especially
 undesirable, but may also encourage conservative forecasting.
 </p>
-<p><font color="#00cc00">In the example above, <i>RMSE</i> = 3.2 C</font>
+<p class="green>In the example above, <i>RMSE</i> = 3.2 C
 </p>
 <p>The <a href="index.html#RMSF">root mean square factor</a> is similar to <i>RMSE</i>,
 but gives a multiplicative error instead of an additive error.
 </p>
-<p><a name="MSE"></a>- - - - - - - - - - -
+<p><a id="MSE"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Mean squared error</i></b> -&nbsp;
 <img src="site/MSE.gif" alt="Equation for mean squared error" width="162" height="52" align="middle">
@@ -1257,9 +1263,9 @@ but gives a multiplicative error instead of an additive error.
 <p><b>Characteristics:</b> Can be decomposed into component error sources
 following Murphy (1987). Units of <i>MSE</i> are the square of the basic units.
 </p>
-<p><font color="#00cc00">In the example above, <i>MSE</i> = 10 degrees squared</font>
+<p class="green>In the example above, <i>MSE</i> = 10 degrees squared
 </p>
-<p><a name="LEPS"></a>- - - - - - - - - - -
+<p><a id="LEPS"></a>- - - - - - - - - - -
 </p>
 <p><b><i><a href="site/LEPS.html">Linear error in probability space</a> (LEPS)</i></b> -&nbsp;
 <img src="site/LEPS.gif" alt="Equation for linear error in probability space" width="248" height="47" align="middle">
@@ -1278,11 +1284,11 @@ derived an improved version of the LEPS score that is equitable and
 does not "bend back" (give better scores for worse forecasts near the extremes):
 <img src="site/LEPSrevised.gif" alt="Revised LEPS score" width="616" height="33">.
 </p>
-<p><font color="#00cc00">In the example above, suppose the climatological
+<p class="green>In the example above, suppose the climatological
 temperature is normally distributed with a mean of 14 C and variance of
-50 C. Then according to the first expression, LEPS=0.106.</font>
+50 C. Then according to the first expression, LEPS=0.106.
 </p>
-<p><a name="SEEPS"></a>- - - - - - - - - - -
+<p><a id="SEEPS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Stable equitable error in probability space (SEEPS)</i></b> -&nbsp;
 <img src="site/SEEPS.gif" alt="Equation for stable equitable error in probability space" width="211" height="50" align="middle">
@@ -1311,7 +1317,7 @@ For further stability require 0.1 &lt; <i>p<sub>1</sub></i> &lt; 0.85,
 that is, climate not too dry or too wet so that rain (or no rain) is an extreme event. 
 For more information see <a href="index.html#Rodwell_et_al_2010">Rodwell et al. (2010)</a>.
 </p>
-<p><a name="corr"></a>- - - - - - - - - - -
+<p><a id="corr"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Correlation coefficient</i></b> -&nbsp;
 <img src="site/Corr.gif" alt="Equation for correlation coefficient" width="208" height="61" align="middle">
@@ -1327,9 +1333,9 @@ scatter plot are to a straight line. Does not take forecast bias into account --
 it is possible for a forecast with large errors to still have a good
 correlation coefficient with the observations. Sensitive to outliers.
 </p>
-<p><font color="#00cc00">In the example above, <i>r</i> = 0.914</font>
+<p class="green>In the example above, <i>r</i> = 0.914
 </p>
-<p><a name="AC"></a>- - - - - - - - - - -
+<p><a id="AC"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Anomaly correlation</i></b> -&nbsp;
 <img src="site/AnomCorr.gif" alt="Anomaly correlation equation" width="650" height="66" align="middle">
@@ -1348,16 +1354,15 @@ so a good anomaly correlation does not guarantee accurate forecasts. Both
 forms of the equation are in common use -- see <a href="index.html#Jolliffe_and_Stephenson_2012">Jolliffe
 and Stephenson (2012)</a> or <a href="index.html#Wilks">Wilks (2011)</a> for further discussion.
 </p>
-<p><font color="#00cc00">In the example above, if the climatological temperature is 14 C, 
-then <i>AC</i> = 0.904. <i>AC</i> is more often used in spatial verification.</font>
+<p class="green>In the example above, if the climatological temperature is 14 C, 
+then <i>AC</i> = 0.904. <i>AC</i> is more often used in spatial verification.
 </p>
-<p><a name="S1"></a>- - - - - - - - - - -
+<p><a id="S1"></a>- - - - - - - - - - -
 </p>
 <p><b><i>S1 score</i></b> -&nbsp;
 <img src="site/S1.gif" alt="Equation for S1 score" width="242" height="78" align="middle">
 <br>
-where <i><font face="Symbol">D</font><font face="Arial,Helvetica">F</font></i>
-(<i><font face="Symbol">D</font><font face="Arial,Helvetica">O</font></i>)
+where <i>ΔF</i> (<i>ΔO</i>)
 refers to the horizontal gradient in the forecast (observations).
 </p>
 <p><b>Answers the question: </b><i>How well did the forecast gradients
@@ -1371,9 +1376,9 @@ NWP showing improvement in model performance over the years. Because
 <i>S1</i> depends only on gradients, good scores can be achieved even when the
 forecast values are biased. Also depends on spatial resolution of the forecast.
 </p>
-<p><a name="skill"></a>- - - - - - - - - - -
+<p><a id="skill"></a>- - - - - - - - - - -
 </p>
-<p><a name="Skill_score"></a><b><i>Skill score</i></b> -&nbsp;
+<p><a id="Skill_score"></a><b><i>Skill score</i></b> -&nbsp;
 <img src="site/Skill.gif" alt="Equation for equation for skill score" width="310" height="51" align="middle">
 </p>
 <p><b>Answers the question: </b><i>What is the relative improvement of
@@ -1419,7 +1424,7 @@ probabilities near 0 or 1, as opposed to values clustered around the mean
 to resolve the set of sample events into subsets with characteristically
 different outcomes
 </p>
-<p><a name="reliability"></a>- - - - - - - - - - -
+<p><a id="reliability"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Reliability diagram</i></b> - (called "attributes diagram"
 when the no-resoloution and no-skill w.r.t. climatology lines are included).
@@ -1452,7 +1457,7 @@ to the <a href="index.html#ROC">ROC</a>, which is conditioned on the observation
 users may find a reliability table (table of observed relative frequency associated with 
 each forecast probability) easier to understand than a reliability diagram.
 </p>
-<p><a name="BS"></a>- - - - - - - - - - -
+<p><a id="BS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Brier score</i></b> -&nbsp;<img src="site/BSexpanded.gif" alt="Expansion of Brier Score" width="473" height="47" align="middle">
 </p>
@@ -1470,7 +1475,7 @@ event: the more rare an event, the easier it is to get a good <i>BS</i>
 without having any real skill. Negative orientation (smaller score
 better) - can "fix" by subtracting <i>BS</i> from 1.
 </p>
-<p><a name="BSS"></a>- - - - - - - - - - -
+<p><a id="BSS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Brier skill score</i></b> -&nbsp;
 <img src="site/BSS.gif" alt="Equation for Brier skill score" width="274" height="54" align="middle">
@@ -1488,7 +1493,7 @@ sample climatology), thus taking climatological frequency into account. Not
 strictly proper. Unstable when applied to small data sets; the rarer the event,
 the larger the number of samples needed.
 </p>
-<p><a name="ROC"></a>- - - - - - - - - - -
+<p><a id="ROC"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Relative operating characteristic</i></b> -
 <img src="site/ROC.gif" alt="Relative operating characteristic (ROC)" width="292" height="299" align="right">
@@ -1524,7 +1529,7 @@ More information on ROC can be found in <a href="index.html#Mason_1982">Mason
 1982</a>, <a href="index.html#Jolliffe_and_Stephenson_2012">Jolliffe and Stephenson 2012</a> (ch.3), 
 and the <a href="https://wise.cgu.edu/wise-tutorials/tutorial-signal-detection-theory/">WISE site</a>.
 </p>
-<p><a name="Discrimination_diagram"></a>- - - - - - - - - - -
+<p><a id="Discrimination_diagram"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Discrimination diagram</i></b> - 
 <img src="site/Discrimination_diagram.gif" alt="Discrimination diagram" width="377" height="194" align="right">Plot the likelihood of each forecast probability 
@@ -1541,7 +1546,7 @@ forecast probabilities for observed events and non-events. As with the
 (i.e., given that an event occurred what was the correponding forecast?)&nbsp; 
 Some users may find the discrimination diagram easier to understand than the ROC.
 </p>
-<p><a name="RPS"></a>- - - - - - - - - - -
+<p><a id="RPS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Ranked probability score</i></b> -&nbsp;
 <img src="site/RPS.gif" alt="ranked probability score formula" width="243" height="57" align="middle">
@@ -1564,7 +1569,7 @@ outcome. Negative orientation - can "fix" by subtracting <i>RPS</i> from
 Continuous version -&nbsp;
 <img src="site/CRPS.gif" alt="Continuous ranked probability score" width="224" height="60" align="middle">
 </p>
-<p><a name="RPSS"></a>- - - - - - - - - - -
+<p><a id="RPSS"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Ranked probability skill score</i></b> -&nbsp;
 <img src="site/RPSS.gif" alt="Equation for ranked probability skill score" width="326" height="50" align="middle">
@@ -1581,7 +1586,7 @@ multi-category probabilistic forecast relative to a reference forecast (usually 
 long-term or sample climatology). Strictly proper. Takes climatological frequency
 into account. Unstable when applied to small data sets.
 </p>
-<p><a name="relative_value"></a>- - - - - - - - - - -
+<p><a id="relative_value"></a>- - - - - - - - - - -
 </p>
 <p><b><i>Relative value (value score)</i></b> (<a href="index.html#Richardson_2000">
 Richardson, 2000</a>; <a href="index.html#Wilks_2001">Wilks, 2001</a>)&nbsp;
@@ -1631,9 +1636,9 @@ are standard diagnostic verification methods.
 developed scientific and diagnostic methods, and relies heavily on references and
 links to other sites with greater detail.
 </p>
-<p><b><i><font color="#3333ff">This is also a place to promote new
+<p style="color: blue;><b><i>This is also a place to promote new
 verification techniques. If you are working in this area, then you are encouraged to
-share your methods via this web site.</font></i></b>
+share your methods via this web site.</i></b>
 </p>
 
 <h2 id="Spatial">Methods for spatial forecasts</h2>
@@ -1646,7 +1651,7 @@ Scale decomposition methods allow the errors at each scale to be diagnosed.
 <p><i><b>Wavelet decomposition</b></i>&nbsp; 
 (<a href="index.html#Briggs_and_Levine_1997">Briggs and Levine, 1997</a>)<br>
 </p>
-<a name="IS"></a>- - - - - - - - - - -
+<a id="IS"></a>- - - - - - - - - - -
 <p><i><b><a href="https://doi.org/10.1017/S1350482704001239">
 Intensity-scale verification approach</a></b></i> (<a href="index.html#Casati2004">Casati et al. 2004</a>)<br>
 </p>
@@ -1693,7 +1698,7 @@ in the local neighborhood of the observations.
 </p>
 <p>- - - - - - - - - - -
 </p>
-<a name="FSS"></a>
+<a id="FSS"></a>
 <img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px;" vspace="2" align="right">
 <p><i><b>Fractions skill score</b></i> (<a href="index.html#Roberts_Lean_2008">Roberts and Lean, 2008</a>)<br>
 </p>
@@ -1906,7 +1911,7 @@ et al., 1995</a>; <a href="index.html#Nehrkorn_et_al_2003">Nehrkorn et al., 2003
 </p>
 <h3>Field verification methods:</h3>
 
-<a name="DAS"></a><b><i>Displacement and Amplitude Score (DAS)</i></b>
+<a id="DAS"></a><b><i>Displacement and Amplitude Score (DAS)</i></b>
 <a href="index.html#Keil_Craig_2009">(Keil and Craig, 2009</a>)<br>
 <br>
 <b>Answers the question:</b><i>
@@ -1942,7 +1947,7 @@ and observation (bottom right – top left).
 </p>
 <p>- - - - - - - - - - -
 </p>
-<p><a name="rank_histogram"></a><b><i>Rank histogram</i></b>
+<p><a id="rank_histogram"></a><b><i>Rank histogram</i></b>
 (<a href="index.html#Talagrand_et_al_1997">Talagrand et al, 1997</a>; 
  <a href="index.html#Hamill_2001">Hamill, 2001</a>)
 <img src="site/RankHistogram.gif" alt="rank histogram diagram" width="379" height="119" align="middle">
@@ -2014,7 +2019,7 @@ predicted probability of the <i>i<sup>th</sup></i>
 outcome occurring then if the <i>j<sup>th</sup></i> outcome is the
 one which actually occurs the score for this particular
 forecast-realization pair is given by</p>
-<p><center>&nbsp;IGN = -log<small><sub>2</sub></small> <i>f<sub>j</sub></i></center>
+<p style="text-align: center;">&nbsp;IGN = -log<small><sub>2</sub></small> <i>f<sub>j</sub></i>
 </p>
 As defined above, with a negative sign, the logarithmic score cannot be negative and
 smaller values of the score are better. The minimum value of the score (zero) is obtained
@@ -2028,7 +2033,7 @@ Click <a href="site/Ignorance.html">here</a> to learn more.
 <b><i>Extreme dependence score family</i></b> 
 (<a href="index.html#Ferro_Stephenson_2011">Ferro and Stephenson, 2011</a>)
 <p>
-<a name="Extreme_dependence"></a>
+<a id="Extreme_dependence"></a>
 <p><b><i>Extreme dependency score</i></b> -
 <img src="site/EDS.gif" alt="extreme dependency score equation" width="319" height="95" align="absmiddle">
 <br><b><i>Symmetric extreme dependency score</i></b> -
@@ -2082,7 +2087,7 @@ and effective correlation (<a href="index.html#Boer_and_Lambert_2001"> Boer and 
 </p>
 <p>- - - - - - - - - - -
 </p>
-<a name="Roebber_diagram"></a><i><b>Categorical performance diagram</b></i> 
+<a id="Roebber_diagram"></a><i><b>Categorical performance diagram</b></i> 
 (<a href="index.html#Roebber_2009">Roebber 2009</a>)<br>
 <img style="width: 243px; height: 234px;" alt="Probability of Detection vs. Success Ratio" src="site/PerformanceDiagram_small.gif" align="right"><br>
 In an approach that is conceptually similar to the Taylor diagram, it is possible 
@@ -2099,7 +2104,7 @@ Click <a href="site/Roebber/PerformanceDiagram.html">here</a> to learn more.
 <br>
 <p>- - - - - - - - - - -
 </p>
-<a name="elliptical_representation"></a> <b><i>Elliptical representation of vector errors</i></b> 
+<a id="elliptical_representation"></a> <b><i>Elliptical representation of vector errors</i></b> 
 (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;&nbsp;
 <br>
 <p><b>Answers the question: </b><i>How does the vector error between
@@ -2128,7 +2133,7 @@ error, and <i>ε</i> denotes the degree of preference for that direction.
 
 <h3>Other scores</h3>
 
-<p><a name="RMSF"></a><b><i>Root mean squared factor</i></b>&nbsp;
+<p><a id="RMSF"></a><b><i>Root mean squared factor</i></b>&nbsp;
 (<a href="index.html#Golding_1998">Golding, 1998</a>)&nbsp;
 <img src="site/RMSF.gif" alt="root mean square factor" width="235" height="74" align="middle">
 <br>
@@ -2197,7 +2202,7 @@ shown, by some customers, for probabilistic forecasts.
 </p>
 <p>- - - - - - - - - - -
 </p></p>
-<a name="alpha_index"></a>
+<a id="alpha_index"></a>
 <b><i>Alpha Index</i></b> (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;-&nbsp; &nbsp; 
 <img style="width: 203px; height: 56px;" alt="Koh's alpha index" src="site/AlphaIndex.gif" align="middle">
 <p><b>Answers the question:</b><i> How does the random error of a
@@ -2276,23 +2281,23 @@ forecasts is:
     <tr valign="CENTER" align="center">
       <td valign="baseline" align="left">Forecast</td>
       <td>tornado</td>
-      <td bgcolor="#33ff33"><b>28</b></td>
-      <td bgcolor="#33ff33"><b>72</b></td>
-      <td bgcolor="#99ff99"><b>100</b></td>
+      <td style="background-color: "#33ff33"><b>28</b></td>
+      <td style="background-color: "#33ff33"><b>72</b></td>
+      <td style="background-color: "#99ff99"><b>100</b></td>
     </tr>
     <tr valign="CENTER" align="center">
       <td><b>&nbsp;</b></td>
       <td>no tornado</td>
-      <td bgcolor="#33ff33"><b>23</b></td>
-      <td bgcolor="#33ff33"><b>2680</b></td>
-      <td bgcolor="#99ff99"><b>2703</b></td>
+      <td style="background-color: "#33ff33"><b>23</b></td>
+      <td style="background-color: "#33ff33"><b>2680</b></td>
+      <td style="background-color: "#99ff99"><b>2703</b></td>
     </tr>
     <tr valign="CENTER" align="center">
       <td align="left">Total</td>
       <td><b>&nbsp;</b></td>
-      <td bgcolor="#99ff99"><b>51</b></td>
-      <td bgcolor="#99ff99"><b>2752</b></td>
-      <td bgcolor="#99ff99"><b>2803</b></td>
+      <td style="background-color: "#99ff99"><b>51</b></td>
+      <td style="background-color: "#99ff99"><b>2752</b></td>
+      <td style="background-color: "#99ff99"><b>2803</b></td>
     </tr>
   </tbody>
 </table>
@@ -2405,7 +2410,7 @@ single values when the user selects the option for time series verification.
   
 <h2 id="FAQs">Some frequently asked questions</h2>
 
-<a name="How_many_samples"></a><b>1. How many samples are needed to get reliable verification results?</b>
+<a id="How_many_samples"></a><b>1. How many samples are needed to get reliable verification results?</b>
 <p><b><a href="site/BestStatistic.html">2. What is the best statistic for measuring
 the accuracy of a forecast?</a></b>
 </p>
@@ -2434,7 +2439,7 @@ system performs significantly better than another?</a></b>
 <p><b><a href="site/Casati/statxtr.htm">10. What are the challenges and strategies 
 to verify weather and climate extremes?</a></b>
 </p>
-<p><b><a name="reliablity_resolution"></a><a href="site/reliability_resolution.html">
+<p><b><a id="reliablity_resolution"></a><a href="site/reliability_resolution.html">
 11. Reliability and resolution - how are they different?</a></b>
 </p>
   
@@ -2583,12 +2588,12 @@ and desired forecast utility.<br>
   
 <h3 id="Reading">References and further reading</h3>
 
-<h4><a name="Books"></a>Books, technical reports, and journal special issues</h4>
+<h4><a id="Books"></a>Books, technical reports, and journal special issues</h4>
 
-<a name="Katz_and_Murphy_1997"></a>Katz, R.W. and A.H. Murphy (eds), 1997: <i>Economic
+<a id="Katz_and_Murphy_1997"></a>Katz, R.W. and A.H. Murphy (eds), 1997: <i>Economic
 Value of Weather and Climate Forecasts</i>. Cambridge University Press, Cambridge.
 
-<p><a name="Jolliffe_and_Stephenson_2012"></a>Jolliffe, I.T., and D.B.
+<p><a id="Jolliffe_and_Stephenson_2012"></a>Jolliffe, I.T., and D.B.
 Stephenson, 2012: <i>Forecast Verification: A Practitioner's Guide in
 Atmospheric Science. 2nd Edition</i>.&nbsp; Wiley and Sons Ltd, 274 pp.
 </p>
@@ -2601,7 +2606,7 @@ weather forecasts (at ECWMF member states)</i>. ECMWF Operations Department,
 October 2003. Click <a href="site/Rec_FIN_Oct.pdf">here</a>
 to access a PDF version (464 kB).
 </p>
-<p><a name="Stanski_et_al."></a>Stanski, H.R., L.J. Wilson, and W.R. Burrows,
+<p><a id="Stanski_et_al."></a>Stanski, H.R., L.J. Wilson, and W.R. Burrows,
 1989: <i>Survey of common verification methods in meteorology</i>.
 World Weather Watch Tech. Rept. No.8, WMO/TD No.358, WMO, Geneva, 114
 pp. Click <a href="site/Stanski_et_al/Stanski_et_al.html">here</a>
@@ -2610,15 +2615,15 @@ to access a PDF version.
 <p>von Storch, H. and F.W. Zwiers, 1999: <i>Statistical Analysis in
 Climate Research</i>. Cambridge University Press, Cambridge.
 </p>
-<p><a name="Wilks"></a>Wilks, D.S., 2011: <i>Statistical Methods in the
+<p><a id="Wilks"></a>Wilks, D.S., 2011: <i>Statistical Methods in the
 Atmospheric Sciences. 3rd Edition</i>.&nbsp; Elsevier, 676 pp.
 </p>
-<p><a name="MetApps"></a>
+<p><a id="MetApps"></a>
 Special issues of <i>Meteorological Applications</i> on Forecast Verification 
 (<a href="https://rmets.onlinelibrary.wiley.com/toc/14698080/2008/15/1">2008</a>, 
  <a href="https://rmets.onlinelibrary.wiley.com/toc/14698080/2013/20/2">2013</a>)
 </p>
-<p><a name="WAF_ICP"></a>
+<p><a id="WAF_ICP"></a>
 Special collection in <i>Weather and Forecasting (2009-2010)</i> on the 
 <a href="https://journals.ametsoc.org/collection/ICP">
 Spatial Forecast Verification Methods Inter-Comparison Project (ICP)</a>
@@ -2637,7 +2642,7 @@ Forecasting</i>, <b>24</b>, 1485-1497.
 <p>Amodei, M. and J. Stein, 2009: Deterministic and fuzzy verification methods 
 for a hierarchy of numerical models. <i>Met. Appl.</i>, <b>16</b>, 191-203.
 </p>
-<p><a name="Atger_2001"></a>Atger, F., 2001: Verification of intense precipitation
+<p><a id="Atger_2001"></a>Atger, F., 2001: Verification of intense precipitation
 forecasts from single models and ensemble prediction systems. <i>Nonlin.
 Proc. Geophys.</i>, <b>8</b>, 401-417. Click <a href="http://www.copernicus.org/EGU/npg/8/401.htm">here</a>
 to see the abstract and get the PDF (295 Kb).
@@ -2682,7 +2687,7 @@ methods for assessing agreement between two methods of clinical measurement.
 <p>Blattenberger, G., and F. Lad, 1985: Separating the Brier score into calibration 
 and refinement components: A graphical exposition. <i>The American Statistician</i>, <b>39</b>, 26-32.
 </p>
-<p><a name="Boer_and_Lambert_2001"></a>Boer, G.J and S. J. Lambert, 2001:
+<p><a id="Boer_and_Lambert_2001"></a>Boer, G.J and S. J. Lambert, 2001:
 Second-order space-time climate difference statistics. <i>Climate
 Dynamics</i>, <b>17</b>, 213-218.
 </p>
@@ -2700,7 +2705,7 @@ confidence intervals for the Brier score and Brier skill score. <i>Wea. Forecast
 <p>Brier, G. W., 1950: Verification of forecasts expressed in terms of probability. 
 <i>Mon. Wea. Rev.</i>, <b>78</b>, 1-3.
 </p>
-<p><a name="Briggs_and_Levine_1997"></a>Briggs, W.M. and R.A. Levine, 1997:
+<p><a id="Briggs_and_Levine_1997"></a>Briggs, W.M. and R.A. Levine, 1997:
 Wavelets and field forecast verification. <i>Mon. Wea. Rev.</i>, <b>125</b>, 1329-1341.
 </p>
 <p>Bröcker, J. and L.A. Smith, 2007: Increasing the reliability of reliability diagrams. 
@@ -2709,15 +2714,15 @@ Wavelets and field forecast verification. <i>Mon. Wea. Rev.</i>, <b>125</b>, 132
 <p>Bröcker, J. and L.A. Smith, 2007: Scoring probabilistic forecasts: the 
 importance of being proper. <i>Wea. Forecasting</i>, <b>22</b>, 382-388. 
 </p>
-<p><a name="Brooks_and_Doswell_1996"></a>Brooks, H.E. and C.A. Doswell
+<p><a id="Brooks_and_Doswell_1996"></a>Brooks, H.E. and C.A. Doswell
 III, 1996: A comparison of measures-oriented and distributions-oriented
 approaches to forecast verification. <i>Wea. Forecasting</i>, <b>11</b>, 288-303.
 </p>
-<p><a name="Brooks_et_al_1998"></a>Brooks, H.E., M. Kay and
+<p><a id="Brooks_et_al_1998"></a>Brooks, H.E., M. Kay and
 J.A. Hart, 1998: Objective limits on forecasting skill of rare events. <i>19th
 Conf. Severe Local Storms, AMS</i>, 552-555.
 </p>
-<p><a name="Brown_et_al_2004"></a>Brown, B.G., R.R. Bullock, C.A. David,
+<p><a id="Brown_et_al_2004"></a>Brown, B.G., R.R. Bullock, C.A. David,
 J.H. Gotway, M.B. Chapman, A. Takacs, E. Gilleland, K. Manning, J.
 Mahoney, 2004: New verification approaches for convective weather forecasts. 
 <i>11th Conf. Aviation, Range, and Aerospace Meteorology, 4-8 Oct 2004, Hyannis, MA.</i>
@@ -2731,7 +2736,7 @@ Intercomparison of in-flight icing algorithms: Part II: Statistical
 verification results. <i>Wea. Forecasting</i>,
 <b>12</b>, 890-914.
 </p>
-<p><a name="Brown_2010"></a>Brown J.D., Demargne J., Seo D-J., and Liu Y., 2010: The Ensemble Verification 
+<p><a id="Brown_2010"></a>Brown J.D., Demargne J., Seo D-J., and Liu Y., 2010: The Ensemble Verification 
 System (EVS): a software tool for verifying ensemble forecasts of hydrometeorological 
 and hydrologic variables at discrete locations. <i>Environmental Modelling and Software</i>, 
 <b>25</b>, 854-872.
@@ -2740,7 +2745,7 @@ and hydrologic variables at discrete locations. <i>Environmental Modelling and S
 Verification of an ensemble prediction system against observations.
 <i>Mon. Wea. Rev.</i>, <b>135</b>, 1140-1147.
 </p>
-<p><a name="Casati2004"></a>Casati, B., Ross, D.B. Stephenson, 2004: 
+<p><a id="Casati2004"></a>Casati, B., Ross, D.B. Stephenson, 2004: 
 A new intensity-scale approach for the verification of spatial precipitation forecasts, 
 <i>Meteorol. Appl.</i>, <b>11</b>, 141-154.
 </p>
@@ -2770,7 +2775,7 @@ performance measures. <i>Meteorol. Appl.</i>, <b>15</b>, 181-197.
 <p>Davis, C. and F. Carr, 2000: Summary of the 1998 Workshop on Mesoscale
 Model Verification. <i>Bull. Amer. Met. Soc.</i>, <b>81</b>, 809-819.
 </p>
-<p><a name="Davis_et_al_2006a"></a>Davis, C., B. Brown, and R. Bullock, 2006a: 
+<p><a id="Davis_et_al_2006a"></a>Davis, C., B. Brown, and R. Bullock, 2006a: 
 Object-based verification of precipitation forecasts. Part I: Methods and 
 application to mesoscale rain areas. <i>Mon. Wea. Rev.</i>, <b>134</b>, 1772-1784.
 </p>
@@ -2782,11 +2787,11 @@ systems. <i>Mon. Wea. Rev.</i> <b>134</b>, 1785-1795.
 Object-Based Diagnostic Evaluation (MODE) applied to numerical forecasts from the 
 2005 NSSL/SPC Spring Program. <i>Wea. Forecasting</i>, <b>24</b>, 1252-1267. 
 </p>
-<p><a name="de_Elia_et_al_2002"></a>de Elia, R., R. Laprise, and B. Denis,
+<p><a id="de_Elia_et_al_2002"></a>de Elia, R., R. Laprise, and B. Denis,
 2002: Forecasting skill limits of nested, limited-area models: A
 perfect-model approach. <i>Mon. Wea. Rev.</i>, <b>130</b>, 2006-2023.
 </p>
-<p><a name="de_Elía_and_Laprise_2003"></a>de Elia, R. and R. Laprise, 2003:
+<p><a id="de_Elía_and_Laprise_2003"></a>de Elia, R. and R. Laprise, 2003:
 Distribution-oriented verification of limited-area model forecasts in a
 perfect-model framework. <i>Mon. Wea. Rev.</i>, <b>131</b>, 2492-2509.
 </p>
@@ -2798,16 +2803,16 @@ Schwein, W. Marosi, and E. Welles, 2009: Application of forecast
 verification science to operational river forecasting in the U.S.
 National Weather Service.  <i>Bull. Amer. Meteorol. Soc.</i>, <b>90</b>, 779-784.
 </p>
-<p><a name="Demargne_et_al_2010"></a>Demargne J., J.D. Brown, Y. Liu Y., D-J. Seo, 
+<p><a id="Demargne_et_al_2010"></a>Demargne J., J.D. Brown, Y. Liu Y., D-J. Seo, 
 L. Wu, Z. Toth, and Y. Zhu, 2010: Diagnostic verification of hydrometeorological 
 and hydrologic ensembles. <i>Atmos. Sci. Lett.</i>, <b>11</b>, 114-122.
 </p>
-<p><a name="Denis_et_al_2002a"></a>Denis, B., J. Côté and
+<p><a id="Denis_et_al_2002a"></a>Denis, B., J. Côté and
 R. Laprise, 2002a: Spectral decomposition of two-dimensional atmospheric
 fields on limited-area domains using the discrete cosine transform
 (DCT). <i>Mon. Wea. Rev.</i>, <b>130</b>, 1812-1829.
 </p>
-<p><a name="Denis_et_al_2002b"></a>Denis, B., R. Laprise, D. Caya, and
+<p><a id="Denis_et_al_2002b"></a>Denis, B., R. Laprise, D. Caya, and
 J. Côté, 2002b: Downscaling ability of one-way nested regional
 climate models: the Big-Brother Experiment. <i>Climate Dynamics</i>, <b>18</b>,
 627-646.
@@ -2823,7 +2828,7 @@ measures of skill in rare event forecasting based on contingency tables.
 <p>Duc, L., K. Saito, and H. Seko, 2013: Spatial-temporal fractions verification 
 for high-resolution ensemble forecasts. <i>Tellus A</i>, <b>65</b>.
 </p>
-<p><a name="Ebert_2008"></a>Ebert, E.E., 2008: Fuzzy
+<p><a id="Ebert_2008"></a>Ebert, E.E., 2008: Fuzzy
 verification of high resolution gridded forecasts: A review and
 proposed framework. <i>Meteorol. Appl.</i>, <b>15</b>, 51-64.
 </p>
@@ -2833,7 +2838,7 @@ rewarding close forecasts. <i>Wea. Forecasting</i>, <b>24</b>, 1498-1510.
 <p>Ebert, E.E. and W.A. Gallus, 2009: Toward better understanding of the contiguous 
 rain area (CRA) method for spatial forecast verification. <i>Wea. Forecasting</i>, <b>24</b>, 1401-1415. 
 </p>
-<p><a name="Ebert_and_McBride_2000"></a>Ebert, E.E. and J.L. McBride, 2000:
+<p><a id="Ebert_and_McBride_2000"></a>Ebert, E.E. and J.L. McBride, 2000:
 Verification of precipitation in weather systems: Determination of
 systematic errors. <i>J. Hydrology</i>, <b>239</b>, 179-202.
 </p>
@@ -2857,19 +2862,19 @@ cross validation. <i>Wea. Forecasting</i>, <b>9</b>, 619-624.
 <p>Fawcett, R., 2008: Verification techniques and simple theoretical forecast models. 
 <i>Wea. Forecasting</i>, <b>23</b>, 1049-1068.
 </p>
-<p><a name="Ferro2007"></a>Ferro C.A.T., 2007: A probability model for verifying deterministic 
+<p><a id="Ferro2007"></a>Ferro C.A.T., 2007: A probability model for verifying deterministic 
 forecasts of extreme events. <i>Wea. Forecasting</i>, <b>22</b>, 1089-1100.
 </p>
 <p>Ferro, C.A.T., D.S. Richardson, A.P. Weigel, 2008: On the
 effect of ensemble size on the discrete and continuous ranked
 probability scores. <i>Meteorol. Appl.</i>, <b>15</b>, 19-24.
 </p>
-<p><a name="Ferro_Stephenson_2011"></a>Ferro C.A.T., and D.B. Stephenson,
+<p><a id="Ferro_Stephenson_2011"></a>Ferro C.A.T., and D.B. Stephenson,
 2011: Extremal Dependence Indices: improved verifiation
 measures for deterministic forecasts of rare binary
 events. <i>Wea. Forecasting</i>, <b>26</b>, 699-713.
 </p>
-<p><a name="Finley_1884"></a>Finley, J.P., 1884: Tornado
+<p><a id="Finley_1884"></a>Finley, J.P., 1884: Tornado
 predictions. <i>Amer. Meteor. J.</i>, <b>1</b>, 85-88.
 </p>
 <p>Gallus, W.A., Jr., 2002: Impact of verification grid-box size on
@@ -2879,7 +2884,7 @@ warm-season QPF skill measures. <i>Wea. Forecasting</i>, <b>17</b>, 1296-1302.
 techniques to ensemble precipitation forecasts. 
 <i>Wea. Forecasting</i>, <b>25</b>, 144-158.
 </p>
-<p><a name="Gerrity_1992"></a>Gerrity, J.P., 1992: 
+<p><a id="Gerrity_1992"></a>Gerrity, J.P., 1992: 
 A note on Gandin and Murphy's equitable skill score.
 <i>Mon. Wea. Rev.</i>, <b>120</b>, 2709-2712.
 </p>
@@ -2908,7 +2913,7 @@ Verifying forecasts spatially. <i>Bull. Amer. Meteorol. Soc.</i>, <b>91</b>, 136
 model ever satisfy a naive forecaster? On grid box mean versus point
 verification. <i>Meteorol. Appl.</i>, <b>15</b>, 359-365.
 </p>
-<p><a name="Golding_1998"></a>Golding, B.W., 1998: Nimrod: A system for
+<p><a id="Golding_1998"></a>Golding, B.W., 1998: Nimrod: A system for
 generating automated very short range forecasts. <i>Meteorol. Appl.</i>,
 <b>5</b>, 1-16.
 </p>
@@ -2922,17 +2927,17 @@ forums'  seasonal precipitation forecasts of southeast South America during 1998
 <p>Hagedorn, R. and L.A. Smith, 2009: Communicating the value of 
 probabilistic forecasts with weather roulette, <i>Met. Appl.</i>, <b>16</b>, 143-155.
 </p>
-<p><a name="Hamill_1997"></a>Hamill, T.M., 1997: Reliability diagrams for
+<p><a id="Hamill_1997"></a>Hamill, T.M., 1997: Reliability diagrams for
 multicategory probabilistic forecasts. <i>Wea. Forecasting</i>, <b>12</b>,
 736-741.
 </p>
-<p><a name="Hamill_1999"></a>Hamill, T.M., 1999: Hypothesis tests for evaluating
+<p><a id="Hamill_1999"></a>Hamill, T.M., 1999: Hypothesis tests for evaluating
 numerical precipitation forecasts. <i>Wea. Forecasting</i>, <b>14</b>, 155-167.
 </p>
-<p><a name="Hamill_2001"></a>Hamill, T.M., 2001: Interpretation of rank
+<p><a id="Hamill_2001"></a>Hamill, T.M., 2001: Interpretation of rank
 histograms for verifying ensemble forecasts. <i>Mon. Wea. Rev.</i>, <b>129</b>, 550-560.
 </p>
-<p><a name="Hamill_and_Juras_2005"></a>Hamill, T.M., and J. Juras,
+<p><a id="Hamill_and_Juras_2005"></a>Hamill, T.M., and J. Juras,
 2006: Measuring forecast skill: is it real skill or is it the varying
 climatology? <i>Q. J. Royal Met. Soc.</i>, <b>132</b>, 2905-2923.
 Click <a href="https://doi.org/10.1256/qj.06.25">here</a>
@@ -2957,16 +2962,16 @@ application of signal detection theory to weather forecasting behavior.
 <p>Hersbach, H., 2000: Decomposition of the continuous ranked probability
 score for ensemble prediction systems. <i>Wea. Forecasting</i>, <b>15</b>, 559-570.
 </p>
-<p><a name="Hewson2007"></a>Hewson, T., 2007: The concept of 'Deterministic limit'. <i>3rd Intl. Verification
+<p><a id="Hewson2007"></a>Hewson, T., 2007: The concept of 'Deterministic limit'. <i>3rd Intl. Verification
 Methods Workshop, 31 January-2 February 2007, Reading, UK. </i>
 Click <a href="https://www.ecmwf.int/sites/default/files/elibrary/2007/15467-concept-deterministic-limit.pdf">
 here</a> to download the PDF (788 Kb).
 </p>
-<p><a name="Hoffman_et_al._1995"></a>Hoffman, R.N., Z. Liu, J.-F. Louis,
+<p><a id="Hoffman_et_al._1995"></a>Hoffman, R.N., Z. Liu, J.-F. Louis,
 and C. Grassotti, 1995: Distortion representation of forecast errors. <i>Mon.
 Wea. Rev.</i>, <b>123</b>, 2758-2770.
 </p>
-<p><a name="Hogan_et_al_2010"></a>
+<p><a id="Hogan_et_al_2010"></a>
 Hogan, R.J., C.A.T. Ferro, I.T. Jolliffe and D.B. Stephenson, 2010: Equitability revisited: 
 Why the "equitable threat score" is not equitable. <i>Wea. Forecasting</i>, <b>25</b>, 710-726. 
 </p>
@@ -2974,11 +2979,11 @@ Why the "equitable threat score" is not equitable. <i>Wea. Forecasting</i>, <b>2
 framework for assessing the quality of probability forecasts. <i>Int.
 J. Forecasting</i>, <b>2</b>, 285-293.
 </p>
-<p><a name="Jenkner_2008"></a>Jenkner, J., C. Frei and C. Schwierz, 2008: 
+<p><a id="Jenkner_2008"></a>Jenkner, J., C. Frei and C. Schwierz, 2008: 
 Quantile-based short-range QPF evaluation over Switzerland. Meteorologische Zeitschrift, <b>17</b>, 827-848. 
 Click <a href="https://doi.org/10.1127/0941-2948/2008/0344">here</a> to download the PDF (1.9 MB).
 </p>
-<p><a name="Jewson_2003"></a>Jewson, S., 2003: Use of the likelihood for
+<p><a id="Jewson_2003"></a>Jewson, S., 2003: Use of the likelihood for
 measuring the skill of probabilistic forecasts. 
 <a href="http://arxiv.org/PS_cache/physics/pdf/0308/0308046v2.pdf">http://arxiv.org/PS_cache/physics/pdf/0308/0308046v2.pdf</a>
 </p>
@@ -3007,7 +3012,7 @@ Carbin, 2003: Subjective verification of numerical models as a
 component of a broader interaction between research and operations. <i>Wea.
 Forecasting</i>, <b>18</b>, 847-860.
 </p>
-<p><a name="Kane_and_Brown_2000"></a>Kane, T.L. and B.G. Brown, 2000: Confidence
+<p><a id="Kane_and_Brown_2000"></a>Kane, T.L. and B.G. Brown, 2000: Confidence
 intervals for some verification measures - a survey of several methods.<i>15th
 Conference on Probability and Statistics in the Atmospheric Sciences,
 Amer. Met. Soc., 8-11 May 2000, Asheville, North Carolina</i>.
@@ -3020,18 +3025,18 @@ the radar and raingage measurement of rainfall. <i>Atmos. Research</i>,
 applied in a regional ensemble forecasting system. <i>Mon. Wea. Rev.</i>,
 <b>135</b>, 3248-3259.
 </p>
-<p><a name="Keil_Craig_2009"></a>Keil, C. and G.C. Craig, 2009: A
+<p><a id="Keil_Craig_2009"></a>Keil, C. and G.C. Craig, 2009: A
 displacement and amplitude score employing an optical flow technique. <i>Wea.
 Forecasting</i>, <b>24</b>, 1297-1308.
 </p>
-<p><a name="Koh_Ng_2009"></a>Koh, T. Y. and J. S. Ng, 2009: Improved
+<p><a id="Koh_Ng_2009"></a>Koh, T. Y. and J. S. Ng, 2009: Improved
 diagnostics for NWP verification in the
 tropics. <i>J. Geophys. Res.</i>, <b>114</b>, D12102, doi:10.1029/2008JD011179.
 </p>
 <p>Krzysztofowicz, R., 1992: Bayesian correlation score: A utilitarian measure of 
 forecast skill. <i>Mon. Wea. Rev.</i>, <b>120</b>, 208-219.
 </p>
-<p><a name="Lack_et_al_2010"></a>Lack, S., G.L. Limpert, and N.I. Fox,
+<p><a id="Lack_et_al_2010"></a>Lack, S., G.L. Limpert, and N.I. Fox,
 2010: An object-oriented multiscale verification scheme. <i>Wea.
 Forecasting</i>, <b>25</b>, 79-92.
 </p>
@@ -3078,7 +3083,7 @@ Processes in Geophysics</i>, <b>12</b>, 527-536.
 <p>Marzban, C., 1998: Scalar measures of performance in
 rare-event situations. <i>Wea. Forecasting</i>, <b>13</b>, 753-763.
 </p>
-<p><a name="Marzban_Sandgathe_2006"></a>Marzban,
+<p><a id="Marzban_Sandgathe_2006"></a>Marzban,
 C. and S. Sandgathe, 2006: Cluster analysis for verification of
 precipitation fields, <i>Wea. Forecasting</i>, <b>21</b>, 824-838.
 </p>
@@ -3092,7 +3097,7 @@ Forecasting</i>, <b>24</b>, 1102-1120.
 techniques: Cluster analysis, variogram, and optical flow. <i>Wea. Forecasting</i>, 
 <b>24</b>, 1457-1471. 
 </p>
-<p><a name="Mason_1982"></a>Mason, I., 1982: A model for
+<p><a id="Mason_1982"></a>Mason, I., 1982: A model for
 assessment of weather forecasts. <i>Aust. Met. Mag.</i>, <b>30</b>, 291-303.
 </p>
 <p>Mason, S.J., 2004: On using "climatology" as a reference strategy in
@@ -3122,7 +3127,7 @@ Met. Soc.</i>, <b>83</b>, 407-430.
 <p>May, P.T., and T.P. Lane, 2009: A method for using radar data to test 
 cloud resolving models. <i>Met. Apps.</i>, <b>16</b>, 425-432.
 </p>
-<p><a name="Michaes_2007"></a>Michaes, A.C., N.I. Fox, S.A. Lack and
+<p><a id="Michaes_2007"></a>Michaes, A.C., N.I. Fox, S.A. Lack and
 C.K. Wikle, 2007: Cell identification and verification of QPF ensembles
 using shape analysis techniques. <i>J. Hydrol.</i>, <b>343</b>, 105-116.
 </p>
@@ -3136,7 +3141,7 @@ forecast on perceived forecast skill. <i>Wea. Forecasting</i>, <b>23</b>, 1022-1
 of spatial forecast verification methods: identifying skillful spatial
 scales using the fractions skill score. <i>Wea. Forecasting,</i>
 <b>25</b>, 343-354.</p>
-<p><a name="Murphy_1973"></a>Murphy, A.H., 1973: A new vector partition 
+<p><a id="Murphy_1973"></a>Murphy, A.H., 1973: A new vector partition 
 of the probability score. <i>J. Appl. Meteor.</i>, <b>12</b>, 595-600.
 </p>
 <p>Murphy, A.H., 1988: Skill scores based on the mean square error and 
@@ -3149,7 +3154,7 @@ forecasts of rare events. <i>Wea. Forecasting,</i> <b>6</b>, 302-308.
 <p>Murphy, A.H., 1991: Forecast verification: Its complexity and dimensionality. 
 <i>Mon. Wea. Rev.</i>, <b>119</b>, 1590-1601.
 </p>
-<p><a name="Murphy1993"></a>Murphy, A.H., 1993: What is a good forecast?
+<p><a id="Murphy1993"></a>Murphy, A.H., 1993: What is a good forecast?
 An essay on the nature of goodness in weather forecasting. <i>Wea.
 Forecasting</i>, <b>8</b>, 281-293.
 </p>
@@ -3170,7 +3175,7 @@ some basic aspects of forecast quality. <i>Mon. Wea. Rev.</i>, <b>124</b>, 2353-
 <p>Murphy, A.H., 1997: Forecast verification. <i>Economic Value of Weather and Climate 
 Forecasts</i> (R.W. Katz and A.H. Murphy, Editors). Cambridge Univ. Press, ch. 7 (pp. 19-74).
 </p>
-<p><a name="Murphy_et_al_1989"></a>Murphy, A.H., B.G. Brown, and Y.-S.
+<p><a id="Murphy_et_al_1989"></a>Murphy, A.H., B.G. Brown, and Y.-S.
 Chen, 1989: Diagnostic verification of temperature forecasts. <i>Wea.
 Forecasting</i>, <b>4</b>, 485-501.
 </p>
@@ -3185,24 +3190,24 @@ in model verification. <i>Mon. Wea. Rev.</i>, <b>117</b>, 572-581.
 models in forecast verification: Precipitation probability forecasts. <i>Wea.
 Forecasting</i>, <b>13</b>, 795-810.
 </p>
-<p><a name="Murphy_and_Winkler_1987"></a>Murphy, A.H. and R.L. Winkler,
+<p><a id="Murphy_and_Winkler_1987"></a>Murphy, A.H. and R.L. Winkler,
 1987: A general framework for forecast verification. <i>Mon. Wea. Rev.</i>,
 <b>115</b>, 1330-1338.
 </p>
 <p>Murphy, A.H. and R.L. Winkler, 1992: Diagnostic verification of probability 
 forecasts. <i>Int. J. Forecasting</i>, <b>7</b>, 435-455.
 </p>
-<p><a name="Nachamkin2004"></a>Nachamkin, J.E., 2004: Mesoscale verification 
+<p><a id="Nachamkin2004"></a>Nachamkin, J.E., 2004: Mesoscale verification 
 using meteorological composites. <i>Mon. Wea. Rev.</i>, <b>132</b>, 941-955.
 </p>
 <p>Nachamkin, J.E., 2009: Application of the composite method to the Spatial Forecast 
 Verification Methods Intercomparison dataset. <i>Wea. Forecasting</i>, <b>24</b>, 1390-1400. 
 </p>
-<p><a name="Nash_Sutcliffe_1970"></a>Nash, J.E. and J.V. Sutcliffe,
+<p><a id="Nash_Sutcliffe_1970"></a>Nash, J.E. and J.V. Sutcliffe,
 1970: River flow forecasting through conceptual models part I
 : A discussion of principles. <i>J. Hydrology</i>, <b>10</b>, 282-290.
 </p>
-<p><a name="Nehrkorn_et_al_2003"></a>Nehrkorn, T., R.N. Hoffman, C.Grassotti
+<p><a id="Nehrkorn_et_al_2003"></a>Nehrkorn, T., R.N. Hoffman, C.Grassotti
 and J.-F. Louis, 2003: Feature calibration and alignment to represent
 model forecast errors: Empirical regularization. <i>Q. J. R. Meteorol.
 Soc.</i>, <b>129</b>, 195-218.
@@ -3219,7 +3224,7 @@ Uncertainty Estimation framework for hydrological applications.
 <p>Petrik, R., M. Baldauf, H. Schlunzen and A. Gassmann, 2011: Validation of a mesoscale 
 weather prediction model using subdomain budgets. <i>Tellus</i>, <b>63A</b>, 707-726. 
 </p>
-<p><a name="Potts_et_al_1996"></a>Potts, J.M., C.K. Folland, I.T. Jolliffe, 
+<p><a id="Potts_et_al_1996"></a>Potts, J.M., C.K. Folland, I.T. Jolliffe, 
 and D. Sexton, 1996: Revised "LEPS" scores for assessing climate model simulations 
 and long-range forecasts. <i>J. Climate</i>, <b>9</b>, 34-53.
 </p>
@@ -3230,7 +3235,7 @@ extreme dependency score. <i>Met. Appl.</i>, <b>16</b>, 533-535.
 Verification of ensemble flow forecasts for the River Rhine. 
 <i>J. Hydrol.</i>, <b>376</b>, 463-475.
 </p>
-<p><a name="Richardson_2000"></a>Richardson, D.S., 2000: Skill and relative
+<p><a id="Richardson_2000"></a>Richardson, D.S., 2000: Skill and relative
 economic value of the ECMWF ensemble prediction system. <i>Quart. J.
 Royal Met. Soc.</i>, <b>126</b>, 649-667.
 </p>
@@ -3242,22 +3247,22 @@ variations in mesoscale numerical wind forecasts. <i>Mon. Wea. Rev.</i>,
 changes in wind as objects for evaluating mesoscale numerical weather
 prediction. <i>Wea. Forecasting</i>, <b>24</b>, 1374-1389. 
 </p>
-<p><a name="Roberts_Lean_2008"></a>Roberts, N.M. and H.W. Lean, 2008: 
+<p><a id="Roberts_Lean_2008"></a>Roberts, N.M. and H.W. Lean, 2008: 
 Scale-selective verification of rainfall accumulations from high-resolution 
 forecasts of convective events. <i>Mon. Wea. Rev.</i>,  <b>136</b>, 78-97.
 </p>
-<p><a name="Rodwell_et_al_2010"></a>Rodwell, M.J., D.S. Richardson, T.D. Hewson 
+<p><a id="Rodwell_et_al_2010"></a>Rodwell, M.J., D.S. Richardson, T.D. Hewson 
 and T. Haiden, 2010: A new equitable score suitable for verifying precipitation
 in numerical weather prediction. <i>Q. J. R. Meteorol. Soc.</i>, 
 <b>136</b>, 1344-1363.
 </p>
-<p><a name="Roebber_2009"></a>Roebber, P.J., 2009: Visualizing multiple
+<p><a id="Roebber_2009"></a>Roebber, P.J., 2009: Visualizing multiple
 measures of forecast quality. <i>Wea. Forecasting</i>, <b>24</b>, 601-608.
 </p>
 <p>Roebber, P.J., and L.F. Bosart, 1996: The contributions of education and 
 experience to forecast skill. <i>Wea. Forecasting</i>, <b>11</b>, 21-40.
 </p>
-<p><a name="Roulston_Smith_2002"></a>Roulston, M.S. and
+<p><a id="Roulston_Smith_2002"></a>Roulston, M.S. and
 L.A. Smith, 2002: Evaluating probabilistic forecasts
 using information theory. <i>Mon. Wea. Rev.</i>, <b>130</b>, 1653-1660.
 </p>
@@ -3268,7 +3273,7 @@ reliability. <i>Mon. Wea. Rev.,</i> <b>132</b>, 1487-1501.
 <p>Schervish, M.J., 1989: A general method for comparing probability assessors. 
 <i>Annals of Statistics</i>, <b>17</b>, 1856-1879.
 </p>
-<p><a name="Seaman_et_al_1996"></a>Seaman, R., I. Mason, and F. Woodcock,
+<p><a id="Seaman_et_al_1996"></a>Seaman, R., I. Mason, and F. Woodcock,
 1996: Confidence intervals for some performance measures of yes-no
 forecasts.<i>Aust. Met. Mag.</i>, <b>45</b>, 49-53.
 </p>
@@ -3288,18 +3293,18 @@ methodology applied to the damaging downburst prediction and detection algorithm
 <p>Stensrud, D.J., and J.A. Skindlov, 1996: Gridpoint predictions of high temperature from 
 a mesoscale model. <i>Wea. Forecasting</i>, <b>11</b>, 103-110.
 </p>
-<p><a name="Stensrud_and_Wandishin_2000"></a>Stensrud, D.J. and M.S. Wandishin,
+<p><a id="Stensrud_and_Wandishin_2000"></a>Stensrud, D.J. and M.S. Wandishin,
 2000: The correspondence ratio in forecast evaluation. <i>Wea.
 Forecasting</i>, <b>15</b>, 593-602.
 </p>
-<p><a name="Stephenson_2000"></a>Stephenson, D.B., 2000:
+<p><a id="Stephenson_2000"></a>Stephenson, D.B., 2000:
 Use of the "odds ratio" for diagnosing forecast skill. 
 <i>Wea. Forecasting</i>, <b>15</b>, 221-232.
 </p>
 <p>Stephenson, D.B. and F. J. Doblas-Reyes, 2000: Statistical methods for
 interpreting Monte Carlo ensemble forecasts. <i>Tellus</i>, <b>52A</b>, 300-322.
 </p>
-<p><a name="Stephenson_et_al_2008"></a>Stephenson D.B., B. Casati, C.A.T. Ferro and 
+<p><a id="Stephenson_et_al_2008"></a>Stephenson D.B., B. Casati, C.A.T. Ferro and 
 C.A. Wilson, 2008: The extreme dependency score: a non-vanishing measure for forecasts of 
 rare events. <i>Meteorol. Appl.</i>, <b>15</b>, 41-50.
 </p>
@@ -3310,28 +3315,28 @@ extra components in the Brier Score Decomposition, <i>Wea. Forecasting</i>,
 <p>Stewart, T.R., 1990: A decomposition of the correlation coefficient
 and its use in analyzing forecast skill. <i>Wea. Forecasting</i>, <b>5</b>, 661-666.
 </p>
-<p><a name="Talagrand_et_al_1997"></a>Talagrand, O., R.
+<p><a id="Talagrand_et_al_1997"></a>Talagrand, O., R.
 Vautard and B.  Strauss, 1997: Evaluation of probabilistic prediction 
 systems.  <i>Proceedings, ECMWF Workshop on Predictability.</i>
 </p>
 <p>Tartaglione, N., 2010: Relationship between precipitation forecast errors and skill 
 scores of dichotomous forecasts. <i>Wea. Forecasting</i>, <b>25</b>, 355-365. 
 </p>
-<p><a name="Taylor_2001"></a>Taylor, K.E., 2001: Summarizing multiple
+<p><a id="Taylor_2001"></a>Taylor, K.E., 2001: Summarizing multiple
 aspects of model performance in a single diagram. <i>J. Geophys. Res.</i>,
 <b>106</b> (D7), 7183-7192.
 </p>
-<p><a name="Theis_et_al_2005"></a>Theis,
+<p><a id="Theis_et_al_2005"></a>Theis,
 S.E., A. Hense and U. Damrath, 2005: Probabilistic precipitation
 forecasts from a deterministic model: a pragmatic approach. <i>Meteorol.
 Appl.</i>, <b>12</b>, 257-268.
 </p>
-<p><a name="Thornes_and_Stephenson_2001"></a>Thornes, J.E. and D.B. Stephenson,
+<p><a id="Thornes_and_Stephenson_2001"></a>Thornes, J.E. and D.B. Stephenson,
 2001: How to judge the quality and value of weather forecast products.
 <i>Meteorol. Appl.</i>, <b>8</b>, 307-314. Click <a href="https://doi.org/10.1017/S1350482701003061">here</a>
 to download a PDF of this paper (79 KB).
 </p>
-<p><a name="Tremblay_et_al_1996"></a>Tremblay, A., S.G. Cober, A. Glazer,
+<p><a id="Tremblay_et_al_1996"></a>Tremblay, A., S.G. Cober, A. Glazer,
 G. Isaac, and J. Mailhot, 1996: An intercomparison of mesoscale
 forecasts of aircraft icing using SSM/I retrievals.
 <i>Wea. Forecasting</i>, <b>11</b>, 66-77.
@@ -3362,7 +3367,7 @@ of effectiveness for the evaluation of transport and dispersion models.
 <p>Watterson, I.G., 1996: Non-dimensional measures of
 climate model performance. <i>Int. J. Climatol.</i>, <b>16</b>, 379-391.
 </p>
-<p><a name="Wernli_2008"></a>Wernli H., M. Paulat, M. Hagen and C.
+<p><a id="Wernli_2008"></a>Wernli H., M. Paulat, M. Hagen and C.
 Frei, 2008: SAL - a novel quality measure for the verification of 
 quantitative precipitation forecasts. <i>Mon. Wea. Rev.,</i>, <b>136</b>, 4470-4487.
 </p>
@@ -3381,7 +3386,7 @@ skill for mesoscale and synoptic-scale meteorological features as a
 function of horizontal grid resolution. 
 <i>Mon. Wea. Rev.</i>, <b>122</b>, 57-71.
 </p>
-<p><a name="Weygandt_et_al_2004"></a>Weygandt,
+<p><a id="Weygandt_et_al_2004"></a>Weygandt,
 S.S., A.F. Loughe, S.G. Benjamin and J.L. Mahoney, 2004: Scale
 sensitivities in model precipitation skill scores during IHOP. <i>22nd Conf.
 Severe Local Storms, Amer. Met. Soc., 4-8 October 2004, Hyannis, MA</i>.
@@ -3389,11 +3394,11 @@ Severe Local Storms, Amer. Met. Soc., 4-8 October 2004, Hyannis, MA</i>.
 <p>Wilks D.S., 2000: Diagnostic verification of the climate prediction center 
 long-lead outlooks, 1995-98. <i>J. Climate</i>, <b>13</b>, 2389-2403.
 </p>
-<p><a name="Wilks_2001"></a>Wilks, D.S., 2001: A skill
+<p><a id="Wilks_2001"></a>Wilks, D.S., 2001: A skill
 score based on economic value for probability forecasts. 
 <i>Meteorol. Appl</i>., <b>8</b>, 209-219.
 </p>
-<p><a name="Wilson_et_al_1999"></a>Wilson, L.J., W.R. Burrows, and A. Lanzinger,
+<p><a id="Wilson_et_al_1999"></a>Wilson, L.J., W.R. Burrows, and A. Lanzinger,
 1999: A strategy for verification of weather element forecasts from an
 ensemble prediction system. <i>Mon. Wea. Rev.</i>, <b>127</b>, 956-970.
 </p>
@@ -3403,7 +3408,7 @@ ensemble prediction system. <i>Mon. Wea. Rev.</i>, <b>127</b>, 956-970.
 <p>Winkler, R.L., 1996: Scoring rules and the evaluation of probabilities. 
 <i>Test</i>, <b>5</b>, 1-60. 
 </p>
-<p><a name="Woodcock_1976"></a>Woodcock, F., 1976:
+<p><a id="Woodcock_1976"></a>Woodcock, F., 1976:
 The evaluation of yes/no forecasts for scientific and administrative 
 purposes. <i>Mon.  Wea. Rev.</i>, <b>104</b>, 1209-1214.
 </p>
@@ -3414,7 +3419,7 @@ precipitation fields. <i>Meteorol. Appl.</i>, <b>13</b>, 1-20.
 <p>Yates, J.F., 1994: Subjective probability accuracy analysis. 
 <i>Subjective Probability</i> (ed. G. Wright and P. Ayton). Wiley, pp. 381-410.
 </p>
-<p><a name="Zepeda-Arce_et_al_2000"></a>Zepeda-Arce, J., E. Foufoula-Georgiou,
+<p><a id="Zepeda-Arce_et_al_2000"></a>Zepeda-Arce, J., E. Foufoula-Georgiou,
 and K.K. Droegemeier, 2000: Space-time rainfall organization and its
 role in validating quantitative precipitation forecasts. <i>J.
 Geophys. Res.</i>, <b>105</b> (D8), 10,129-10,146.
