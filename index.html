@@ -20,7 +20,7 @@
       background-color: #f8f8f8;
       border-right: 1px solid #ddd;
       padding: 1em;
-      overflow-y: auto;,
+      overflow-y: auto;
     }
     #sidebar h2 {
       font-size: 1.1em;
@@ -143,8 +143,6 @@
 <img alt="WWRP logo" src="site/WWRPlogo.gif" style="height: 90px;"></a>
 <a href="https://www.wcrp-climate.org/">
 <img alt="WCRP logo" src="site/WCRP_logo.jpg" style="height: 90px;"></a>
-<h3 class="green"><a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research"><i>
-WWRP/WGNE Joint Working Group on Forecast Verification Research</i></a></h3>
 <!--<hr>-->
 
 <!-- UNCOMMENT AND USE THIS SECTION TO PROMOTE NEWS, ETC. -->
@@ -157,6 +155,8 @@ More scores:<br>
 <b><i>Upcoming meetings:</i></b><br> 
 <hr>
 -->
+
+<h2 style="border: none;">Forecast verification - methods, issues and FAQ</h2>
 
 <h2 id="Purpose">What is this website about?</h2>
 
@@ -636,10 +636,9 @@ shown in parentheses.
 </p><p>
 <a id="ACC"></a>- - - - - - - - - - -
 </p>
+<!--Note: The "flexbox" using <div> is to vertically center the equation image with the text -->
 <div style="display: flex; align-items: center;">
-  <p>
-    <b><i>Accuracy (fraction correct)</i></b> -&nbsp;
-  </p>
+  <p><b><i>Accuracy (fraction correct)</i></b> - </p>
   <img src="site/Accuracy.gif" alt="Description" width="267" height="55">
 </div>
 <p><b>Answers the question:</b> <i>Overall, what fraction of the forecasts were correct?</i>
@@ -654,9 +653,10 @@ by the most common category, usually "no event" in the case of rare weather.
 </p>
 <p><a id="BIAS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Bias score (frequency bias)</i></b> -&nbsp;
-<img src="site/BIAS.gif" alt="Equation for bias" width="194" height="53" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Bias score (frequency bias)</i></b> - </p>
+  <img src="site/BIAS.gif" alt="Equation for bias" width="194" height="53">
+</div>
 <p><b>Answers the question: </b><i>How did the forecast frequency of "yes"
 events compare to the observed frequency of "yes" events?</i>
 </p>
@@ -673,10 +673,11 @@ indicating slight overforecasting of rain frequency.
 </p>
 <p><a id="POD"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Probability of detection (hit rate)</i></b> -&nbsp;
-<img src="site/POD.gif" alt="Equation for probability of detection" width="162" height="49" align="middle">
-&nbsp;(also denoted <i>H</i>)
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Probability of detection (hit rate)</i></b> - </p>
+  <img src="site/POD.gif" alt="Equation for probability of detection" width="162" height="49">
+   &nbsp;(also denoted&nbsp; <i>H</i>)
+</div>
 <p><b>Answers the question: </b><i>What fraction of the observed "yes"
 events were correctly forecast?</i>
 </p>
@@ -694,9 +695,10 @@ indicating that roughly 3/4 of the observed rain events were correctly predicted
 </p>
 <p><a id="FAR"></a>- - - - - - - - - - -
 </p>
-<p><b><i>False alarm ratio</i></b> -&nbsp;
-<img src="site/FAR.gif" alt="Equation for false alarm ratio" width="198" height="52" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>False alarm ratio</i></b> - </p>
+  <img src="site/FAR.gif" alt="Equation for false alarm ratio" width="198" height="52">
+</div>
 <p><b>Answers the question: </b><i>What fraction of the predicted "yes"
 events actually did not occur (i.e., were false alarms)?</i>
 </p>
@@ -711,10 +713,11 @@ indicating that in roughly 1/3 of the forecast rain events, rain was not observe
 </p>
 <p><a id="POFD"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Probability of false detection (false alarm rate)</i></b>
--&nbsp;<img src="site/POFD.gif" alt="probability of false detection" width="278" height="54" align="middle">
-&nbsp;(also denoted <i>F</i>)
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Probability of false detection (false alarm rate)</i></b> - </p>
+  <img src="site/POFD.gif" alt="probability of false detection" width="278" height="54">
+  &nbsp;(also denoted <i>F</i>)
+</div>
 <p><b>Answers the question: </b><i>What fraction of the observed "no"
 events were incorrectly forecast as "yes"?</i>
 </p>
@@ -733,9 +736,10 @@ forecasts were incorrect.
 </p>
 <p><a id="SR"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Success ratio</i></b>
--&nbsp;<img src="site/SR.gif" alt="success ratio" width="182" height="51" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Success ratio</i></b> - </p>
+  <img src="site/SR.gif" alt="success ratio" width="182" height="51">
+</div>
 <p><b>Answers the question: </b><i>What fraction of the forecast "yes"
 events were correctly observed?</i>
 </p>
@@ -752,10 +756,11 @@ indicating that for 68% of the forecast rain events, rain was actually observed.
 </p>
 <p><a id="CSI"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Threat score (critical success index)</i></b> -&nbsp;
-<img src="site/TS.gif" alt="Equation for threat score" width="250" height="48" align="middle">
-&nbsp;(also denoted CSI)
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Threat score (critical success index)</i></b> - </p>
+  <img src="site/TS.gif" alt="Equation for threat score" width="250" height="48">
+  &nbsp;(also denoted <i>CSI</i>)
+</div>
 <p><b>Answers the question: </b><i>How well did the forecast "yes"
 events correspond to the observed "yes" events?</i>
 </p>
@@ -776,12 +781,14 @@ and/or predicted) were correctly forecast.
 </p>
 <p><a id="ETS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Equitable threat score (Gilbert skill score)</i></b>-
-<img src="site/ETSa.gif" alt="Equation for equitable threat score" width="339" height="60" align="middle">
-&nbsp;(also denoted GSS)
-<br>where&nbsp;<a id="random_hits"></a>
-<img src="site/ETSb.gif" alt="Equation for hits due to random chance" width="332" height="47" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Equitable threat score (Gilbert skill score)</i></b> - </p>
+  <img src="site/ETSa.gif" alt="Equation for equitable threat score" width="339" height="60">
+  &nbsp;(also denoted &nbsp;<i>GSS</i>)<br>
+</div><div style="display: flex; align-items: center;">
+  where&nbsp;<a id="random_hits"></a>
+  <img src="site/ETSb.gif" alt="Equation for hits due to random chance" width="332" height="47">
+</div>
 <p><b>Answers the question: </b><i>How well did the forecast "yes" events
 correspond to the observed "yes" events (accounting for hits due tochance)?</i>
 </p>
@@ -802,11 +809,11 @@ it does not distinguish the source of forecast error.
 </p>
 <p><a id="HK"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Hanssen and Kuipers discriminant (true skill statistic,
-Peirce's skill score)</i></b> -&nbsp;
-<img src="site/HK.gif" alt="Equation for Hanssen and Kuipers score" width="391" height="48" align="middle">
-&nbsp;(also denoted TSS and PSS)
-</p>
+<p><b><i>Hanssen and Kuipers discriminant (true skill statistic, Peirce's skill score)</i></b> - </p>
+<div style="display: flex; align-items: center;">
+  <img src="site/HK.gif" alt="Equation for Hanssen and Kuipers score" width="391" height="48">
+  &nbsp;(also denoted &nbsp;<i>TSS</i> &nbsp;and&nbsp; <i>PSS</i>)
+</div>
 <p><b>Answers the question: </b><i>How well did the forecast separate
 the "yes" events from the "no" events?</i>
 </p>
@@ -826,11 +833,13 @@ for a comparison of <i>HK</i> with other scores.
 </p>
 <p><a id="HSS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Heidke skill score (Cohen's κ</i></b>-&nbsp;
-<img src="site/HSSnew.gif" alt="Heidke skill score" width="388" height="49" align="middle">
-<br>
-where&nbsp;<img src="site/ExpectedCorrect.gif" alt="Expected correct forecasts for random chance" width="634" height="53" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Heidke skill score (Cohen's κ)</i></b> - </p>
+  <img src="site/HSSnew.gif" alt="Heidke skill score" width="388" height="49">
+</div><div style="display: flex; align-items: center;">
+  <p><b><i>where&nbsp;</i></b></p>
+  <img src="site/ExpectedCorrect.gif" alt="Expected correct forecasts for random chance" width="634" height="53">
+</div>
 <p><b>Answers the question: </b><i>What was the accuracy of the forecast
 relative to that of random chance?</i>
 </p>
@@ -850,9 +859,10 @@ some other standard.
 </p>
 <p><a id="OR"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Odds ratio</i></b> -
-<img src="site/OddsRatio.gif" alt="odds ratio" width="301" height="86" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Odds ratio</i></b> - </p>
+  <img src="site/OddsRatio.gif" alt="odds ratio" width="301" height="86">
+</div>
 <p><b>Answers the question: </b><i>What is the ratio of the odds of a "yes"
 forecast being correct, to the odds of a "yes" forecast being wrong?</i>
 </p>
@@ -880,9 +890,10 @@ greater than the odds of a "yes" forecast being incorrect.
 </p>
 <p><a id="ORSS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Odds ratio skill score (Yule's Q)</i></b> -
-<img src="site/ORSS.gif" alt="odds ratio skill score equation" width="375" height="47" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Odds ratio skill score (Yule's Q)</i></b> - </p>
+  <img src="site/ORSS.gif" alt="odds ratio skill score equation" width="375" height="47">
+</div>
 <p><b>Answers the question: </b><i>What was the improvement of the forecast
 over random chance?</i>
 </p>
@@ -941,7 +952,7 @@ in the various bins. It is analogous to a scatter plot for categories.
     </tr>
     <tr style="text-align: center;">
       <th><i>...</i></th>
-      <td style="background-color: #33ff33;" align="center">...</td>
+      <td style="background-color: #33ff33; text-align: center;">...</td>
       <td style="background-color: #33ff33;">...</td>
       <td style="background-color: #33ff33;">...</td>
       <td style="background-color: #33ff33;">...</td>
@@ -998,22 +1009,25 @@ to be "not in category <i>i</i>" or "below category <i>i</i>".
 </p>
 <p><a id="histogram"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Histogram</i></b> - Plot the relative frequencies of forecast and observed categories
-<img src="site/histogram.gif" alt="histogram of temperature change categories" width="311" height="178">
-</p>
-<p><b>Answers the question: </b><i>How well did the distribution of forecast
-categories correspond to the distribution of observed categories?</i>
-</p>
-<p><b>Characteristics:</b> Shows similarity between location, spread,
-and skewness of forecast and observed distributions. Does not give
-information on the correspondence between the forecasts and observations.
-Histograms give information similar to <a href="index.html#box_plot">box plots</a>.
-</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1;">
+    <p><b><i>Histogram</i></b> - Plot the relative frequencies of forecast and observed categories</p>
+	<p><b>Answers the question: </b><i>How well did the distribution of forecast 
+	categories correspond to the distribution of observed categories?</i>
+	</p>
+	<p><b>Characteristics:</b> Shows similarity between location, spread,
+	and skewness of forecast and observed distributions. Does not give
+	information on the correspondence between the forecasts and observations.
+	Histograms give information similar to <a href="index.html#box_plot">box plots</a>.</p>
+  </div>
+  <img src="site/histogram.gif" alt="histogram of temperature change categories" width="311" height="178" style="margin-left: 20px;">
+</div>
 <p><a id="ACCmulti"></a>- - - - - - - - - - -
 <br>
-<b><i>Accuracy</i></b> -&nbsp;
-<img src="site/ACCmulti.gif" alt="Equation for accuracy for multiple categories" width="189" height="47" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Accuracy (fraction correct)</i></b> - </p>
+  <img src="site/ACCmulti.gif" alt="Equation for accuracy for multiple categories" width="189" height="47">
+</div>
 <p><b>Answers the question: </b><i>Overall, what fraction of the
 forecasts were in the correct category?</i>
 </p>
@@ -1024,8 +1038,12 @@ it is heavily influenced by the most common category.
 </p>
 <p><a id="HSSmulti"></a>- - - - - - - - - - -
 </p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Accuracy (fraction correct)</i></b> - </p>
+  <img src="site/Accuracy.gif" alt="Description" width="267" height="55">
+</div>
 <p><a id="multicategory_HSS"></a><b><i>Heidke skill score</i></b> -&nbsp;
-<img src="site/HSSmulti.gif" alt="Equation for Heidke skill score for multiple categories" width="324" height="110" align="middle">
+<img src="site/HSSmulti.gif" alt="Equation for Heidke skill score for multiple categories" width="324" height="110">
 </p>
 <p><b>Answers the question: </b><i>What was the accuracy of the forecast
 in predicting the correct category, relative to that of random chance?</i>
@@ -1045,10 +1063,10 @@ observation, i.e., no change) or some other standard.
 </p>
 <p><a id="HKmulti"></a>- - - - - - - - - - -
 </p>
-<p><a id="multicategory_HK"></a><b><i>Hanssen and Kuipers discriminant
-(true skill statistic, Peirce's skill score)</i></b> -&nbsp;
-<img src="site/HKKmulti.gif" alt="Hanssen and Kuipers score for multiple categories" width="323" height="105" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Hanssen and Kuipers discriminant (true skill statistic, Peirce's skill score)</i></b> - </p>
+  <img src="site/HKKmulti.gif" alt="Hanssen and Kuipers score for multiple categories" width="323" height="105">
+</div>
 <p><b>Answers the question: </b><i>What was the accuracy of the
 forecast in predicting the correct category, relative to that of random chance?</i>
 </p>
@@ -1060,17 +1078,25 @@ chance is for an unbiased forecast.
 </p>
 <p><a id="Gerrity"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Gerrity score</i></b> -&nbsp;
-<img src="site/GSS.gif" alt="Gerrity skill score for multiple categories" width="186" height="50" align="middle">
-<br>where <i>s<sub>ij</sub></i> are elements of a scoring matrix given by
-<br>
-<img src="site/GSS_sii.gif" alt="Gerrity skill score sii term" width="185" height="50" align="middle"> (<i>i = j</i>, diagonal), &nbsp;
-<img src="site/GSS_sij.gif" alt="Gerrity skill score sij term" width="270" height="50" align="middle"> (<i>i ≠ j</i>, off-diagonal), and &nbsp;&nbsp;
-<img src="site/GSS_ai.gif" alt="Gerrity skill score a term" width="167" height="50" align="middle">
-<br>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Gerrity score</i></b> - </p>
+  <img src="site/GSS.gif" alt="Gerrity skill score for multiple categories" width="186" height="50">
+</div>
+where <i>s<sub>ij</sub></i> are elements of a scoring matrix given by
+<div style="display: flex; align-items: center;">
+  <img src="site/GSS_sii.gif" alt="Gerrity skill score sii term" width="185" height="50"> 
+  (<i>i = j</i>, diagonal)
+</div>
+<div style="display: flex; align-items: center;">
+  <img src="site/GSS_sij.gif" alt="Gerrity skill score sij term" width="270" height="50"> 
+  (<i>i ≠ j</i>, off-diagonal)
+</div>
+<img src="site/GSS_ai.gif" alt="Gerrity skill score a term" width="167" height="50">
+<p>
 with the sample probabilities (observed frequencies) given by
 <i>p<sub>i</sub></i> = <i>N(O<sub>i</sub>)</i> / <i>N</i>).
-</p><p><b>Answers the question: </b><i>What was the accuracy of the
+</p><p>
+<b>Answers the question: </b><i>What was the accuracy of the
 forecast in predicting the correct category, relative to that of random chance?</i>
 </p>
 <p><b>Range:</b> -1 to 1, 0 indicates no skill. <b>Perfect score:</b> 1
@@ -1160,38 +1186,50 @@ plots such as scatter plots and box plots, as well as various summary scores.
 </p>
 <p><a id="scatterplot"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Scatter plot -</i></b> Plots the forecast values against the observed values.&nbsp;
-<img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212" style="margin: 3px 3px 3px 3px;" "align="right">
-</p>
-<p><b>Answers the question: </b><i>How well did the forecast values correspond
-to the observed values?</i>
-</p>
-<p><b>Characteristics:</b> Good first look at correspondence between forecast
-and observations. An accurate forecast will have points on or near the diagonal.
-</p>
-<p>Scatter plots of the error can reveal relationships between the observed or
-forecast values and the errors.&nbsp;
-<img src="site/error_scatterplot.gif" alt="error scatterplots" width="323" height="157" align="texttop">
-</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1;">
+    <p><b><i>Scatter plot</i></b> - Plot the forecast values against the observed values</p>
+	<p><b>Answers the question: </b><i>How well did the forecast values correspond
+	to the observed values?</i>
+	</p>
+	<p><b>Characteristics:</b> Good first look at correspondence between forecast
+	and observations. An accurate forecast will have points on or near the diagonal.
+	</p>
+  </div>
+  <img src="site/scatterplot.gif" alt="Scatter plot of forecast vs observed temperatures" width="209" height="212" style="margin-left: 20px;">
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1;">
+    <p>Scatter plots of the error can reveal relationships between the observed or
+	forecast values and the errors.&nbsp;
+	</p>
+  </div>
+  <img src="site/error_scatterplot.gif" alt="error scatterplots" width="323" height="157" style="margin-left: 20px;">
+</div>
 <p><a id="box_plot"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Box plot -</i></b> Plot boxes to show the range of data falling
-between the 25th and 75th percentiles, horizontal line inside the box showing
-the median value, and the whiskers showing the complete range of the data.
-<br>
-<img src="site/boxplot.gif" alt="box plot of temperature forecasts" width="353" height="165" align="middle"></p>
-<p><b>Answers the question: </b><i>How well did the distribution of forecast
-values correspond to the distribution of observed values?</i>
-</p>
-<p><b>Characteristics:</b> Shows similarity between location, spread, and
-skewness of forecast and observed distributions. Does not give information
-on the correspondence between the forecasts and observations. Box plots
-give information similar to <a href="index.html#histogram">histograms</a>.
-</p>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1;">
+    <p><b><i>Box plot</i></b> - Plot boxes to show the range of data falling
+	between the 25th and 75th percentiles, horizontal line inside the box showing
+	the median value, and the whiskers showing the complete range of the data.</p>
+	<p><b>Answers the question: </b><i>How well did the distribution of forecast
+	values correspond to the distribution of observed values?</i>
+	</p>
+	<p><b>Characteristics:</b> Shows similarity between location, spread, and
+	skewness of forecast and observed distributions. Does not give information
+	on the correspondence between the forecasts and observations. Box plots
+	give information similar to <a href="index.html#histogram">histograms</a>.
+	</p>
+  </div>
+  <img src="site/boxplot.gif" alt="box plot of temperature forecasts" width="353" height="165" style="margin-left: 20px;">
+</div>
 <p><a id="meanerror"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Mean error</i></b> -&nbsp;<img src="site/MeanError.gif" alt="Equation for mean error" width="196" height="48" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Mean error</i></b> - </p>
+  <img src="site/MeanError.gif" alt="Equation for mean error" width="196" height="48">
+</div>
 <p><b>Answers the question: </b><i>What is the average forecast error?</i>
 </p>
 <p><b>Range:</b> -∞ to ∞. <b>Perfect score:</b> 0.
@@ -1205,9 +1243,10 @@ to get a perfect score for a bad forecast if there are compensating errors.
 </p>
 <p><a id="multiplicative_bias"></a>- - - - - - - - - - -
 </p>
-<p><b><i>(Multiplicative) bias</i></b> -&nbsp;
-<img src="site/multbias.gif" alt="multiplicative bias equation" width="113" height="92" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>(Multiplicative) bias</i></b> - </p>
+  <img src="site/multbias.gif" alt="multiplicative bias equation" width="113" height="92">
+</div>
 <p><b>Answers the question: </b><i>How does the average forecast magnitude
 compare to the average observed magnitude?</i>
 </p>
@@ -1223,9 +1262,10 @@ are compensating errors.
 </p>
 <p><a id="MAE"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Mean absolute error</i></b> -&nbsp;
-<img src="site/MAE.gif" alt="Equation for mean absolute error" width="161" height="48" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Mean absolute error</i></b> - </p>
+  <img src="site/MAE.gif" alt="Equation for mean absolute error" width="161" height="48">
+</div>
 <p><b>Answers the question: </b><i>What is the average magnitude of the forecast errors?</i>
 </p>
 <p><b>Range:</b> 0 to ∞.&nbsp; <b>Perfect score:</b> 0.
@@ -1237,9 +1277,10 @@ of the deviations.
 </p>
 <p><a id="RMS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Root mean square error</i></b> -&nbsp;
-<img src="site/RMSE.gif" alt="Equation for root mean square error" width="178" height="58" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Root mean square error</i></b> - </p>
+  <img src="site/RMSE.gif" alt="Equation for root mean square error" width="178" height="58">
+</div>
 <p><b>Answers the question: </b><i>What is the average magnitude of the forecast errors?</i>
 </p>
 <p><b>Range:</b> 0 to ∞.&nbsp; <b>Perfect score:</b> 0.
@@ -1257,9 +1298,10 @@ but gives a multiplicative error instead of an additive error.
 </p>
 <p><a id="MSE"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Mean squared error</i></b> -&nbsp;
-<img src="site/MSE.gif" alt="Equation for mean squared error" width="162" height="52" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Mean squared error</i></b> - </p>
+  <img src="site/MSE.gif" alt="Equation for mean squared error" width="162" height="52">
+</div>
 <p>Measures the mean squared difference between the forecasts and observations.
 </p>
 <p><b>Range:</b> 0 to ∞.&nbsp; <b>Perfect score:</b> 0.
@@ -1271,10 +1313,11 @@ following Murphy (1987). Units of <i>MSE</i> are the square of the basic units.
 </p>
 <p><a id="LEPS"></a>- - - - - - - - - - -
 </p>
-<p><b><i><a href="site/LEPS.html">Linear error in probability space</a> (LEPS)</i></b> -&nbsp;
-<img src="site/LEPS.gif" alt="Equation for linear error in probability space" width="248" height="47" align="middle">
-<img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" height="243" style="margin: 3px 3px 3px 3px;" align="right">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i><a href="site/LEPS.html">Linear error in probability space</a> (LEPS)</i></b> - </p>
+  <img src="site/LEPS.gif" alt="Equation for linear error in probability space" width="248" height="47">
+</div>
+<img src="site/LEPSdiagram.gif" alt="LEPS diagram" width="370" height="243" style="float: right; margin-left: 20px;">
 <p>Measures the error in probability space as opposed to measurement space,
 where <i>CDFo()</i> is the cumulative probability density function of
 the observations, determined from an appropriate climatology.
@@ -1294,14 +1337,16 @@ temperature is normally distributed with a mean of 14 C and variance of
 </p>
 <p><a id="SEEPS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Stable equitable error in probability space (SEEPS)</i></b> -&nbsp;
-<img src="site/SEEPS.gif" alt="Equation for stable equitable error in probability space" width="211" height="50" align="middle">
-<img src="site/SEEPSdiagram.gif" alt="SEEPS diagram" width="288" height="282" style="margin: 3px 3px 3px 3px;" align="right">
-<br>where <i>n</i>(<i>F<sub>i</sub>,O<sub>j</sub></i>) is the joint occurrence
+<img src="site/SEEPSdiagram.gif" alt="SEEPS diagram" width="288" height="282" style="float: right; margin-left: 20px;">
+<div style="display: flex; align-items: center;">
+  <p><b><i>Stable equitable error in probability space (SEEPS)</i></b> - </p>
+  <img src="site/SEEPS.gif" alt="Equation for stable equitable error in probability space" width="211" height="50">
+</div>
+<p>where <i>n</i>(<i>F<sub>i</sub>,O<sub>j</sub></i>) is the joint occurrence
 of forecast category <i>i</i> and observed category <i>j</i> in
-the 3x3 contingency table, and the scoring matrix is given by
-<img src="site/SEEPS_scoring_matrix.gif" alt="SEEPS scoring matrix" width="427" height="139" align="middle">
-</p>
+the 3x3 contingency table, and the scoring matrix is given by</p>
+<img src="site/SEEPS_scoring_matrix.gif" alt="SEEPS scoring matrix" width="427" height="139">
+
 <p>Like LEPS, SEEPS measures the error in probability space as opposed to measurement
 space. It was developed to assess rainfall forecasts,
 where (1-<i>p<sub>1</sub></i>) is the climatological probability of 
@@ -1323,9 +1368,10 @@ For more information see <a href="index.html#Rodwell_et_al_2010">Rodwell et al. 
 </p>
 <p><a id="corr"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Correlation coefficient</i></b> -&nbsp;
-<img src="site/Corr.gif" alt="Equation for correlation coefficient" width="208" height="61" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Correlation coefficient</i></b> - </p>
+  <img src="site/Corr.gif" alt="Equation for correlation coefficient" width="208" height="61">
+</div>
 <p><b>Answers the question: </b><i>How well did the forecast values
 correspond to the observed values?</i>
 </p>
@@ -1341,9 +1387,10 @@ correlation coefficient with the observations. Sensitive to outliers.
 </p>
 <p><a id="AC"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Anomaly correlation</i></b> -&nbsp;
-<img src="site/AnomCorr.gif" alt="Anomaly correlation equation" width="650" height="66" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Anomaly correlation</i></b> - </p>
+  <img src="site/AnomCorr.gif" alt="Anomaly correlation equation" width="650" height="66">
+</div>
 <p><b>Answers the question: </b><i>How well did the forecast
 anomalies correspond to the observed anomalies?</i>
 </p>
@@ -1363,13 +1410,14 @@ then <i>AC</i> = 0.904. <i>AC</i> is more often used in spatial verification.
 </p>
 <p><a id="S1"></a>- - - - - - - - - - -
 </p>
-<p><b><i>S1 score</i></b> -&nbsp;
-<img src="site/S1.gif" alt="Equation for S1 score" width="242" height="78" align="middle">
-<br>
-where <i>ΔF</i> (<i>ΔO</i>)
+<div style="display: flex; align-items: center;">
+  <p><b><i>S1 score</i></b> - </p>
+  <img src="site/S1.gif" alt="Equation for S1 score" width="242" height="78">
+</div>
+<p>where <i>ΔF</i> (<i>ΔO</i>)
 refers to the horizontal gradient in the forecast (observations).
-</p>
-<p><b>Answers the question: </b><i>How well did the forecast gradients
+</p><p>
+<b>Answers the question: </b><i>How well did the forecast gradients
 correspond to the observed gradients?</i>
 </p>
 <p><b>Range:</b> 0 to ∞.&nbsp; <b>Perfect score:</b> 0.
@@ -1382,9 +1430,10 @@ forecast values are biased. Also depends on spatial resolution of the forecast.
 </p>
 <p><a id="skill"></a>- - - - - - - - - - -
 </p>
-<p><a id="Skill_score"></a><b><i>Skill score</i></b> -&nbsp;
-<img src="site/Skill.gif" alt="Equation for equation for skill score" width="310" height="51" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><a id="Skill_score"></a><b><i>Skill score</i></b> - </p>
+  <img src="site/Skill.gif" alt="Equation for equation for skill score" width="310" height="51">
+</div>
 <p><b>Answers the question: </b><i>What is the relative improvement of
 the forecast over some reference forecast?</i>
 </p>
@@ -1430,10 +1479,9 @@ different outcomes
 </p>
 <p><a id="reliability"></a>- - - - - - - - - - -
 </p>
+<img src="site/ReliabilityDiagram.gif" alt="reliability diagram" width="326" height="321" style="float: right; margin-left: 20px;">
 <p><b><i>Reliability diagram</i></b> - (called "attributes diagram"
-when the no-resoloution and no-skill w.r.t. climatology lines are included).
-</p>
-<p><img src="site/ReliabilityDiagram.gif" alt="reliability diagram" width="326" height="321" align="middle"></p>
+when the no-resoloution and no-skill w.r.t. climatology lines are included).</p>
 <p>The reliability diagram plots the observed frequency against the
 forecast probability, where the range of forecast probabilities is divided into
 <i>K</i> bins (for example, 0-5%, 5-15%, 15-25%, etc.). The sample size in each
@@ -1463,8 +1511,10 @@ each forecast probability) easier to understand than a reliability diagram.
 </p>
 <p><a id="BS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Brier score</i></b> -&nbsp;<img src="site/BSexpanded.gif" alt="Expansion of Brier Score" width="473" height="47" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Brier score</i></b> - </p>
+  <img src="site/BSexpanded.gif" alt="Expansion of Brier Score" width="473" height="47">
+</div>
 <p><b>Answers the question:</b><i> What is the magnitude of the probability
 forecast errors?</i>
 </p>
@@ -1481,9 +1531,10 @@ better) - can "fix" by subtracting <i>BS</i> from 1.
 </p>
 <p><a id="BSS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Brier skill score</i></b> -&nbsp;
-<img src="site/BSS.gif" alt="Equation for Brier skill score" width="274" height="54" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Brier skill score</i></b> - </p>
+  <img src="site/BSS.gif" alt="Equation for Brier skill score" width="274" height="54">
+</div>
 <p><b>Answers the question:</b><i> What is the relative skill of the probabilistic
 forecast over that of climatology, in terms of predicting whether or
 not an event occurred?</i>
@@ -1499,8 +1550,8 @@ the larger the number of samples needed.
 </p>
 <p><a id="ROC"></a>- - - - - - - - - - -
 </p>
+<img src="site/ROC.gif" alt="Relative operating characteristic (ROC)" width="292" height="299" style="float: right; margin-left: 20px;">
 <p><b><i>Relative operating characteristic</i></b> -
-<img src="site/ROC.gif" alt="Relative operating characteristic (ROC)" width="292" height="299" align="right">
 Plot <i><a href="index.html#POD">hit
 rate (POD)</a></i> vs <a href="index.html#POFD"><i>false alarm rate</i> (<i>F</i>)</a>,
 using a set of increasing probability thresholds (for example, 0.05, 0.15,
@@ -1535,8 +1586,8 @@ and the <a href="https://wise.cgu.edu/wise-tutorials/tutorial-signal-detection-t
 </p>
 <p><a id="Discrimination_diagram"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Discrimination diagram</i></b> - 
-<img src="site/Discrimination_diagram.gif" alt="Discrimination diagram" width="377" height="194" align="right">Plot the likelihood of each forecast probability 
+<img src="site/Discrimination_diagram.gif" alt="Discrimination diagram" width="377" height="194" style="float: right; margin-left: 20px;">
+<p><b><i>Discrimination diagram</i></b> - Plot the likelihood of each forecast probability 
 when the event occurred and when it did not occur. A summary score can be
 computed as the absolute value of the difference between the mean values of
 each distribution.
@@ -1552,10 +1603,11 @@ Some users may find the discrimination diagram easier to understand than the ROC
 </p>
 <p><a id="RPS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Ranked probability score</i></b> -&nbsp;
-<img src="site/RPS.gif" alt="ranked probability score formula" width="243" height="57" align="middle">
-<br>
-where <i>M</i> is the number of forecast categories, <i>p<sub>k</sub></i>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Ranked probability score</i></b> - </p>
+  <img src="site/RPS.gif" alt="ranked probability score formula" width="243" height="57">
+</div>
+<p>where <i>M</i> is the number of forecast categories, <i>p<sub>k</sub></i>
 is the predicted probability in forecast category <i>k</i>, and <i>o<sub>k</sub></i>
 is an indicator (0=no, 1=yes) for the observation in category <i>k</i>.
 </p>
@@ -1568,16 +1620,34 @@ predict the category that the observation fell into?</i>
 probability space for a multi-category probabilistic forecast. Penalizes
 forecasts more severely when their probabilities are further from the actual
 outcome. Negative orientation - can "fix" by subtracting <i>RPS</i> from
-1. For two forecast categories the <i>RPS</i> is the same as the Brier Score.
-<br>
-Continuous version -&nbsp;
-<img src="site/CRPS.gif" alt="Continuous ranked probability score" width="224" height="60" align="middle">
+1. For two forecast categories the <i>RPS</i> is the same as the 
+<a href="index.html/BS">Brier Score</a>.
+</p>
+<p><a id="CRPS"></a>- - - - - - - - - - -
+</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Continuous ranked probability score</i></b> - </p>
+  <img src="site/CRPS.gif" alt="continuous ranked probability score formula" width="224" height="60">
+</div>
+<p><b>Answers the question:</b><i> How well did the probability forecast
+predict the value of the observation?</i>
+</p>
+<p><b>Perfect score:</b> 0.
+</p>
+<p><b>Characteristics:</b> The <i>CRPS</i> is essentially the 
+<a href="index.html#MAE">Mean Absolute Error</a> of the forecast distribution 
+with respect to the observed distribution. It has units of the variable being 
+verified. Penalizes forecasts more severely when their probabilities are further 
+from the actual outcome. Lower values are better. Because <i>CRPS</i> considers the 
+entire forecast probability distribution, it is a good all-around score for 
+evaluating probabilistic forecasts.
 </p>
 <p><a id="RPSS"></a>- - - - - - - - - - -
 </p>
-<p><b><i>Ranked probability skill score</i></b> -&nbsp;
-<img src="site/RPSS.gif" alt="Equation for ranked probability skill score" width="326" height="50" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Ranked probability skill score</i></b> - </p>
+  <img src="site/RPSS.gif" alt="Equation for ranked probability skill score" width="326" height="50">
+</div>
 <p><b>Answers the question:</b><i> What is the relative improvement of
 the probability forecast over climatology in predicting the category
 that the observations fell into?</i>
@@ -1592,9 +1662,9 @@ into account. Unstable when applied to small data sets.
 </p>
 <p><a id="relative_value"></a>- - - - - - - - - - -
 </p>
+<img src="site/value_determ.gif" alt="relative value curve for deterministic forecast" width="352" height="264" style="float: right; margin-left: 20px;">
 <p><b><i>Relative value (value score)</i></b> (<a href="index.html#Richardson_2000">
 Richardson, 2000</a>; <a href="index.html#Wilks_2001">Wilks, 2001</a>)&nbsp;
-<img src="site/value_determ.gif" alt="relative value curve for deterministic forecast" width="352" height="264" align="right">
 <br>
 <img src="site/value.gif" alt="Equation for relative value score" width="353" height="148"></p>
 <p><b>Answers the question: </b><i>For a <a href="site/value/relativevalue_more.html">cost/loss
@@ -1608,7 +1678,7 @@ expected expense, with climatology as the reference forecast. Because the
 cost/loss ratio is different for different users of forecasts, the value is
 generally plotted as a function of <i>C/L</i>.
 </p>
-<p><img src="site/value_EPS.gif" alt="relative value for ensemble prediction system" width="353" height="265" align="right">
+<p><img src="site/value_EPS.gif" alt="relative value for ensemble prediction system" width="353" height="265" style="float: right; margin-left: 20px;">
 Like <a href="index.html#ROC">ROC</a>,
 it gives information that can be used in decision making. When applied
 to a probabilistic forecasts system (for example, an ensemble
@@ -1655,13 +1725,14 @@ Scale decomposition methods allow the errors at each scale to be diagnosed.
 <p><i><b>Wavelet decomposition</b></i>&nbsp; 
 (<a href="index.html#Briggs_and_Levine_1997">Briggs and Levine, 1997</a>)<br>
 </p>
-<a id="IS"></a>- - - - - - - - - - -
+<p><a id="IS"></a>- - - - - - - - - - -
+</p>
+<img alt="MSE skill for intensity-scale verification method" src="site/IS_MSEskill.gif" width="444" height="239"  style="float: right; margin-left: 20px;">
 <p><i><b><a href="https://doi.org/10.1017/S1350482704001239">
 Intensity-scale verification approach</a></b></i> (<a href="index.html#Casati2004">Casati et al. 2004</a>)<br>
 </p>
 <p><b>Answers the question:</b> <i>How does the skill of spatial precipitation forecasts 
-depend on both the scale of the forecast error and the intensity of the precipitation events?
-<img alt="MSE skill for intensity-scale verification method" src="site/IS_MSEskill.gif" width="444" height="239" style="margin: 5px 5px 5px 5px;" align="right"></i><br>
+depend on both the scale of the forecast error and the intensity of the precipitation events?</i><br>
 </p>
 <p>The intensity-scale verification approach bridges
 traditional categorical binary verification, which provides information
@@ -1703,7 +1774,7 @@ in the local neighborhood of the observations.
 <p>- - - - - - - - - - -
 </p>
 <a id="FSS"></a>
-<img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px; margin: 2px 2px 2px 2px;" align="right">
+<img alt="Plot of fractions skill score" src="site/FSSplot.gif" style="width: 559px; height: 280px; float: right; margin-left: 20px;">
 <p><i><b>Fractions skill score</b></i> (<a href="index.html#Roberts_Lean_2008">Roberts and Lean, 2008</a>)<br>
 </p>
 <p><b>Answers the question: </b><i>What are
@@ -1716,9 +1787,9 @@ event frequencies are used directly to compute a Fractions Brier Score,
 a version of the more familiar (half) <a href="index.html#BS">Brier score</a>
 but now the observation can take any value between 0 and 1. The result can be
 framed as a Fractions Skill Score
-<br>&nbsp;<br>
-<img alt="Equation for fractions skill score" src="site/FSS.gif" style="width: 201px; height: 93px;" align="middle">
-</p><p>where <i>P<sub>f</sub></i> is the forecast fraction,
+</p>
+<img alt="Equation for fractions skill score" src="site/FSS.gif" style="width: 201px; height: 93px;">
+<p>where <i>P<sub>f</sub></i> is the forecast fraction,
 <i>P<sub>o</sub></i> is the observed fraction, and <i>N</i>
 is the number of spatial windows in the domain.</p>
 <p>FSS has the following properties:</p>
@@ -1732,11 +1803,9 @@ is the number of spatial windows in the domain.</p>
   <i>f<sub>o</sub></i> is the domain average observed fraction. The smallest
   window size for which <i>FSS</i> ≥ <i>FSS<sub>useful</sub></i> can be considered
   the "skillful scale".</li>
-  <li>As the size of the squares used to
-  compute the fractions gets larger, the score will asympotote to a value
-  that depends on the ratio between the forecast and observed frequencies
-  of the event. The closer the asymptotic value is to 1, the smaller the
-  forecast bias.</li>
+  <li>As the size of the squares used to compute the fractions gets larger, the score 
+  will asympotote to a value that depends on the ratio between the forecast and observed frequencies
+  of the event. The closer the asymptotic value is to 1, the smaller the forecast bias.</li>
   <li>The score is most sensitive to rare events (e.g., small rain areas).</li>
 </ul>
 <p>- - - - - - - - - - -
@@ -1807,8 +1876,8 @@ CRA (entity-based) verification</a></i></b>
 What is the location error of the (spatial) forecast, and how does the total error break
 down into components due to incorrect location, volume, and fine scale structure?</i>
 <br>
-<img src="site/CRA_entities0.gif" alt="CRA entities" width="260" height="111" style="margin: 5px 5px 5px 5px;" align="right"><br>
-This object-oriented method verifies the properties of spatial forecasts of <i>entities</i>,
+<img src="site/CRA_entities0.gif" alt="CRA entities" width="260" height="111" style="float: right; margin-left: 20px;">
+<br>This object-oriented method verifies the properties of spatial forecasts of <i>entities</i>,
 where an entity is anything that can be defined by a closed contour. Some
 examples of entities, or blobs, are contiguous rain areas (CRAs, for which
 the method is named), convective outlook regions, and low pressure minima.
@@ -1831,7 +1900,7 @@ the forecast. This event verification can be useful for monitoring forecast perf
 <p><b><i>Method for Object-based Diagnostic Evaluation (MODE)</i></b> 
 (<a href="index.html#Brown_et_al_2004">Brown et al.,2004</a>; 
  <a href="index.html#Davis_et_al_2006a">Davis et al., 2006</a>)
-<img src="site/MODE.gif" alt="MODE objects" width="236" height="209" style="margin: 5px 5px 5px 5px;" align="right"><br>
+<img src="site/MODE.gif" alt="MODE objects" width="236" height="209" style="float: right; margin-left: 20px;">
 </p>
 <p><b>Answers the question:</b><i> How similar are the forecast objects to the observed
  objects according to a variety of descriptive criteria ?</i></p>
@@ -1911,16 +1980,15 @@ of the variance and is the main one of interest. The phase errors are presented 
 et al., 1995</a>; <a href="index.html#Nehrkorn_et_al_2003">Nehrkorn et al., 2003</a>)
 </p>
 <p>- - - - - - - - - - -
-<br>
 </p>
 <h3>Field verification methods:</h3>
 
+<img src="site/DASexample.gif" alt="Example of Displacement Amplitude Score verification" style="width: 325px; height: 321px; float: right; margin-left: 20px;">
 <a id="DAS"></a><b><i>Displacement and Amplitude Score (DAS)</i></b>
 <a href="index.html#Keil_Craig_2009">(Keil and Craig, 2009</a>)<br>
 <br>
 <b>Answers the question:</b><i>
 What is the distance between forecast and observed features?</i>
-<img style="width: 325px; height: 321px;" alt="Example of Displacement Amplitude Score verification" src="site/DASexample.gif" align="right"><br>
 <p>Measuring the distance between observed and
 forecast features is not only an intuitive error measure for many users, but
 also avoids the double-counting penalty where a feature displaced in space is
@@ -1951,11 +2019,12 @@ and observation (bottom right – top left).
 </p>
 <p>- - - - - - - - - - -
 </p>
-<p><a id="rank_histogram"></a><b><i>Rank histogram</i></b>
-(<a href="index.html#Talagrand_et_al_1997">Talagrand et al, 1997</a>; 
- <a href="index.html#Hamill_2001">Hamill, 2001</a>)
-<img src="site/RankHistogram.gif" alt="rank histogram diagram" width="379" height="119" align="middle">
-</p>
+<div style="display: flex; align-items: center;">
+  <p><a id="rank_histogram"></a><b><i>Rank histogram</i></b>
+  (<a href="index.html#Talagrand_et_al_1997">Talagrand et al, 1997</a>; 
+  <a href="index.html#Hamill_2001">Hamill, 2001</a>) - </p>
+  <img src="site/RankHistogram.gif" alt="rank histogram diagram" width="379" height="119">
+</div>
 <p><b>Answers the question:</b><i> How well does the ensemble spread of
 the forecast represent the true variability (uncertainty) of the observations?</i>
 </p>
@@ -1996,7 +2065,11 @@ represented by the ensemble.
 to the combined area of those events 
 (<a href="index.html#Stensrud_and_Wandishin_2000">Stensrud and Wandishin, 2000</a>)
 </p>
-<img src="site/CorrespondenceRatio.gif" alt="Equation for correspondence ratio" width="442" height="91"><img src="site/Venn.gif" alt="Venn diagram showing intersection of three areas" width="119" height="135"><br>
+<div style="display: flex; align-items: center;">
+  <img src="site/CorrespondenceRatio.gif" alt="Equation for correspondence ratio" width="442" height="91">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="site/Venn.gif" alt="Venn diagram showing intersection of three areas" width="119" height="135">
+</div>
 <p>where <i>F<sub>m,i</sub></i> is the value of forecast <i>m</i> at gridpoint <i>i</i>,
 and <i>O<sub>i</sub></i> is the corresponding observed value. In the diagram <i>CR</i>
 is the ratio of the dark area to the total shaded area. Click
@@ -2038,19 +2111,27 @@ Click <a href="site/Ignorance.html">here</a> to learn more.
 (<a href="index.html#Ferro_Stephenson_2011">Ferro and Stephenson, 2011</a>)
 <p>
 <a id="Extreme_dependence"></a>
-<p><b><i>Extreme dependency score</i></b> -
-<img src="site/EDS.gif" alt="extreme dependency score equation" width="319" height="95" align="absmiddle">
-<br><b><i>Symmetric extreme dependency score</i></b> -
-<img src="site/SEDS.gif" alt="symmetric extreme dependency score equation" width="251" height="95" align="absmiddle">
-<br><b><i>Extremal dependence index</i></b> -
-<img src="site/EDI.gif" alt="extremal dependence index equation" width="132" height="45" align="absmiddle">
-<br><b><i>Symmetric extremal dependence index</i></b> -
-<img src="site/SEDI.gif" alt="symmetric extremal dependence index equation" width="282" height="49" align="absmiddle">
-</p>
-<br>where <i>p</i>=(<i>hits</i>+<i>misses</i>)/<i>total</i>  is the base rate (climatology),
+<div style="display: flex; align-items: center;">
+  <p><b><i>Extreme dependency score</i></b> - </p>
+  <img src="site/EDS.gif" alt="extreme dependency score equation" width="319" height="95">
+</div>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Symmetric extreme dependency score</i></b> - </p>
+  <img src="site/SEDS.gif" alt="symmetric extreme dependency score equation" width="251" height="95">
+</div>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Extremal dependence index</i></b> - </p>
+  <img src="site/EDI.gif" alt="extremal dependence index equation" width="132" height="45">
+</div>
+<div style="display: flex; align-items: center;">
+  <p><b><i>Symmetric extremal dependence index</i></b> - </p>
+  <img src="site/SEDI.gif" alt="symmetric extremal dependence index equation" width="282" height="49">
+</div>
+<p>where <i>p</i>=(<i>hits</i>+<i>misses</i>)/<i>total</i>  is the base rate (climatology),
 <i>q</i>=(<i>hits</i>+<i>false alarms</i>)/<i>total</i>  is the frequency with which the event is forecast,
 <i>H</i> is the <a href="index.html#POD">hit rate</a>, also known as the probability of detection, and
 <i>F</i> is the <a href="index.html#POFD">false alarm rate</a>, also known as the probability of false detection.
+</p>
 <p><b>Answer the question: </b><i>What is the association between forecast and observed rare events?</i>
 </p>
 <p><b>Range:</b> -1 to 1, 0 indicates no skill. <b>Perfect score:</b> 1
@@ -2079,22 +2160,24 @@ Click <a href="site/Ferro/Verif_rare_events.html">here</a> to learn more.
 
 <h3>Diagrams to plot several statistics at one time</h3>
 
-<img style="width: 347px; height: 331px;" alt="Taylor diagram example" src="site/TaylorDiagram.gif" align="right"> 
-<p>
-<b><i>Taylor diagram</i></b> of correlation coefficient,
-root-mean-square difference, and standard deviation (<a href="index.html#Taylor_2001">
-Taylor, 2001</a>); see also <a href="https://pcmdi.llnl.gov/staff/taylor/CV/Taylor_diagram_primer.pdf">
-LLNL description</a>. An example of a Taylor diagram is shown at right.</p>
-<p>
-<b><i>BLT diagram</i></b> of relative climate mean squared difference, variance ratio, 
-and effective correlation (<a href="index.html#Boer_and_Lambert_2001"> Boer and Lambert, 2001</a>).
+<div style="display: flex;">
+  <p><b><i>Taylor diagram</i></b> of correlation coefficient,
+  root-mean-square difference, and standard deviation (<a href="index.html#Taylor_2001">
+  Taylor, 2001</a>); see also <a href="https://pcmdi.llnl.gov/staff/taylor/CV/Taylor_diagram_primer.pdf">
+  LLNL description</a>. An example of a Taylor diagram is shown at right.</p>
+  <img src="site/TaylorDiagram.gif" alt="Taylor diagram example" width="347" height="331">
+</div>
+<p>- - - - - - - - - - -
+</p>
+<p><b><i>BLT diagram</i></b> of relative climate mean squared difference, variance ratio, 
+and effective correlation (<a href="index.html#Boer_and_Lambert_2001">Boer and Lambert, 2001</a>).
 </p>
 <p>- - - - - - - - - - -
 </p>
+<img src="site/PerformanceDiagram_small.gif" alt="Probability of Detection vs. Success Ratio" style="width: 243px; height: 234px; float: right; margin-left: 20px;"><br>
 <a id="Roebber_diagram"></a><i><b>Categorical performance diagram</b></i> 
-(<a href="index.html#Roebber_2009">Roebber 2009</a>)<br>
-<img style="width: 243px; height: 234px;" alt="Probability of Detection vs. Success Ratio" src="site/PerformanceDiagram_small.gif" align="right"><br>
-In an approach that is conceptually similar to the Taylor diagram, it is possible 
+(<a href="index.html#Roebber_2009">Roebber 2009</a>)
+<p>In an approach that is conceptually similar to the Taylor diagram, it is possible 
 to exploit the geometric relationship between
 four measures of dichotomous forecast performance: probability of
 detection (POD), false alarm ratio or its opposite, the success ratio
@@ -2103,9 +2186,9 @@ score). For good forecasts, POD, SR, bias and CSI approach unity, such
 that a perfect forecast lies in the upper right of the diagram. Skill is
 assessed by plotting the forecast quality measure relative to a reference forecast (climatology,
 persistence or any other desired baseline). <br>
-<br>
+</p><p>
 Click <a href="site/Roebber/PerformanceDiagram.html">here</a> to learn more.
-<br>
+</p>
 <p>- - - - - - - - - - -
 </p>
 <a id="elliptical_representation"></a> <b><i>Elliptical representation of vector errors</i></b> 
@@ -2113,14 +2196,20 @@ Click <a href="site/Roebber/PerformanceDiagram.html">here</a> to learn more.
 <br>
 <p><b>Answers the question: </b><i>How does the vector error between
 the model and observation vary about the mean vector error (i.e., bias)?</i></p>
-<p>In the diagram to the right, the mean vector error is represented by&nbsp;<i><b>
-<img style="width: 76px; height: 26px;" alt="Expression for mean vector error" src="site/VectorError.gif" align="top"></b></i>.
-The error variance ellipse may be represented by: &nbsp;
-<img style="width: 335px; height: 263px;" alt="error variance ellipse" src="site/VarianceEllipse_medium.gif" align="right">
+<p>In the diagram to the right, the mean vector error is represented by&nbsp;
+<img src="site/VectorError.gif" alt="Expression for mean vector error" style="width: 76px; height: 26px;">.
+<br>The error variance ellipse may be represented by: &nbsp;
+<img src="site/VarianceEllipse_medium.gif" alt="Error variance ellipse" style="width: 335px; height: 263px; float: right; margin-left: 20px;">
 </p>
 <ul>
-  <li>standard deviation, <img style="width: 89px; height: 34px;" alt="standard deviation" src="site/SD.gif" align="middle"></li>
-  <li>eccentricity, <sup><img style="width: 107px; height: 32px;" alt="eccentricity" src="site/eccentricity.gif" align="top"></sup></li>
+  <li><div style="display: flex; align-items: center;">
+    <p>standard deviation, &nbsp;</p>
+    <img src="site/SD.gif" alt="standard deviation" width="89" height="34">
+  </div></li>
+  <li><div style="display: flex; align-items: center;">
+    <p>eccentricity, &nbsp;</p>
+    <img src="site/eccentricity.gif" alt="eccentricity" width="107" height="32">
+  </div></li>
   <li>orientation of the major axis, <i>θ</i>.</li>
 </ul>
 where <i>a</i> and <i>b</i> are the semi-major and semi-minor axes of the ellipse.
@@ -2137,11 +2226,12 @@ error, and <i>ε</i> denotes the degree of preference for that direction.
 
 <h3>Other scores</h3>
 
-<p><a id="RMSF"></a><b><i>Root mean squared factor</i></b>&nbsp;
-(<a href="index.html#Golding_1998">Golding, 1998</a>)&nbsp;
-<img src="site/RMSF.gif" alt="root mean square factor" width="235" height="74" align="middle">
-<br>
-<b>Answers the question:</b><i> What is the average multiplicative error?</i>
+<div style="display: flex; align-items: center;">
+  <p><a id="RMSF"></a><b><i>Root mean squared factor</i></b> &nbsp;
+  (<a href="index.html#Golding_1998">Golding, 1998</a>)&nbsp;- </p>
+  <img src="site/RMSF.gif" alt="root mean square factor" width="235" height="74">
+</div>
+<p><b>Answers the question:</b><i> What is the average multiplicative error?</i>
 </p>
 <p>The <i>RMSF</i> is the exponent of the root mean square error of the
 logarithm of the data. The logarithmic transformation is performed to smooth the
@@ -2161,9 +2251,11 @@ of half the lower limit or double the upper limit are prescribed on the other.
 </p>
 <p>- - - - - - - - - - -
 </p>
-<i><b>Nash-Sutcliffe efficiency coefficient</b></i> 
-(<a href="index.html#Nash_Sutcliffe_1970">Nash and Sutcliffe, 1970</a>) - 
-<img style="width: 150px; height: 95px;" alt="Nash-Sutcliffe efficiency factor" src="site/NashEfficiency.gif" align="middle">
+<div style="display: flex; align-items: center;">
+  <p><b><i>Nash-Sutcliffe efficiency coefficient </i></b>
+  (<a href="index.html#Nash_Sutcliffe_1970">Nash and Sutcliffe, 1970</a>) - </p>
+  <img src="site/NashEfficiency.gif" alt="Nash-Sutcliffe efficiency factor" width="150" height="95">
+</div>
 <p><b>Answers the question:</b><i> How well does the forecast predict
 the observed time series?</i>
 </p>
@@ -2177,8 +2269,9 @@ expression is identical to that for the coefficient of determination
 <i>R</i><sup>2</sup> and the <a href="index.html#Skill_score">reduction of variance</a>.<br>
 </p>
 <p>- - - - - - - - - - -
-<p><img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" height="237" style="margin: 2px 2px 2px 2px;" align="right">
-<b><i><a href="site/Hewson/DeterministicLimit.html">
+</p>
+<img src="site/DetLim.gif" alt="deterministic limit diagram" width="320" height="237" style="float: right; margin-left: 20px;">
+<p><b><i><a href="site/Hewson/DeterministicLimit.html">
 Deterministic limit</a></i></b> <a href="index.html#Hewson2007">(Hewson, 2007)</a></p>
 <p><a><b>Answers the question:</b><i> What is the length of time into the forecast 
 in which the forecast is more likely to be correct than incorrect?</i>
@@ -2208,7 +2301,7 @@ shown, by some customers, for probabilistic forecasts.
 </p>
 <a id="alpha_index"></a>
 <b><i>Alpha Index</i></b> (<a href="index.html#Koh_Ng_2009">Koh and Ng, 2009</a>)&nbsp;-&nbsp; &nbsp; 
-<img style="width: 203px; height: 56px;" alt="Koh's alpha index" src="site/AlphaIndex.gif" align="middle">
+<img style="width: 203px; height: 56px;" alt="Koh's alpha index" src="site/AlphaIndex.gif">
 <p><b>Answers the question:</b><i> How does the random error of a
 forecast compare between regions of different observational variability?</i>
 </p>
@@ -2223,11 +2316,10 @@ products if the variable is a vector (e.g. wind).
 </p>
 <p>- - - - - - - - - - -
 </p>
+<img alt="Example of quantile scores for Switzerland" src="site/fall_bothint_querrclim.gif" width="397" height="291" style="float: right; margin-left: 20px;">
 <b><i>Quantile-based categorical statistics</i></b>&nbsp;
 (<a href="index.html#Jenkner_2008">Jenkner et al., 2008</a>) 
-<img alt="Example of quantile scores for Switzerland" src="site/fall_bothint_querrclim.gif" style="width: 397px; height: 291px;" align="right"><br>
-<br>
-Dichotomous forecasts can be thought of in terms of
+<p>Dichotomous forecasts can be thought of in terms of
 statistical frequencies instead of physical amplitudes. If the marginal
 totals of the contingency table are fixed by means of quantiles,
 categorical statistics benefit from some inherent advantages. The
@@ -2241,8 +2333,8 @@ provide a complete verification set with the ability to assess the full
 range of intensities. The verification can be computed for certain quantiles, 
 as shown at right for the COSMO model's QPF performance over six predefined
 regions in Switzerland, or it can be aggregated over intensities by
-means of appropriate summary measures.
-<p>Click <a href="site/Jenkner/qbasedverif.htm">here</a> to learn more.<br>
+means of appropriate summary measures.</p>
+<p>Click <a href="site/Jenkner/qbasedverif.htm">here</a> to learn more.
 </p>
   
 <h2 id="Datasets">Sample forecast datasets</h2>
@@ -2307,7 +2399,7 @@ different categorical scores rate the Finley (1884) forecasts.
   
 <h3 id="POP3"><i>Probability of precipitation forecasts</i></h3>
 
-<img alt="Tampere, Finland" src="site/TampereRain_small.jpg" style="width: 497px; height: 116px;" align="right">
+<img alt="Tampere, Finland" src="site/TampereRain_small.jpg" style="width: 497px; height: 116px; float: right; margin-left: 20px;">
 24-hour and 48-hour forecasts of probability of precipitation were made by the Finnish
 Meteorological Institute (FMI) during 2003, for daily precipitation in
 the city of Tampere in south central Finland. Three precipitation categories were used:<br>
@@ -2326,6 +2418,25 @@ ranked probability score, and ranked probability skill score.<br>
 
 
 <h2 id="Tools">Freely available verification tools and packages</h2>
+
+<h3><i>Scores</i></h3>
+<p>
+<a href="https://scores.readthedocs.io/en/stable/"><i>scores</i></a>
+is an open source Python package developed by the Bureau of Meteorology. 
+It contains mathematical functions for the verification, 
+evaluation and optimisation of forecasts, predictions or models. At present, <i>scores</i> 
+primarily supports the meteorological, climatological and oceanographic communities
+and is also being used for machine learning.
+</p><p>
+<i>scores</i> includes over 60 verification metrics and statistical techniques. Additionally, it 
+provides pre-processing tools for preparing data for scores in a variety of formats 
+including cumulative distribution functions (CDF). 
+</p><p>
+<i>scores</i> primarily supports xarray datatypes for Earth system data allowing it to work 
+with NetCDF4, HDF5, Zarr and GRIB data formats among others. It uses Dask for scaling 
+and performance. Some metrics also work with pandas. All of the metrics have undergone 
+a thorough scientific and software review. Every score has a companion Jupyter Notebook 
+tutorial that demonstrates its use in practice.</p>
 
 <h3><i>Model Evaluation Tools (MET)</i></h3>
 <p>
@@ -2408,37 +2519,38 @@ single values when the user selects the option for time series verification.
   
 <h2 id="FAQs">Some frequently asked questions</h2>
 
-<a id="How_many_samples"></a><b>1. How many samples are needed to get reliable verification results?</b>
-<p><b><a href="site/BestStatistic.html">2. What is the best statistic for measuring
+<!--<p><a id="How_many_samples"></a><b>1. How many samples are needed to get reliable verification results?</b>
+</p>-->
+<p><b><a href="site/BestStatistic.html">1. What is the best statistic for measuring
 the accuracy of a forecast?</a></b>
 </p>
-<p><b><a href="site/Goeber_Wilson/Double_penalty_combined.html">3. Why, when a model's resolution 
+<p><b><a href="site/Goeber_Wilson/Double_penalty_combined.html">2. Why, when a model's resolution 
 is improved, do the forecasts often verify worse?</a></b>
 </p>
-<p><b><a href="site/Goeber_Wilson/super_obs.html">4. How do I compare gridded
+<p><b><a href="site/Goeber_Wilson/super_obs.html">3. How do I compare gridded
 forecasts (from a model, for example) with observations at point locations?</a></b>
 </p>
-<p><b><a href="site/WordedForecasts.html">5.How do I verify worded forecasts?</a></b>
+<p><b><a href="site/WordedForecasts.html">4.How do I verify worded forecasts?</a></b>
 </p>
-<p><b><a href="site/FAQ-Hedging2.html">6.What does "hedging" a forecast mean,
+<p><b><a href="site/FAQ-Hedging2.html">5.What does "hedging" a forecast mean,
 and how do some scores encourage hedging?</a></b>
 <!-- <p><b><a href="StrictlyProper.html">7. What does "strictly proper" mean
 when referring to verification scores?</a></b> -->
 </p>
-<p><b><a href="site/VerificationValidation.html">7. Is there a difference between
+<p><b><a href="site/VerificationValidation.html">6. Is there a difference between
 "verification" and "validation"?</a></b>
 </p>
-<p><b><a href="site/Inference.html">8.What is the relationship between confidence
+<p><b><a href="site/Inference.html">7.What is the relationship between confidence
 intervals and prediction intervals?</a></b>
 </p>
-<p><b><a href="site/CIdiff/FAQ-CIdiff.html">9.How do I know whether one forecast
+<p><b><a href="site/CIdiff/FAQ-CIdiff.html">8.How do I know whether one forecast
 system performs significantly better than another?</a></b>
 </p>
-<p><b><a href="site/Casati/statxtr.htm">10. What are the challenges and strategies 
+<p><b><a href="site/Casati/statxtr.htm">9. What are the challenges and strategies 
 to verify weather and climate extremes?</a></b>
 </p>
 <p><b><a id="reliablity_resolution"></a><a href="site/reliability_resolution.html">
-11. Reliability and resolution - how are they different?</a></b>
+10. Reliability and resolution - how are they different?</a></b>
 </p>
   
 <!--<h2 id="Group">Discussion group</h2>
@@ -2471,7 +2583,6 @@ Statistics Handbook</a> - NIST / SEMATECH summaries of statistical methods
 <br>
 <a href="http://home.ubalt.edu/ntsbarsh/index.html">Dr. Arsham's Web
 Page</a> - zillions of links to web-based statistics resources
-</p>
 
 <h4>Meteorological - methods</h4>
 
@@ -3447,21 +3558,23 @@ Pertti Nurmi, Finnish Meteorological Institute, Hensinki, Finland<br>
 Paul Roebber, University of Wisconsin, Milwaukee, Wisconsin, USA<br>
 David Stephenson, University of Exeter, Exeter, UK<br>
 Clive Wilson, The Met Office, Exeter, UK<br>
-Laurie Wilson, Research en Prévision Numérique, Dorval, Canada<br>
-</p>  
+Laurie Wilson, Research en Prévision Numérique, Dorval, Canada<br>  
 
 <!--<h2 id="Art">Verification and art</h2>
 THERE USED TO BE LINKS TO VERIFICATION BLUES HERE
 -->
+<hr>
+<p>
+ 
+<h3 class="green"><a href="https://community.wmo.int/en/activity-areas/wwrp/wwrp-working-groups/wwrp-forecast-verification-research"><i>
+This website is published by the WWRP/WGNE Joint Working Group on Forecast Verification Research</i></a></h3>
+<p>Webmaster: Beth Ebert, Bureau of Meteorology
+<a href="mailto:Beth.Ebert@bom.gov.au">Beth.Ebert@bom.gov.au</a> <br> 
+Last updated: 2 August 2024<br>
+</p>
   
 </div>
 
-<hr>
-<p>
-Webmaster: Beth Ebert, Bureau of Meteorology
-<a href="mailto:Beth.Ebert@bom.gov.au">Beth.Ebert@bom.gov.au</a> <br> 
-Last updated: 1 August 2024<br>
-</p>
 </body>
 
 </html>
